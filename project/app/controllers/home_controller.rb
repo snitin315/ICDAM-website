@@ -51,6 +51,8 @@ class HomeController < ApplicationController
   end
 
   def publication
+    @publication = Publication.all
+    @important_dates = ImportantDate.all
 
   end
 
