@@ -12,4 +12,9 @@ class HomeController < ApplicationController
     @important_dates = ImportantDate.all
   end
 
+  def about_universal_innovators
+    @about_universal_innovators = AboutUniversalInnovator.last.content
+    @important_dates = ImportantDate.all
+  end
+
 end
