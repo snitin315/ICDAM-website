@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get 'home/about_irdindia'
   get 'home/about_universal_innovators'
   get 'home/call_for_papers'
+  get 'home/registration'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -22,4 +22,11 @@ class HomeController < ApplicationController
     @important_dates = ImportantDate.all
   end
 
+
+  def registration
+    @important_dates = ImportantDate.all
+
+
+  end
+
 end
