@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170927035938) do
+ActiveRecord::Schema.define(version: 20170927064718) do
 
   create_table "about_institutes", force: :cascade do |t|
     t.text     "content"
@@ -27,6 +27,21 @@ ActiveRecord::Schema.define(version: 20170927035938) do
 
   create_table "about_universal_innovators", force: :cascade do |t|
     t.text     "content"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "call_for_paper_sub_headings", force: :cascade do |t|
+    t.integer  "callforpaper_id"
+    t.string   "content"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+  end
+
+  add_index "call_for_paper_sub_headings", ["callforpaper_id"], name: "index_call_for_paper_sub_headings_on_callforpaper_id"
+
+  create_table "call_for_papers", force: :cascade do |t|
+    t.string   "title"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

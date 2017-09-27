@@ -17,4 +17,9 @@ class HomeController < ApplicationController
     @important_dates = ImportantDate.all
   end
 
+  def call_for_papers
+    @call_for_papers = CallForPaper.all
+    @important_dates = ImportantDate.all
+  end
+
 end
