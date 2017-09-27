@@ -7,4 +7,9 @@ class HomeController < ApplicationController
     @important_dates = ImportantDate.all
   end
 
+  def about_irdindia
+    @about_irdindia = AboutIrdind.last.content
+    @important_dates = ImportantDate.all
+  end
+
 end
