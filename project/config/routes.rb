@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get 'home/steeringcommittee'
   get 'home/technicalprogramcommittee'
   get 'home/advisorycommittee'
+  get 'home/sponsorship'
 
 
   # The priority is based upon order of creation: first created -> highest priority.

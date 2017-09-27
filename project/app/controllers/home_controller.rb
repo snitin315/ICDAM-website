@@ -44,4 +44,10 @@ class HomeController < ApplicationController
     @important_dates = ImportantDate.all
   end
 
+  def sponsorship
+    @sponsors = Sponsor.all
+    @important_dates = ImportantDate.all
+
+  end
+
 end
