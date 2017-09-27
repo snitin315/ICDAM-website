@@ -29,4 +29,19 @@ class HomeController < ApplicationController
 
   end
 
+  def steeringcommittee
+    @steercompost = SteerComPost.all
+    @important_dates = ImportantDate.all
+  end
+
+  def technicalprogramcommittee
+    @techcom = TechCom.all
+    @important_dates = ImportantDate.all
+  end
+
+  def advisorycommittee
+    @advcom = AdvCom.all
+    @important_dates = ImportantDate.all
+  end
+
 end

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170927064718) do
+ActiveRecord::Schema.define(version: 20170927112749) do
 
   create_table "about_institutes", force: :cascade do |t|
     t.text     "content"
@@ -29,6 +29,13 @@ ActiveRecord::Schema.define(version: 20170927064718) do
     t.text     "content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "adv_coms", force: :cascade do |t|
+    t.string   "name"
+    t.string   "information"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   create_table "call_for_paper_sub_headings", force: :cascade do |t|
@@ -51,6 +58,29 @@ ActiveRecord::Schema.define(version: 20170927064718) do
     t.datetime "date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "steer_com_mems", force: :cascade do |t|
+    t.string   "name"
+    t.string   "information"
+    t.integer  "steercompost_id"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+  end
+
+  add_index "steer_com_mems", ["steercompost_id"], name: "index_steer_com_mems_on_steercompost_id"
+
+  create_table "steer_com_posts", force: :cascade do |t|
+    t.string   "position"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "tech_coms", force: :cascade do |t|
+    t.string   "name"
+    t.string   "information"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
 end
