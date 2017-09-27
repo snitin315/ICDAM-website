@@ -18,14 +18,15 @@
     <h3>International Conference on Innovative Computing and Communication(ICICC-2018)</h3>
 
     <nav>
-      <a href="">Home</a>
-      <a href="">About</a>
-      <a href="">Papers</a>
-      <a href="">Registration</a>
-      <a href="">Sponsorship</a>
-      <a href="">publication</a>
-      <a href="">Committee</a>
-      <a href="">Explore</a>
+      <%= link_to "Home", url_for(controller: 'home', action: 'index') %>
+      <%= link_to "About", url_for(controller: 'home', action: 'index') %>
+      <%= link_to "Papers", url_for(controller: 'home', action: 'index') %>
+      <%= link_to "Registration", url_for(controller: 'home', action: 'registration') %>
+      <%= link_to "Sponsorship", url_for(controller: 'home', action: 'sponsorship') %>
+      <%= link_to "Publication", url_for(controller: 'home', action: 'publication') %>
+      <%= link_to "Committee", url_for(controller: 'home', action: 'index') %>
+      <%= link_to "Explore", url_for(controller: 'home', action: 'index') %>
+
     </nav>
   </header>
 
