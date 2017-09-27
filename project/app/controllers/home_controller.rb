@@ -50,4 +50,8 @@ class HomeController < ApplicationController
 
   end
 
+  def publication
+
+  end
+
 end
