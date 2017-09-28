@@ -130,6 +130,7 @@ header nav a {
   -webkit-border-radius: 2px;
   border-radius: 2px;
 }
+
 header nav a:hover {
   -moz-box-shadow: 0 0 0 1px #fff;
   -webkit-box-shadow: 0 0 0 1px #fff;
@@ -150,7 +151,7 @@ p {
   color: #7f8c8d;
 }
 
-
+\
 /* Sticky Header Style */
 /* ---------------------------------------- */
 body.sticky-header {

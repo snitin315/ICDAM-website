@@ -11,5 +11,9 @@ ActiveAdmin.register Publication do
 #   permitted << :other if params[:action] == 'create' && current_user.admin?
 #   permitted
 # end
-
+permit_params do
+  params = [:title,:weblink,:description]
+  # params.push :author_id if current_user.admin?
+  params
+end
 end

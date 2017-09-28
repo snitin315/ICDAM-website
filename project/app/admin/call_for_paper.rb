@@ -1,4 +1,6 @@
 ActiveAdmin.register CallForPaper do
+  # has_many :callforpapersubheadings
+has_many :callforpapersubheadings
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
 #
@@ -11,5 +13,9 @@ ActiveAdmin.register CallForPaper do
 #   permitted << :other if params[:action] == 'create' && current_user.admin?
 #   permitted
 # end
-
+permit_params do
+  params = [:title]
+  # params.push :author_id if current_user.admin?
+  params
+end
 end
