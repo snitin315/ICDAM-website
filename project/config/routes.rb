@@ -13,6 +13,8 @@ Rails.application.routes.draw do
   get 'home/advisorycommittee'
   get 'home/sponsorship'
   get 'home/publication'
+  get 'home/contact_us'
+  post 'home/contact_us/post' => 'home#post'
 
 
   # The priority is based upon order of creation: first created -> highest priority.

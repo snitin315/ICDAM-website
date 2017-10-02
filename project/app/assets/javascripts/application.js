@@ -13,6 +13,10 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+//= require jquery.noty.packaged.min.js
+$ = jQuery
+$.noty.defaults.timeout = 8000
+
 
 $(function(){
   $(window).scroll(function(){

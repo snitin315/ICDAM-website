@@ -66,4 +66,33 @@ class HomeController < ApplicationController
 
   end
 
+  def contact_us
+    @response= session[:response]
+
+  end
+
+  def post
+    # byebug
+    @name=params["name"]
+    @email=params["email"]
+    @subject=params["subject"]
+    @content= params["content"]
+    unless @name=="" || @email=="" || @content=="" || @subject==""
+      UserMailer.contact_us(@name,@email,@content,@subject).deliver_now
+      @response=true
+      session[:response]=@response
+      redirect_to "/home/contact_us"
+    else
+      @response="empty"
+      session[:response]=@response
+
+      redirect_to "/home/contact_us"
+
+    end
+
+
+
+
+  end
+
 end
