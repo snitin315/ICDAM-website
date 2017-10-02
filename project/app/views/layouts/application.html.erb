@@ -26,9 +26,19 @@
       <%= link_to "Sponsorship", url_for(controller: 'home', action: 'sponsorship') %>
       <%= link_to "Publication", url_for(controller: 'home', action: 'publication') %>
       <%= link_to "Committee", url_for(controller: 'home', action: 'index') %>
-      <%= link_to "Explore", url_for(controller: 'home', action: 'index') %>
+      <!-- <%= link_to "Explore", url_for(controller: 'home', action: 'index') %> -->
+      <a class="dropdown-button" href="#!" data-activates="dropdown1" data-hover="true">Explore</a>
 
     </nav>
+
+    <ul id="dropdown1" class="dropdown-content">
+  <li><a href="#!">one</a></li>
+  <li><a href="#!">two</a></li>
+  <li class="divider"></li>
+  <li><a href="#!">three</a></li>
+</ul>
+
+
   </header>
 
 
