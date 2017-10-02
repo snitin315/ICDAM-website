@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171002024634) do
+ActiveRecord::Schema.define(version: 20171002073112) do
 
   create_table "about_conferences", force: :cascade do |t|
     t.string   "description"
@@ -105,6 +105,12 @@ ActiveRecord::Schema.define(version: 20171002024634) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "paper_submissions", force: :cascade do |t|
+    t.string   "url"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "photo_galleries", force: :cascade do |t|
     t.string   "url"
     t.datetime "created_at", null: false
@@ -117,6 +123,13 @@ ActiveRecord::Schema.define(version: 20171002024634) do
     t.string   "description"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+  end
+
+  create_table "publish_partners", force: :cascade do |t|
+    t.string   "image"
+    t.string   "url"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "sponsors", force: :cascade do |t|

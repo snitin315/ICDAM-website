@@ -4,6 +4,9 @@ class HomeController < ApplicationController
     @newsupdate = NewsUpdate.all
     @important_dates = ImportantDate.all
     @aboutconference = AboutConference.last.description
+    @sponsors = Sponsor.all
+    @papersubmission = PaperSubmission.all
+    @publishpartner = PublishPartner.all
 
   end
 
