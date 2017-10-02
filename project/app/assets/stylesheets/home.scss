@@ -1,17 +1,27 @@
 header{
   text-align: center;
   position: sticky;
-  top: -220px;
+  top: -240px;
   height: 300px;
-  padding-top: 50px;
+  padding-top: 26px;
+  text-transform: uppercase;
+
   background-color: #3498db;
 
   h3{
+    color: white;
     margin-top: 0px;
+    font-size: 30px;
+    font-weight:100;
+    line-height: 230px;
   }
   nav{
       position: absolute;
       bottom: 0px;
-      height:80px;
+      height:60px;
+      a{
+        padding-right: 50px;
+      }
+
   }
 }
