@@ -1,4 +1,4 @@
-ActiveAdmin.register PublishPartner do
+ActiveAdmin.register KeyNoteSpeaker do
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
 #
@@ -12,7 +12,7 @@ ActiveAdmin.register PublishPartner do
 #   permitted
 # end
 permit_params do
-  params = [:image,:url , :content]
+  params = [:image,:caption,:url]
   # params.push :author_id if current_user.admin?
   params
 end

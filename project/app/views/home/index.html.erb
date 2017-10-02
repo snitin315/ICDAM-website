@@ -106,10 +106,10 @@
               <% @publishpartner.each do |publishpartner| %>
               <div class="card">
                   <div class="card-image waves-effect waves-block waves-light">
-                    <img src="<%="/publishpartner/" + publishpartner.image%>" class="responsive-img activator">
+                    <img src="<%="/PublishPartner/" + publishpartner.image%>" class="responsive-img activator">
                   </div>
                   <div class="card-content">
-                    <span class="card-title activator grey-text text-darken-1"><a href="<%= publishpartner.url %>"></a></span>
+                    <span class="card-title activator grey-text text-darken-1"><a href="<%= publishpartner.url %>"><%= publishpartner.content %></a></span>
                   </div>
 
                 </div>
@@ -124,6 +124,73 @@
         </div>
 
       </div>
+
+
+
+      <div class="row">
+
+        <div class="col m12 s12 l3">
+          <div class="card-panel teal">
+            <span class="white-text">
+              <h5>Recent Visitors</h5><hr>
+              <div class="card">
+                  <div class="card-image waves-effect waves-block waves-light">
+                    <img src="/map1.png" class="responsive-img activator">
+                  </div>
+                </div>
+
+            </span>
+          </div>
+        </div>
+
+        <div class="col m12 s12 l5">
+          <div class="card-panel teal">
+            <span class="white-text">
+              <h5>Tourism Selection</h5><hr>
+              <% @papersubmission.each do |papersubmission| %>
+              <div class="card">
+                  <div class="card-image waves-effect waves-block waves-light">
+                    <img src="<%="/PaperSubmission/" + papersubmission.url%>" class="responsive-img activator">
+                  </div>
+
+                </div>
+
+              <% end %>
+            </span>
+          </div>
+
+        </div>
+        <div class="col m12 s12 l4">
+
+          <div class="card-panel teal">
+            <span class="white-text">
+              <h5>KeyNote Speaker</h5><hr>
+              <div class="card">
+                  <div class="card-image waves-effect waves-block waves-light">
+                    <img src="/akshardham.jpg" class="responsive-img activator">
+                  </div>
+
+                </div>
+
+            </span>
+          </div>
+
+
+
+
+        </div>
+
+      </div>
+
+
+
+
+
+
+
+
+
+
 
 
       <div class="row">
