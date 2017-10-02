@@ -1,10 +1,16 @@
 class HomeController < ApplicationController
   def index
+    @photogallery = PhotoGallery.all
+    @newsupdate = NewsUpdate.all
+    @important_dates = ImportantDate.all
+    @aboutconference = AboutConference.last.description
+
   end
 
   def about_institute
     @about_institute = AboutInstitute.last.content
     @important_dates = ImportantDate.all
+
   end
 
   def about_irdindia

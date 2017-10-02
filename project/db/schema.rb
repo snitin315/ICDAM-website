@@ -11,7 +11,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170927183345) do
+ActiveRecord::Schema.define(version: 20171002024634) do
+
+  create_table "about_conferences", force: :cascade do |t|
+    t.string   "description"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
 
   create_table "about_institutes", force: :cascade do |t|
     t.text     "content"
@@ -89,6 +95,18 @@ ActiveRecord::Schema.define(version: 20170927183345) do
   create_table "important_dates", force: :cascade do |t|
     t.string   "title"
     t.datetime "date"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "news_updates", force: :cascade do |t|
+    t.string   "news"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "photo_galleries", force: :cascade do |t|
+    t.string   "url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
