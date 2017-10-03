@@ -1,27 +1,27 @@
 <section class="paper_submission">
-  <h1>Paper Submission</h1>
   <div class="container">
     <div class="row">
       <div class="col m12 s12 l8">
         <div class="card-panel teal">
-          <div class="card-panel red">
+          <h1>Paper Submission</h1>
+
             Paper Submission : - Paper should be in the format strictly specified on the conference website. Only the selected papers will get the intimation who will be accepted for publication. Kindly do not submit the paper multiple times, it may lead to cancellation of an article/paper.
-Submit your paper ..................................................
-          </div>
-          <div class="card-panel red">
+Submit your paper .............
+<hr>
             Download Paper Template
               <br>
-            🔗  Download Paper Template (ICICC) : <%=link_to 'click here', url_for(controller: 'home', action: 'download_paper_template')%>
+             Download Paper Template (ICICC) <%=link_to url_for(controller: 'home', action: 'download_paper_template') do%>
+            <i class="fa fa-download" aria-hidden="true"></i>
 
-
-
-          </div>
-          <div class="card-panel red">
-            Clik the suitable button for paper submission
+            <%end%>
+<hr>
+            Click the suitable button for paper submission
               <br>
-            Click ☛  Abstarct paper submission <a class="waves-effect waves-light btn">Abstract Paper Submission</a>
 
-          </div>
+<a class="waves-effect waves-light btn">Abstract Paper Submission</a>
+            <a href="http://easychair.org/" class="waves-effect waves-light btn"> EasyChair</a>
+
+
         </div>
 
       </div>
