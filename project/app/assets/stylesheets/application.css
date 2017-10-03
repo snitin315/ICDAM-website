@@ -102,3 +102,9 @@ p {
   line-height: 2;
   color: #7f8c8d;
 }
+
+
+
+h1,h2,h3,h4,h5,h6,b {
+  font-family: 'Montserrat', sans-serif;
+  }
