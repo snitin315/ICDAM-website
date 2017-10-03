@@ -14,7 +14,7 @@ header{
     margin-top: 0px;
     font-size: 30px;
     font-weight:100;
-    
+
     // line-height: 230px;
   }
   h6{
@@ -95,7 +95,18 @@ section.conference_venue{
   h1{
     text-align: center;
   }
+
 }
+section.important_dates{
+  span.white-text{
+    b{
+      font-size: 20px;
+      text-transform: capitalize;
+    }
+  }
+}
+
+
 @media (max-width: 740px) {
   header{
     position: sticky;

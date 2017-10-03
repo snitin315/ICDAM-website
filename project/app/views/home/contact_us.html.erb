@@ -39,23 +39,24 @@ noty({
         <%=form_tag("/home/contact_us/post", method: :POST) do%>
           <div class="input-field col s6">
             <i class="material-icons prefix">account_circle</i>
-            <%=label_tag :name,"Name"%>
             <%= text_field_tag :name,nil,class: "validate", id: "icon_prefix"%>
+            <%=label_tag :name,"Name"%>
+
           </div>
           <div class="input-field col s6">
             <i class="material-icons prefix">email</i>
             <%= text_field_tag :email,nil,class: "validate", id: "icon_prefix"%>
-            <%=label_tag :email,"email"%>
+            <%=label_tag :email,"Email"%>
 
           </div>
           <div class="input-field col s12">
             <%= text_field_tag :subject,nil, id: "icon_prefix"%>
-            <%=label_tag :subject,"subject"%>
+            <%=label_tag :subject,"Subject"%>
           </div>
 
           <div class="input-field col s12">
-            <%=label_tag :content,nil%>
             <%= text_area_tag :content,nil, id: "textarea1",class: "materialize-textarea"%>
+            <%=label_tag :content,nil%>
 
           </div>
           <%=button_tag(type: "submit", class: "btn waves-effect waves-light") do%>
