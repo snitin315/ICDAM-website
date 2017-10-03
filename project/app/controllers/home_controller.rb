@@ -119,6 +119,7 @@ class HomeController < ApplicationController
 
   end
   def paper_submission
+    @important_dates = ImportantDate.all
 
   end
 
