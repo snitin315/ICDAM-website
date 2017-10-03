@@ -20,23 +20,54 @@
 <div class="nav-wrapper">
     <nav>
       <%= link_to "Home", url_for(controller: 'home', action: 'index') %>
-      <%= link_to "About", url_for(controller: 'home', action: 'index') %>
-      <%= link_to "Papers", url_for(controller: 'home', action: 'index') %>
+      <!-- <%= link_to "About", url_for(controller: 'home', action: 'index') %> -->
+      <a class="dropdown-button" data-activates="dropdown2" data-hover="true">About</a>
+
+      <!-- <%= link_to "Papers", url_for(controller: 'home', action: 'index') %> -->
+      <a class="dropdown-button" data-activates="dropdown3" data-hover="true">Papers</a>
+
       <%= link_to "Registration", url_for(controller: 'home', action: 'registration') %>
       <%= link_to "Sponsorship", url_for(controller: 'home', action: 'sponsorship') %>
       <%= link_to "Publication", url_for(controller: 'home', action: 'publication') %>
-      <%= link_to "Committee", url_for(controller: 'home', action: 'index') %>
+      <!-- <%= link_to "Committee", url_for(controller: 'home', action: 'index') %> -->
+      <a class="dropdown-button" data-activates="dropdown4" data-hover="true">Committee</a>
       <!-- <%= link_to "Explore", url_for(controller: 'home', action: 'index') %> -->
-      <a class="dropdown-button" href="#!" data-activates="dropdown1" data-hover="true">Explore</a>
+      <a class="dropdown-button" data-activates="dropdown1" data-hover="true">Explore</a>
 
     </nav>
 </div>
-    <ul id="dropdown1" class="dropdown-content">
-  <li><a href="#!">one</a></li>
-  <li><a href="#!">two</a></li>
-  <li class="divider"></li>
-  <li><a href="#!">three</a></li>
+
+<ul id="dropdown4" class="dropdown-content">
+  <li> <%= link_to "Steering Committee", url_for(controller: 'home', action: 'steeringcommittee') %></li>
+<li class="divider"></li>
+<li> <%= link_to "Technical Program Committee", url_for(controller: 'home', action: 'technicalprogramcommittee') %></li>
+<li class="divider"></li>
+<li> <%= link_to "Advisory Committee", url_for(controller: 'home', action: 'advisorycommittee') %></li>
 </ul>
+
+    <ul id="dropdown1" class="dropdown-content">
+  <li><a >one</a></li>
+  <li class="divider"></li>
+  <li><a >two</a></li>
+  <li class="divider"></li>
+  <li> <%= link_to "Contact Us", url_for(controller: 'home', action: 'contact_us') %></li>
+</ul>
+<ul id="dropdown2" class="dropdown-content">
+  <li> <%= link_to "About Institute", url_for(controller: 'home', action: 'about_institute') %></li>
+<li class="divider"></li>
+<li> <%= link_to "About IRD India", url_for(controller: 'home', action: 'about_irdindia') %></li>
+<li class="divider"></li>
+<li> <%= link_to "About Universal Innovators", url_for(controller: 'home', action: 'about_universal_innovators') %></li>
+</ul>
+
+<ul id="dropdown3" class="dropdown-content">
+  <li> <%= link_to "Call For Papers", url_for(controller: 'home', action: 'call_for_papers') %></li>
+<li class="divider"></li>
+<li> <%= link_to "Call For Special Submission", url_for(controller: 'home', action: 'special_submission') %></li>
+<li class="divider"></li>
+<li> <%= link_to "Paper Submission", url_for(controller: 'home', action: 'call_for_papers') %></li>
+</ul>
+
 
 
   </header>
