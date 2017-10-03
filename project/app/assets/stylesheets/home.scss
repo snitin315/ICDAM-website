@@ -1,7 +1,7 @@
 header{
   text-align: center;
   position: sticky;
-  top: -240px;
+  top: -260px;
   height: 300px;
   padding-top: 26px;
   text-transform: uppercase;
@@ -15,18 +15,23 @@ header{
     font-weight:100;
     // line-height: 230px;
   }
+  h6{
+    text-align: center;
+    width: 40%;
+    margin: auto;
+  }
   div.nav-wrapper{
     position: relative;
-    bottom: -128px;
+    bottom: -150px;
     nav{
+
         position: relative;
-        bottom: 0px;
-        position: sticky;
-        top: 0px;
-        // height:60px;
+        bottom: 126px;
+        height:40px;
         display: flex;
         justify-content: space-around;
-        font-size: 1.4vw;
+        align-items: center;
+        font-size: 1.2vw;
 
 
     }
