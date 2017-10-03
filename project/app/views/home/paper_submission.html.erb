@@ -27,14 +27,19 @@ Submit your paper .............
       </div>
       <div class="col m12 s12 l4">
         <div class="card-panel teal">
-          <h4>Important</h4>
-          <ul>
-            <li id="heading_li"><i class="fa fa-hand-o-right" aria-hidden="true"></i>
-heading</li>
-            <li id="date_li"><i class="fa fa-hand-o-right" aria-hidden="true"></i>
-date</li>
-          </ul>
-        </div>
-    </div>
+          <span class="white-text">
+            <b>Important Dates</b>
+            <hr />
+         <% @important_dates.each do |impdate| %>
+             <b><%= impdate.title %></b>
+             <br>
+             <%= impdate.date.to_date.to_formatted_s(:long_ordinal) %>
+             <br><hr />
+
+         <% end %>
+       </span>
+     </div>
+     </div>
+
   </div>
 </section>

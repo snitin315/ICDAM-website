@@ -110,8 +110,16 @@ class HomeController < ApplicationController
     UserMailer.special_submission(@name,@email,@number,@introduction,@objective,@paper_count,@file).deliver_now
     return redirect_to '/home/special_submission'
   end
+  def conference_venue
+  end
 
+
+  def important_dates
+    @important_dates = ImportantDate.all
+
+  end
   def paper_submission
+    @important_dates = ImportantDate.all
 
   end
 

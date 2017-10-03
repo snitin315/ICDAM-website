@@ -20,6 +20,12 @@ Rails.application.routes.draw do
   get 'home/paper_submission'
   get 'home/download_paper_template'
 
+  get 'home/conference_venue'
+  get 'home/important_dates'
+
+
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
