@@ -106,9 +106,21 @@ class HomeController < ApplicationController
     @introduction= params["introduction"]
     @objective=params["objective"]
     @paper_count=params["paper_count"]
+      if params['file'] != nil
     @file = save_file(params["file"])
-    UserMailer.special_submission(@name,@email,@number,@introduction,@objective,@paper_count,@file).deliver_now
-    return redirect_to '/home/special_submission'
+  end
+    unless @name=="" || @email=="" || @number=="" || @introduction=="" || @objective =="" || @paper_count==""
+
+      UserMailer.special_submission(@name,@email,@number,@introduction,@objective,@paper_count,@file).deliver_now
+      @response=true
+      session[:response]=@response
+      return redirect_to '/home/special_submission'
+    else
+      @response="empty"
+      session[:response]=@response
+      redirect_to "/home/special_submission"
+    end
+
   end
   def conference_venue
   end
