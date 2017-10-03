@@ -98,7 +98,7 @@ section.conference_venue{
 
 }
 
-section.technicalprogramcommittee, section.steeringcommittee, section.paper_submission, section.call_for_papers, section.registration, section.special_submission, section.publication, section.advisorycommittee{
+section.technicalprogramcommittee, section.steeringcommittee, section.paper_submission, section.call_for_papers, section.registration, section.special_submission, section.publication, section.advisorycommittee, section.sponsorship{
   div.l4{
     span.white-text{
       b{
@@ -120,12 +120,19 @@ section.steeringcommittee{
 
   }
   b.name{
-    
+
     margin-left: 20px;
 
   }
 }
-
+section.sponsorship{
+  div.card-image{
+    img{
+      width:240px;
+      height: 180px;
+    }
+  }
+}
 section.important_dates{
   span.white-text{
       b{
