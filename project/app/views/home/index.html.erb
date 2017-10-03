@@ -68,7 +68,7 @@
               <h5>Sponsors</h5><hr>
               <% @sponsors.each do |sponsor| %>
               <div class="card">
-                  <div class="card-image waves-effect waves-block waves-light">
+                  <div class="card-image">
                     <img src="<%="/sponsors/" + sponsor.image%>" class="responsive-img activator">
                   </div>
                   <div class="card-content">
@@ -87,7 +87,7 @@
               <h5>Paper Submission</h5><hr>
               <% @papersubmission.each do |papersubmission| %>
               <div class="card">
-                  <div class="card-image waves-effect waves-block waves-light">
+                  <div class="card-image">
                     <img src="<%="/PaperSubmission/" + papersubmission.url%>" class="responsive-img activator">
                   </div>
 
@@ -105,7 +105,7 @@
               <h5>Publish Partner</h5><hr>
               <% @publishpartner.each do |publishpartner| %>
               <div class="card">
-                  <div class="card-image waves-effect waves-block waves-light">
+                  <div class="card-image">
                     <img src="<%="/PublishPartner/" + publishpartner.image%>" class="responsive-img activator">
                   </div>
                   <div class="card-content">
@@ -134,7 +134,7 @@
             <span class="white-text">
               <h5>Recent Visitors</h5><hr>
               <div class="card">
-                  <div class="card-image waves-effect waves-block waves-light">
+                  <div class="card-image">
                     <img src="/map1.png" class="responsive-img activator">
                   </div>
                 </div>
@@ -147,15 +147,13 @@
           <div class="card-panel teal">
             <span class="white-text">
               <h5>Tourism Selection</h5><hr>
-              <% @papersubmission.each do |papersubmission| %>
               <div class="card">
-                  <div class="card-image waves-effect waves-block waves-light">
-                    <img src="<%="/PaperSubmission/" + papersubmission.url%>" class="responsive-img activator">
+                  <div class="card-image">
+                    <img src="/akshardham.jpg" class="responsive-img activator">
                   </div>
 
                 </div>
 
-              <% end %>
             </span>
           </div>
 
@@ -165,13 +163,18 @@
           <div class="card-panel teal">
             <span class="white-text">
               <h5>KeyNote Speaker</h5><hr>
-              <div class="card">
-                  <div class="card-image waves-effect waves-block waves-light">
-                    <img src="/akshardham.jpg" class="responsive-img activator">
-                  </div>
+              <% @keynotespeaker.each do |keynotespeaker| %>
 
+              <div class="card">
+                <div class="card-image">
+                  <img src="<%="/keynotespeaker/" + keynotespeaker.image%>" class="responsive-img activator">
+                </div>
+                <div class="card-content">
+                  <span class="card-title activator grey-text text-darken-1"><a href="<%= keynotespeaker.url %>"><%= keynotespeaker.caption %></a></span>
                 </div>
 
+                </div>
+            <% end %>
             </span>
           </div>
 

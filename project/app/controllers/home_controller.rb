@@ -94,6 +94,7 @@ class HomeController < ApplicationController
   end
 
   def special_submission
+    @important_dates = ImportantDate.all
     @response= session[:response]
   end
 
