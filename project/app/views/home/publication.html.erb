@@ -10,12 +10,13 @@
                   <h5>Publication</h5><hr>
 
                    <% @publication.each do |publish| %>
-                   <b><%= publish.title %></b>
+                   <i class="fa fa-eercast" aria-hidden="true"></i>
+<b><%= publish.title %></b>
                    <br>
                       <%= publish.weblink %>
                    <br>
                    <%= publish.description %>
-                   <br>
+                   <br><br />
                    <br />
                <% end %>
              </span>
