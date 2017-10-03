@@ -59,7 +59,24 @@ section.paper_submission{
   }
 
 }
-
+footer{
+  div#social{
+    text-align: center;
+  }
+  div{
+    li{
+      text-align: center;
+    }
+  }
+  a.fa{
+    font-size: 30px;
+    padding-right: 5px;
+    color: white;
+  }
+  h5{
+    text-align: center;
+  }
+}
 
 
 @media (max-width: 740px) {
