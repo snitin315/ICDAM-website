@@ -111,6 +111,18 @@ class HomeController < ApplicationController
     return redirect_to '/home/special_submission'
   end
 
+
+  def conference_venue
+  end
+
+
+  def important_dates
+    @important_dates = ImportantDate.all
+
+  end
+
+
+
   private
     def save_file(uploaded_file)
       filename = SecureRandom.hex(6)+ "."+uploaded_file.original_filename.split('.')[-1]

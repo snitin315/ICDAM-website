@@ -46,9 +46,9 @@
     </ul>
 
     <ul id="dropdown1" class="dropdown-content">
-      <li><a >one</a></li>
+      <li> <%= link_to "Important Dates", url_for(controller: 'home', action: 'important_dates') %></li>
       <li class="divider"></li>
-      <li><a >two</a></li>
+      <li> <%= link_to "Conference Venue", url_for(controller: 'home', action: 'conference_venue') %></li>
       <li class="divider"></li>
       <li> <%= link_to "Contact Us", url_for(controller: 'home', action: 'contact_us') %></li>
     </ul>

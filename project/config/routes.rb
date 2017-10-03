@@ -17,6 +17,10 @@ Rails.application.routes.draw do
   post 'home/contact_us/post' => 'home#contact_us_post'
   get 'home/special_submission'
   post 'home/special_submission/post' => 'home#special_submission_post'
+  get 'home/conference_venue'
+  get 'home/important_dates'
+
+
 
 
   # The priority is based upon order of creation: first created -> highest priority.
