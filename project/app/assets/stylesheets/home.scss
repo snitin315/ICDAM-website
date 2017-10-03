@@ -33,6 +33,26 @@ header{
   }
 
 }
+section.paper_submission{
+  h1{
+    color:teal;
+    text-align: center;
+  }
+  div.card-panel{
+
+    h4{
+      text-align: center;
+    }
+    ul{
+      li#heading_li{
+        font-weight: bold;
+
+      }
+
+    }
+  }
+
+}
 
 
 @media (max-width: 740px) {

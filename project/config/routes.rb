@@ -17,6 +17,9 @@ Rails.application.routes.draw do
   post 'home/contact_us/post' => 'home#contact_us_post'
   get 'home/special_submission'
   post 'home/special_submission/post' => 'home#special_submission_post'
+  get 'home/paper_submission'
+  get 'home/download_paper_template'
+
   get 'home/conference_venue'
   get 'home/important_dates'
 

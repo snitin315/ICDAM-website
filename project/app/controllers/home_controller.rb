@@ -110,8 +110,6 @@ class HomeController < ApplicationController
     UserMailer.special_submission(@name,@email,@number,@introduction,@objective,@paper_count,@file).deliver_now
     return redirect_to '/home/special_submission'
   end
-
-
   def conference_venue
   end
 
@@ -120,7 +118,19 @@ class HomeController < ApplicationController
     @important_dates = ImportantDate.all
 
   end
+  def paper_submission
 
+  end
+
+  def download_paper_template
+
+    filepath= Dir.pwd + '/public/PaperSubmission/paper_template.pdf'
+    send_file(
+    filepath,
+    filename: "paper_template.pdf",
+    type: "application/pdf"
+  )
+  end
 
 
   private
