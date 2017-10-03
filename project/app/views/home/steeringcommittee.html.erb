@@ -6,10 +6,11 @@
            <span class="white-text">
               <h5>Steering Committee</h5><hr>
              <% @steercompost.each do |post| %>
-                 <b><%= post.position %></b><br>
+                 <b class="position"><%= post.position %><%=":"%></b><br>
                    <% post.allmembers.each do |members| %>
-                      <b><%= members.name %></b><%="  :  "%><%= members.information %><br>
+                      <b class="name"><%= members.name %></b><%="  ("%><%= members.information %><%=")"%><br>
                    <%end%>
+                   <hr>
              <%end%>
 
          </span>

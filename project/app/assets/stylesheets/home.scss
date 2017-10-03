@@ -97,6 +97,27 @@ section.conference_venue{
   }
 
 }
+
+section.technicalprogramcommittee, section.steeringcommittee{
+  span.white-text{
+    b{
+      text-transform: capitalize;
+    }
+  }
+}
+section.steeringcommittee{
+  b.position{
+    font-weight: 400;
+    font-size: 24px;
+    text-transform: capitalize;
+    color: red;
+  }
+  b.name{
+    margin-left: 20px;
+    color: black;
+  }
+}
+
 section.important_dates{
   span.white-text{
       b{
