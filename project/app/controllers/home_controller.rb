@@ -71,7 +71,8 @@ class HomeController < ApplicationController
 
   end
 
-  def post
+  def contact_us_post
+
     # byebug
     @name=params["name"]
     @email=params["email"]
@@ -90,9 +91,36 @@ class HomeController < ApplicationController
 
     end
 
-
-
-
   end
+
+  def special_submission
+    @response= session[:response]
+  end
+
+  def special_submission_post
+    # byebug
+    @name=params["name"]
+    @email=params["email"]
+    @number=params["number"]
+    @introduction= params["introduction"]
+    @objective=params["objective"]
+    @paper_count=params["paper_count"]
+    @file = save_file(params["file"])
+    UserMailer.special_submission(@name,@email,@number,@introduction,@objective,@paper_count,@file).deliver_now
+    return redirect_to '/home/special_submission'
+  end
+
+  private
+    def save_file(uploaded_file)
+      filename = SecureRandom.hex(6)+ "."+uploaded_file.original_filename.split('.')[-1]
+      filepath = Dir.pwd + "/public/uploads/" + filename
+      File.open(filepath,'wb') do |file|
+			file.write(uploaded_file.read())
+		end
+    return filename
+    end
+
+
+
 
 end

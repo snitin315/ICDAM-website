@@ -14,7 +14,9 @@ Rails.application.routes.draw do
   get 'home/sponsorship'
   get 'home/publication'
   get 'home/contact_us'
-  post 'home/contact_us/post' => 'home#post'
+  post 'home/contact_us/post' => 'home#contact_us_post'
+  get 'home/special_submission'
+  post 'home/special_submission/post' => 'home#special_submission_post'
 
 
   # The priority is based upon order of creation: first created -> highest priority.
