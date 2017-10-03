@@ -99,8 +99,12 @@ section.conference_venue{
 }
 section.important_dates{
   span.white-text{
-    b{
-      font-size: 20px;
+      b{
+        font-size: 22px;
+      }
+    span{
+      font-size: 18px;
+      font-weight: 600;
       text-transform: capitalize;
     }
   }
