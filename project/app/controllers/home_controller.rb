@@ -111,6 +111,21 @@ class HomeController < ApplicationController
     return redirect_to '/home/special_submission'
   end
 
+  def paper_submission
+
+  end
+
+  def download_paper_template
+
+    filepath= Dir.pwd + '/public/PaperSubmission/paper_template.pdf'
+    send_file(
+    filepath,
+    filename: "paper_template.pdf",
+    type: "application/pdf"
+  )
+  end
+
+
   private
     def save_file(uploaded_file)
       filename = SecureRandom.hex(6)+ "."+uploaded_file.original_filename.split('.')[-1]

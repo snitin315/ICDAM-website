@@ -17,7 +17,8 @@ Rails.application.routes.draw do
   post 'home/contact_us/post' => 'home#contact_us_post'
   get 'home/special_submission'
   post 'home/special_submission/post' => 'home#special_submission_post'
-
+  get 'home/paper_submission'
+  get 'home/download_paper_template'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
