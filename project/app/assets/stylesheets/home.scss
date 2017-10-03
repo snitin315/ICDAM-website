@@ -98,23 +98,31 @@ section.conference_venue{
 
 }
 
-section.technicalprogramcommittee, section.steeringcommittee{
-  span.white-text{
-    b{
-      text-transform: capitalize;
+section.technicalprogramcommittee, section.steeringcommittee, section.paper_submission, section.call_for_papers, section.registration, section.special_submission, section.publication, section.advisorycommittee{
+  div.l4{
+    span.white-text{
+      b{
+        text-transform: capitalize;
+      }
     }
   }
+
 }
 section.steeringcommittee{
+  h5{
+    font-size: 3em;
+  }
+  color: white;
   b.position{
     font-weight: 400;
     font-size: 24px;
     text-transform: capitalize;
-    color: red;
+
   }
   b.name{
+    
     margin-left: 20px;
-    color: black;
+
   }
 }
 

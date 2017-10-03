@@ -8,7 +8,7 @@
              <% @steercompost.each do |post| %>
                  <b class="position"><%= post.position %><%=":"%></b><br>
                    <% post.allmembers.each do |members| %>
-                      <b class="name"><%= members.name %></b><%="  ("%><%= members.information %><%=")"%><br>
+                      <b class="name"><%= members.name + "   "%></b>&nbsp &nbsp<%="("%><%= members.information %><%=")"%><br>
                    <%end%>
                    <hr>
              <%end%>
