@@ -120,12 +120,19 @@ section.steeringcommittee{
 
   }
   b.name{
-    
+
     margin-left: 20px;
 
   }
 }
-
+section.sponsorship{
+  div.card-image{
+    img{
+      width:240px;
+      height: 180px;
+    }
+  }
+}
 section.important_dates{
   span.white-text{
       b{
