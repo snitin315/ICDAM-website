@@ -7,6 +7,13 @@
 
 
 </head>
+<style type="text/css">
+.container {
+  margin: 0 auto;
+  max-width: 1390px;
+  width: 90%;
+}
+</style>
 <body>
   <div class="parallax-container" style="z-index: -10;">
     <div class="parallax">
@@ -59,45 +66,57 @@
 
 
       </div>
+      <div class="row">
+        <% @sponsors.each do |sponsor| %>
+        <!-- <div class="col s12 m12 l12"> -->
+        <%= render 'sponsor' , sponsor: sponsor %>
+        <!-- </div> -->
+        <% end %>
+      </div>
 
       <div class="row">
 
-        <div class="col m12 s12 l3">
-          <div class="card-panel teal">
-            <span class="white-text">
-              <h5>Sponsors</h5><hr>
-              <% @sponsors.each do |sponsor| %>
-              <div class="card">
-                  <div class="card-image">
-                    <img src="<%="/sponsors/" + sponsor.image%>" class="responsive-img activator">
-                  </div>
-                  <div class="card-content">
-                    <span class="card-title activator grey-text text-darken-1"><%= sponsor.caption %></span>
-                  </div>
-                </div>
-
-              <% end %>
-            </span>
-          </div>
-        </div>
-
-        <div class="col m12 s12 l5">
+        <div class="col m12 s12 l6">
           <div class="card-panel teal">
             <span class="white-text">
               <h5>Paper Submission</h5><hr>
               <% @papersubmission.each do |papersubmission| %>
               <div class="card">
-                  <div class="card-image">
-                    <img src="<%="/PaperSubmission/" + papersubmission.url%>" class="responsive-img activator">
-                  </div>
-
+                <div class="card-image">
+                  <img src="<%="/PaperSubmission/" + papersubmission.url%>" class="responsive-img activator">
                 </div>
+
+              </div>
 
               <% end %>
             </span>
           </div>
 
         </div>
+
+        <div class="col m12 s12 l6">
+          <div class="card-panel teal">
+            <span class="white-text">
+              <h5>Tourism Selection</h5><hr>
+              <div class="card">
+                <div class="card-image">
+                  <img src="/akshardham.jpg" class="responsive-img activator">
+                </div>
+
+              </div>
+
+            </span>
+          </div>
+
+        </div>
+      </div>
+
+
+
+      <div class="row">
+
+
+        
         <div class="col m12 s12 l4">
 
           <div class="card-panel teal">
@@ -105,58 +124,31 @@
               <h5>Publish Partner</h5><hr>
               <% @publishpartner.each do |publishpartner| %>
               <div class="card">
-                  <div class="card-image">
-                    <img src="<%="/PublishPartner/" + publishpartner.image%>" class="responsive-img activator">
-                  </div>
-                  <div class="card-content">
-                    <span class="card-title activator grey-text text-darken-1"><a href="<%= publishpartner.url %>"><%= publishpartner.content %></a></span>
-                  </div>
-
+                <div class="card-image">
+                  <img src="<%="/PublishPartner/" + publishpartner.image%>" class="responsive-img activator">
                 </div>
+                <div class="card-content">
+                  <span class="card-title activator grey-text text-darken-1"><a href="<%= publishpartner.url %>"><%= publishpartner.content %></a></span>
+                </div>
+
+              </div>
 
               <% end %>
             </span>
           </div>
-
-
-
-
         </div>
-
-      </div>
-
-
-
-      <div class="row">
-
         <div class="col m12 s12 l3">
           <div class="card-panel teal">
             <span class="white-text">
               <h5>Recent Visitors</h5><hr>
               <div class="card">
-                  <div class="card-image">
-                    <img src="/map1.png" class="responsive-img activator">
-                  </div>
+                <div class="card-image">
+                  <img src="/map1.png" class="responsive-img activator">
                 </div>
+              </div>
 
             </span>
           </div>
-        </div>
-
-        <div class="col m12 s12 l5">
-          <div class="card-panel teal">
-            <span class="white-text">
-              <h5>Tourism Selection</h5><hr>
-              <div class="card">
-                  <div class="card-image">
-                    <img src="/akshardham.jpg" class="responsive-img activator">
-                  </div>
-
-                </div>
-
-            </span>
-          </div>
-
         </div>
         <div class="col m12 s12 l4">
 
@@ -173,8 +165,8 @@
                   <span class="card-title activator grey-text text-darken-1"><a href="<%= keynotespeaker.url %>"><%= keynotespeaker.caption %></a></span>
                 </div>
 
-                </div>
-            <% end %>
+              </div>
+              <% end %>
             </span>
           </div>
 
@@ -186,16 +178,6 @@
       </div>
 
 
-
-
-
-
-
-
-
-
-
-
       <div class="row">
 
         <div class="col m12 s12 l12">
@@ -203,18 +185,10 @@
             <% @photogallery.each do |photo| %>
             <a class="carousel-item" ><img src="<%="/gallery/" + photo.url%>"></a>
             <% end %>
-
           </div>
-
         </div>
-
       </div>
-
-
     </div>
-
-
-
   </body>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js'></script>
@@ -222,6 +196,4 @@
   $(document).ready(function () {
     $('.parallax').parallax();
   });
-
-
   </script>
