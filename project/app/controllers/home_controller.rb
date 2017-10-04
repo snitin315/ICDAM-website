@@ -6,7 +6,7 @@ class HomeController < ApplicationController
     @aboutconference = AboutConference.last.description
     @sponsors = Sponsor.all
     @papersubmission = PaperSubmission.all
-    @publishpartner = PublishPartner.all
+    @publishpartners = PublishPartner.all
     @keynotespeaker = KeyNoteSpeaker.all
 
   end
