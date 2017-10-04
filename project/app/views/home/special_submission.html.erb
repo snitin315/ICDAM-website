@@ -1,6 +1,7 @@
 <%if @response==true %>
 <%session[:response]=false%>
 <script type="text/javascript">
+
 noty({
   text: '',
   type: 'success',
@@ -14,23 +15,55 @@ noty({
 );
 
 </script>
+
 <%end%>
 <%if @response=="empty" %>
 <%session[:response]=false%>
 <script type="text/javascript">
+
 console.log("inside fail callback");
-noty({
-  text: 'fields marked with * are mandatory',
-  type: 'error',
-  animation: {
-        open: 'animated bounceInRight', // Animate.css class names
-        close: 'animated bounceOutRight' // Animate.css class names
-    }
-  }
-);
+
+
+var name_field=$('input[name=name]');
+var email_field=$('input[name=email]')
+var number_field =$('input[name=number]')
+var introduction_field =$('textarea[name=introduction]')
+var objective_field=$('textarea[name=objective]');
+var paper_count_field =$('input[name=paper_count]')
+
+if(name_field.val()==""){
+  var name_field_div = $('#name_field_div');
+  name_field_div.append('<p style="color: red; width: auto; font-size: 100%" class="prefix">Atleast one Guest Editor is required!</p>');
+}
+
+if (email_field.val()==""){
+  var email_field_div = $('#email_field_div');
+  email_field_div.append('<p style="color: red">email is required!</p>');
+}
+if (number_field.val()==""){
+  var number_field_div = $('#number_field_div');
+  number_field_div.append('<p style="color: red">Phone number is required!</p>');
+}
+
+if (introduction_field.val()==""){
+  var introduction_field_div = $('#introduction_field_div');
+  introduction_field_div.append('<p style="color: red">introduction is required!</p>');
+}
+if (objective_field.val()==""){
+  var objective_field_div = $('#objective_field_div');
+  objective_field_div.append('<p style="color: red">objective is required!</p>');
+}
+
+if (paper_count_field.val()==""){
+  var paper_count_field_div = $('#paper_count_field_div');
+  paper_count_field_div.append('<p style="color: red">Please specify number of pages</p>');
+}
+
 
 </script>
+
 <%end%>
+
 <section class="special_submission">
   <div class="container">
     <div class="row">
@@ -84,38 +117,38 @@ noty({
 
 
 
-        <%=form_tag '/home/special_submission/post', method: :POST, :enctype =>"multipart/form-data"   do%>
-        <div class="input-field col s6">
+        <%=form_tag '/home/special_submission/post', method: :POST, :enctype =>"multipart/form-data",authenticity_token: true,remote: true   do%>
+        <div class="input-field col s6" id="name_field_div">
           <i class="material-icons prefix">account_circle</i>
           <%=label_tag :name,"Guest Editor(s)*"%>
           <%= text_field_tag :name,nil,class: "validate", id: "icon_prefix"%>
         </div>
-        <div class="input-field col s6">
+        <div class="input-field col s6" id="email_field_div">
           <i class="material-icons prefix">email</i>
           <%= email_field_tag :email,nil,class: "validate", id: "icon_prefix"%>
           <%=label_tag :email,"email*"%>
 
         </div>
-        <div class="input-field col s6">
+        <div class="input-field col s6" id="number_field_div">
           <i class="material-icons prefix">phone</i>
           <%= number_field_tag :number,nil,class: "validate", id: "icon_prefix"%>
           <%=label_tag :number,"Phone Number*"%>
 
         </div>
 
-        <div class="input-field col s12">
+        <div class="input-field col s12" id="introduction_field_div">
           <%=label_tag :introduction,"introduction*"%>
           <%= text_area_tag :introduction,nil, id: "textarea1",class: "materialize-textarea"%>
 
         </div>
 
-        <div class="input-field col s12">
+        <div class="input-field col s12" id="objective_field_div">
           <%=label_tag :objective,"objective and significance of special session*"%>
           <%= text_area_tag :objective,nil, id: "textarea1",class: "materialize-textarea"%>
 
         </div>
 
-        <div class="input-field col s6">
+        <div class="input-field col s6" id="paper_count_field_div">
 
           <%= number_field_tag :paper_count,nil,class: "validate", id: "icon_prefix"%>
           <%=label_tag :number,"Expected number of papers*"%>
@@ -133,7 +166,7 @@ noty({
         </div>
 
         <div class="input-field col s6">
-          <%=button_tag(type: "submit", class: "btn waves-effect waves-light") do%>
+          <%=button_tag(type: "submit", class: "btn waves-effect waves-light", id: "special_submission_submit") do%>
           Send
           <%end%>
         </div>

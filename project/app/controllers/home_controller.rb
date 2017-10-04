@@ -78,17 +78,25 @@ class HomeController < ApplicationController
     @email=params["email"]
     @subject=params["subject"]
     @content= params["content"]
-    unless @name=="" || @email=="" || @content=="" || @subject==""
-      UserMailer.contact_us(@name,@email,@content,@subject).deliver_now
-      @response=true
-      session[:response]=@response
-      redirect_to "/home/contact_us"
-    else
-      @response="empty"
-      session[:response]=@response
+    respond_to do |format|
+      unless @name=="" || @email=="" || @content=="" || @subject==""
+        @response=true
+        format.js{}
+        UserMailer.contact_us(@name,@email,@content,@subject).deliver_now
 
-      redirect_to "/home/contact_us"
+        session[:response]=@response
+        format.html{ redirect_to "/home/contact_us"
+            }
 
+      else
+        @response="empty"
+        session[:response]=@response
+        format.html{      redirect_to "/home/contact_us"
+        }
+        format.js{
+        }
+
+      end
     end
 
   end
@@ -106,21 +114,41 @@ class HomeController < ApplicationController
     @introduction= params["introduction"]
     @objective=params["objective"]
     @paper_count=params["paper_count"]
-      if params['file'] != nil
-    @file = save_file(params["file"])
-  end
-    unless @name=="" || @email=="" || @number=="" || @introduction=="" || @objective =="" || @paper_count==""
+    if params['file'] != nil
+      @file = save_file(params["file"])
+      respond_to do |format|
+        unless @name=="" || @email=="" || @number=="" || @introduction=="" || @objective =="" || @paper_count==""
 
-      UserMailer.special_submission(@name,@email,@number,@introduction,@objective,@paper_count,@file).deliver_now
-      @response=true
-      session[:response]=@response
-      return redirect_to '/home/special_submission'
+          UserMailer.special_submission(@name,@email,@number,@introduction,@objective,@paper_count,@file).deliver_now
+          @response=true
+          session[:response]=@response
+        format.html{return redirect_to '/home/special_submission'}
+        else
+          @response="empty"
+          session[:response]=@response
+          format.js{}
+          format.html{redirect_to "/home/special_submission"}
+        end
+      end
+
     else
-      @response="empty"
-      session[:response]=@response
-      redirect_to "/home/special_submission"
-    end
+      
+    respond_to do |format|
+      unless @name=="" || @email=="" || @number=="" || @introduction=="" || @objective =="" || @paper_count==""
 
+        UserMailer.special_submission(@name,@email,@number,@introduction,@objective,@paper_count,@file).deliver_now
+        @response=true
+        session[:response]=@response
+        format.js{}
+        format.html{return redirect_to '/home/special_submission'}
+      else
+        @response="empty"
+        session[:response]=@response
+        format.js{}
+        format.html{redirect_to "/home/special_submission"}
+      end
+    end
+    end
   end
   def conference_venue
   end

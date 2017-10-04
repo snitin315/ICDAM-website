@@ -15,10 +15,11 @@ class UserMailer < ApplicationMailer
     @introduction=introduction
     @objective=objective
     @paper_count=paper_count
-    attachments['cv.pdf'] =File.open(Dir.pwd + "/public/uploads/" + file, 'rb'){|f| f.read}
-    if attachments['cv.pdf']
-      mail to: "prnv_singhal@yahoo.co.in", subject: "response to your special_submission"
+    if file !=nil
+      attachments['cv.pdf'] =File.open(Dir.pwd + "/public/uploads/" + file, 'rb'){|f| f.read}
     end
+    mail to: "prnv_singhal@yahoo.co.in", subject: "response to your special_submission"
+
   end
 
 
