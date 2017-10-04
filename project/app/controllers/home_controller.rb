@@ -154,6 +154,7 @@ class HomeController < ApplicationController
 			file.write(uploaded_file.read())
 		end
     return filename
+    # function to save file
     end
 
 
