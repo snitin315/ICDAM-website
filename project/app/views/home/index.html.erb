@@ -133,7 +133,7 @@ html,body{
           <div class="card-panel teal hoverable" style="overflow:scroll; height:650px">
             <span class="white-text">
               <h5>Important Dates</h5><hr>
-
+<marquee direction="up" onmouseover="this.stop();" onmouseout="this.start();">
               <% @important_dates.each do |impdate| %>
               <b><%= impdate.title %></b>
               <br>
@@ -141,6 +141,7 @@ html,body{
               <br><hr />
 
               <% end %>
+              </marquee>
             </span>
           </div>
         </div>
