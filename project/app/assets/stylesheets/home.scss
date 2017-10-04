@@ -37,12 +37,20 @@ header{
         font-size: 1.2vw;
 
         a{
-          // height: 40px;
-          vertical-align:middle;
+          height: 40px;
+          // vertical-align:middle;
 
           // padding-bottom: 10px;
         }
 
+    }
+  }
+  ul{
+    a{
+      height: 60px;
+    }
+    li{
+      height: 60px;
     }
   }
 
