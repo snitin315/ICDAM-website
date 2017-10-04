@@ -7,7 +7,7 @@ header{
   padding-top: 26px;
   text-transform: uppercase;
   z-index: 100;
-  background-color: #009688;
+  background-color: #3498DB;
 
   h3{
     color: white;
@@ -27,7 +27,7 @@ header{
     bottom: -150px;
 
     nav{
-
+        background-color: #2F89C5;
         position: relative;
         bottom: 126px;
         height:40px;
@@ -75,6 +75,7 @@ section.paper_submission{
 
 }
 footer{
+
   div#social{
     text-align: center;
   }
@@ -99,6 +100,11 @@ section.conference_venue{
 
 }
 
+section.special_submission{
+margin-top: 140px;
+}
+
+
 section.technicalprogramcommittee, section.steeringcommittee, section.paper_submission, section.call_for_papers, section.registration, section.special_submission, section.publication, section.advisorycommittee, section.sponsorship{
   div.l4{
     span.white-text{
@@ -111,7 +117,8 @@ section.technicalprogramcommittee, section.steeringcommittee, section.paper_subm
 }
 section.steeringcommittee{
   h5{
-    font-size: 3em;
+    // font-size: 3em;
+    font-weight: 400;
   }
   color: white;
   b.position{

@@ -118,3 +118,8 @@ header *{
   font-family: 'Righteous', cursive;
 
 }
+
+
+footer.page-footer {
+  background-color: #3ba7ef;
+}
