@@ -12,6 +12,13 @@
 html,body{
 
 }
+div.container div.row div.l4 div.card-panel{
+  height: 300px
+}
+
+div.container div.row div.l4 marquee{
+  height: 200px;
+}
 div.card-panel{
   background-color: #74b5eb;
 }
@@ -26,7 +33,7 @@ div.card-panel{
   top: 50%;
   transform: translateY(-50%);
   overflow: hidden;
-  background-color: #74b5eb; 
+  background-color: #74b5eb;
 }
 #carousel h3{
   margin-left: 685px;
@@ -110,15 +117,17 @@ div.card-panel{
       <div class="row">
 
         <div class="col m12 s12 l3" >
-          <div class="card-panel  hoverable "style="overflow:scroll; height:650px">
+          <div class="card-panel  hoverable "style="height:300px">
             <span class="white-text">
               <h5>News Update</h5><hr>
+              <marquee style="height:300px" direction="up" onmouseover="this.stop();" onmouseout="this.start();">
 
               <% @newsupdate.each do |newsupdate| %>
               <b><%= newsupdate.news %></b>
               <br>
 
               <% end %>
+            </marquee>
             </span>
           </div>
         </div>
@@ -133,7 +142,7 @@ div.card-panel{
           </div>
         </div>
         <div class="col m12 s12 l4">
-          <div class="card-panel  hoverable" style="overflow:scroll; height:650px">
+          <div class="card-panel  hoverable" style=" height:300px">
             <span class="white-text">
               <h5>Important Dates</h5><hr>
 <marquee direction="up" onmouseover="this.stop();" onmouseout="this.start();">
@@ -214,13 +223,18 @@ div.card-panel{
           <div class="card-panel  hoverable">
             <span class="white-text">
               <h5>Publishing Partner</h5><hr>
+              <div class="row">
 
               <% @publishpartners.each do |publishpartner| %>
+                    <div class="col m3 s3 l6">
+                      <img src="<%="/PublishPartner/" + publishpartner.image%>" style="width:150px;">
+                      <span><a href="<%= publishpartner.url %>"><%= publishpartner.content %></a></span>
+                    </div>
 
-                  <img src="<%="/PublishPartner/" + publishpartner.image%>" style="width:150px;">
-                  <span><a href="<%= publishpartner.url %>"><%= publishpartner.content %></a></span>
 
               <% end %>
+            </div>
+
             </span>
           </div>
         </div>
@@ -242,14 +256,19 @@ div.card-panel{
           <div class="card-panel  hoverable">
             <span class="white-text">
               <h5>KeyNote Speaker</h5><hr>
-              <% @keynotespeaker.each do |keynotespeaker| %>
+              <div class="row">
+                <% @keynotespeaker.each do |keynotespeaker| %>
+                    <div class="col s3 m3 l6">
+                      <img src="<%="/keynotespeaker/" + keynotespeaker.image%>"  style="width:150px;">
+
+                      <span><a href="<%= keynotespeaker.url %>"><%= keynotespeaker.caption %></a></span>
+                    </div>
 
 
-                  <img src="<%="/keynotespeaker/" + keynotespeaker.image%>"  style="width:150px;">
 
-                  <span><a href="<%= keynotespeaker.url %>"><%= keynotespeaker.caption %></a></span>
+                <% end %>
+              </div>
 
-              <% end %>
             </span>
           </div>
 

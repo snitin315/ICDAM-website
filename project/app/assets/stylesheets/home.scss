@@ -1,10 +1,16 @@
 
 header{
+  div.row{
+    margin: 0;
+    h3{
+      margin:0;
+    }
+  }
   text-align: center;
   position: sticky;
-  top: -284px;
-  height: 300px;
-  padding-top: 26px;
+  top: -226px;
+  height: 230px;
+  padding-top:0px;
   text-transform: uppercase;
   z-index: 100;
   background-color: #3498DB;
@@ -24,7 +30,7 @@ header{
   }
   div.nav-wrapper{
     position: relative;
-    bottom: -150px;
+    bottom: -140px;
 
     nav{
         background-color: #2F89C5;
@@ -124,7 +130,7 @@ button{
   background-color: #74b5eb;
 
 }
-section.technicalprogramcommittee, section.steeringcommittee, section.paper_submission, section.call_for_papers, section.registration, section.special_submission, section.publication, section.advisorycommittee, section.sponsorship{
+section.technicalprogramcommittee, section.steeringcommittee, section.paper_submission, section.call_for_papers, section.registration, section.special_submission, section.publication, section.advisorycommittee, section.sponsorship, section.about_institute,section.about_irdindia,section.about_universal_innovators{
   button,a.btn,div.btn{
     background-color: #74b5eb;
 
@@ -200,12 +206,26 @@ section.important_dates{
     }
   }
 }
+footer.page-footer{
+  div.footer-copyright{
+    padding:0;
+  }
+  padding-top: 0;
+  div.row{
+    font-size: 1vw;
+    p{
+      margin-bottom: 0;
+    }
 
-
-@media (max-width: 740px) {
-  header{
-    position: sticky;
-    top:0px;
-    background-color: black;
   }
 }
+
+
+
+// @media (max-width: 740px) {
+//   header{
+//     position: sticky;
+//     top:0px;
+//     background-color: black;
+//   }
+// }
