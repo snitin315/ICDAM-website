@@ -34,7 +34,7 @@ header{
         display: flex;
         justify-content: space-around;
         align-items: center;
-        font-size: 1.2vw;
+        font-size: 1.4vw;
 
         a{
           height: 40px;
@@ -111,9 +111,32 @@ section.conference_venue{
 section.special_submission{
 margin-top: 140px;
 }
+section.contact_us{
+  button{
+    background-color: #74b5eb;
 
+  }
+  div.card-panel{
+    background-color: #74b5eb;
+  }
+}
+button{
+  background-color: #74b5eb;
 
+}
 section.technicalprogramcommittee, section.steeringcommittee, section.paper_submission, section.call_for_papers, section.registration, section.special_submission, section.publication, section.advisorycommittee, section.sponsorship{
+  button,a.btn,div.btn{
+    background-color: #74b5eb;
+
+  }
+  div.l4{
+    div.card-panel{
+      height: 300px;
+      marquee{
+        height: 200px;
+      }
+    }
+  }
   div.card-panel{
     background-color: #74b5eb;
   }
