@@ -2,7 +2,7 @@
 header{
   text-align: center;
   position: sticky;
-  top: -260px;
+  top: -284px;
   height: 300px;
   padding-top: 26px;
   text-transform: uppercase;
@@ -12,7 +12,7 @@ header{
   h3{
     color: white;
     margin-top: 0px;
-    font-size: 30px;
+    font-size: 2vw;
     font-weight:100;
 
     // line-height: 230px;
@@ -114,6 +114,9 @@ margin-top: 140px;
 
 
 section.technicalprogramcommittee, section.steeringcommittee, section.paper_submission, section.call_for_papers, section.registration, section.special_submission, section.publication, section.advisorycommittee, section.sponsorship{
+  div.card-panel{
+    background-color: #74b5eb;
+  }
   div.l4{
     span.white-text{
       b{
@@ -149,6 +152,9 @@ section.steeringcommittee{
   }
 }
 section.sponsorship{
+  div.card{
+    background-color: #74b5eb;
+  }
   div.card-image{
     img{
       width:240px;
@@ -157,6 +163,9 @@ section.sponsorship{
   }
 }
 section.important_dates{
+  div.card-panel{
+    background-color: #74b5eb;
+  }
   span.white-text{
       b{
         font-size: 22px;

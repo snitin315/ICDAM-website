@@ -12,6 +12,9 @@
 html,body{
 
 }
+div.card-panel{
+  background-color: #74b5eb;
+}
 .container {
   margin: 0 auto;
   max-width: 1390px;
@@ -19,11 +22,11 @@ html,body{
 }
 #carousel {
   position: relative;
-  height: 400px;
+  height: 500px;
   top: 50%;
   transform: translateY(-50%);
   overflow: hidden;
-  background: linear-gradient(-227deg, rgb(55, 236, 186) 0%, rgb(114, 175, 211) 100%)
+  background-color: #74b5eb; 
 }
 #carousel h3{
   margin-left: 685px;
@@ -107,7 +110,7 @@ html,body{
       <div class="row">
 
         <div class="col m12 s12 l3" >
-          <div class="card-panel teal hoverable "style="overflow:scroll; height:650px">
+          <div class="card-panel  hoverable "style="overflow:scroll; height:650px">
             <span class="white-text">
               <h5>News Update</h5><hr>
 
@@ -121,7 +124,7 @@ html,body{
         </div>
 
         <div class="col m12 s12 l5">
-          <div class="card-panel teal hoverable" style="overflow:hidden; height:650px">
+          <div class="card-panel  hoverable" style="overflow:hidden; height:650px">
             <span class="white-text">
               <h4 >About Conference</h4>
               <hr>
@@ -130,7 +133,7 @@ html,body{
           </div>
         </div>
         <div class="col m12 s12 l4">
-          <div class="card-panel teal hoverable" style="overflow:scroll; height:650px">
+          <div class="card-panel  hoverable" style="overflow:scroll; height:650px">
             <span class="white-text">
               <h5>Important Dates</h5><hr>
 <marquee direction="up" onmouseover="this.stop();" onmouseout="this.start();">
@@ -150,7 +153,7 @@ html,body{
 
 
       </div>
-      <div class="row sponsors" style="  background: linear-gradient(-227deg, rgb(55, 236, 186) 0%, rgb(114, 175, 211) 100%">
+      <div class="row sponsors card-panel hoverable" style="  background-color: #74b5eb">
         <div class="col m12 l12 s12">
           <h4 style="margin-left:460px;">SPONSORS</h4>
         </div>
@@ -164,7 +167,7 @@ html,body{
       <div class="row">
 
         <div class="col m12 s12 l6">
-          <div class="card-panel teal hoverable" style="height: 480px; width:450px;">
+          <div class="card-panel hoverable" style="height: 480px; width:450px;">
             <span class="white-text">
               <h5>Paper Submission</h5><hr>
               <% @papersubmission.each do |papersubmission| %>
@@ -184,7 +187,7 @@ html,body{
         </div>
 
         <div class="col m12 s12 l6">
-          <div class="card-panel teal hoverable"  style="height: 480px; width:550px;">
+          <div class="card-panel  hoverable"  style="height: 480px; width:550px;">
             <span class="white-text">
               <h5>Tourism Selection</h5><hr>
               <div class="card"5
@@ -208,7 +211,7 @@ html,body{
 
         <div class="col m12 s12 l4">
 
-          <div class="card-panel teal hoverable">
+          <div class="card-panel  hoverable">
             <span class="white-text">
               <h5>Publishing Partner</h5><hr>
 
@@ -222,7 +225,7 @@ html,body{
           </div>
         </div>
         <div class="col m12 s12 l4">
-          <div class="card-panel teal hoverable">
+          <div class="card-panel  hoverable">
             <span class="white-text">
               <h5>Recent Visitors</h5><hr>
               <div class="card">
@@ -236,7 +239,7 @@ html,body{
         </div>
         <div class="col m12 s12 l4">
 
-          <div class="card-panel teal hoverable">
+          <div class="card-panel  hoverable">
             <span class="white-text">
               <h5>KeyNote Speaker</h5><hr>
               <% @keynotespeaker.each do |keynotespeaker| %>
@@ -262,7 +265,7 @@ html,body{
 
         <main>
 
-    <div id="carousel">
+    <div class="card-panel hoverable" id="carousel">
 
       <h3 style="margin-left: 460px;">Photo Gallery</h3>
        <div class="hideLeft">
