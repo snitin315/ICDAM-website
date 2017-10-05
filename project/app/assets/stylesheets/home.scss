@@ -1,5 +1,6 @@
 
 header{
+
   div.row{
     margin: 0;
     h3{
@@ -8,7 +9,7 @@ header{
   }
   text-align: center;
   position: sticky;
-  top: -226px;
+  top: -210px;
   height: 230px;
   padding-top:0px;
   text-transform: uppercase;
@@ -33,6 +34,7 @@ header{
     bottom: -140px;
 
     nav{
+
         background-color: #2F89C5;
         position: relative;
         bottom: 126px;
@@ -56,12 +58,13 @@ header{
       height: 60px;
     }
     li{
-      height: 60px;
+      height: 80px;
     }
   }
 
 }
 section.paper_submission{
+  margin-top: 140px;
   color:white;
   h1{
     color:white;
@@ -181,8 +184,15 @@ section.steeringcommittee{
   }
 }
 section.sponsorship{
+
+  color: white;
   div.card{
     background-color: #74b5eb;
+  }
+  div.card-panel{
+    h5{
+      text-align: center;
+    }
   }
   div.card-image{
     img{
