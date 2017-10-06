@@ -29,15 +29,15 @@ header{
     width: 40%;
     margin: auto;
   }
-  div.nav-wrapper{
-    position: relative;
-    bottom: -140px;
+  // div.nav-wrapper{
+  //   position: relative;
+  //   bottom: -140px;
 
     nav{
 
         background-color: #2F89C5;
         position: relative;
-        bottom: 126px;
+        bottom: -10px;
         height:40px;
         display: flex;
         justify-content: space-around;
@@ -52,7 +52,7 @@ header{
         }
 
     }
-  }
+  // }
   ul{
     a{
       height: 60px;
