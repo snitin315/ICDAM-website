@@ -1,7 +1,5 @@
 
-// console.log(i);
 document.getElementById("special_submission_submit").innerHTML="Send";
-console.log("inside response js");
 <%if @response==true %>
 <%session[:response]=false%>
 
@@ -22,7 +20,6 @@ noty({
 <%if @response=="empty" %>
 <%session[:response]=false%>
 
-console.log("inside fail callback");
 
 
 var name_field=$('input[name=name]');

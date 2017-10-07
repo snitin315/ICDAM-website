@@ -1,7 +1,5 @@
 var i ="<i class='material-icons right'>"+ "send"+"</i>";
-console.log(i);
 document.getElementById("contact_us_submit").innerHTML="Send Message"+ i;
-console.log("inside response js");
 <%if @response==true %>
 <%session[:response]=false%>
 
@@ -11,8 +9,8 @@ noty({
   layout: "top",
   template: '<div><i class="fa fa-thumbs-o-up" aria-hidden="true"></i>Thanks for responding!</div><div>We will get back to you as soon as I can</div>',
   animation: {
-        open: 'animated bounceInDown', // Animate.css class names
-        close: 'animated bounceOutUp' // Animate.css class names
+        open: 'animated bounceInDown',
+        close: 'animated bounceOutUp'
     }
 }
 );
@@ -22,16 +20,7 @@ noty({
 <%if @response=="empty" %>
 <%session[:response]=false%>
 
-console.log("inside fail callback");
-// noty({
-//   text: 'Oops! you did not write anything!',
-//   type: 'error',
-//   animation: {
-//         open: 'animated bounceInRight', // Animate.css class names
-//         close: 'animated bounceOutRight' // Animate.css class names
-//     }
-//   }
-// );
+
 
 var subject_field=$('input[name=subject]');
 var name_field=$('input[name=name]');
@@ -46,7 +35,6 @@ if (email_field.val()==""){
   email_field_div.append('<p style="color: red">email is required!</p>');
 }
 if (content_field.val()==""){
-  console.log("inside content field callback");
   var content_field_div = $('#content_field_div');
   content_field_div.append('<p style="color: red">content is required!</p>');
 }

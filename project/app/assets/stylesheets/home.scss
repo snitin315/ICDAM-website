@@ -1,6 +1,5 @@
 
 header{
-
   div.row{
     margin: 0;
     h3{
@@ -9,8 +8,8 @@ header{
   }
   text-align: center;
   position: sticky;
-  top: -210px;
-  height: 230px;
+  top: -150px;
+  height: 160px;
   padding-top:0px;
   text-transform: uppercase;
   z-index: 100;
@@ -22,16 +21,13 @@ header{
     font-size: 2vw;
     font-weight:100;
 
-    // line-height: 230px;
+
   }
   h6{
     text-align: center;
-    width: 40%;
-    margin: auto;
+
   }
-  // div.nav-wrapper{
-  //   position: relative;
-  //   bottom: -140px;
+
 
     nav{
 
@@ -46,13 +42,11 @@ header{
 
         a{
           height: 40px;
-          // vertical-align:middle;
 
-          // padding-bottom: 10px;
         }
 
     }
-  // }
+  
   ul{
     a{
       height: 60px;
@@ -229,13 +223,3 @@ footer.page-footer{
 
   }
 }
-
-
-
-// @media (max-width: 740px) {
-//   header{
-//     position: sticky;
-//     top:0px;
-//     background-color: black;
-//   }
-// }
