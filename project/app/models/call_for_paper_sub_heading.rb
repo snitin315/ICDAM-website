@@ -1,3 +1,3 @@
 class CallForPaperSubHeading < ActiveRecord::Base
-  belongs_to :callforpaper
+  belongs_to :call_for_paper
 end

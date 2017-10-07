@@ -1,17 +1,15 @@
 ActiveAdmin.register SteerComMem do
+  permit_params do
+    params = [:name, :information, :steercompost_id]
+    params
+  end
 
+  form do |f|
+    f.input :name, label: "name"
+    f.input :information, label: "information"
+    f.input :steercompost_id, :as => :number
+    f.actions
+  end
 
-# See permitted parameters documentation:
-# https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
-#
-# permit_params :list, :of, :attributes, :on, :model
-#
-# or
-#
-# permit_params do
-#   permitted = [:permitted, :attributes]
-#   permitted << :other if params[:action] == 'create' && current_user.admin?
-#   permitted
-# end
 
 end

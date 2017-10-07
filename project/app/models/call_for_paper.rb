@@ -1,5 +1,5 @@
 class CallForPaper < ActiveRecord::Base
-  has_many :callforpapersubheadings
+  # has_many :call_for_paper_subheadings
 
 
   def getallsubheading

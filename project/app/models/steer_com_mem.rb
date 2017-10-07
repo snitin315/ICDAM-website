@@ -1,3 +1,3 @@
 class SteerComMem < ActiveRecord::Base
-  belongs_to :steercompost
+  belongs_to :steer_com_post
 end
