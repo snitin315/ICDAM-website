@@ -132,7 +132,7 @@ class HomeController < ApplicationController
       end
 
     else
-      
+
     respond_to do |format|
       unless @name=="" || @email=="" || @number=="" || @introduction=="" || @objective =="" || @paper_count==""
 

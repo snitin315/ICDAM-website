@@ -35,7 +35,7 @@ body .container {
               <h5>News Update</h5><hr>
               <marquee style="height:200px" direction="up" onmouseover="this.stop();" onmouseout="this.start();">
               <% @newsupdate.each do |newsupdate| %>
-              <b><%= newsupdate.news %></b>
+              <b><%= newsupdate.news %></b><br>
               <br>
 
               <% end %>
@@ -99,7 +99,7 @@ body .container {
               <div class="row">
                 <% @keynotespeaker.each do |keynotespeaker| %>
                     <div class="col s3 m3 l6">
-                      <img src="<%="/keynotespeaker/" + keynotespeaker.image%>"  style="width:10vw;">
+                      <img src="<%="/keynotespeaker/" + keynotespeaker.image%>"  style="width:10vw;"><br>
                       <span><a href="<%= keynotespeaker.url %>"><%= keynotespeaker.caption %></a></span>
                     </div>
                 <% end %>
@@ -202,11 +202,9 @@ body .container {
   <main style="background-color:#3498DB; padding-bottom40px;">
   <h3 style="color: white;text-align:center">Photo Gallery</h3><hr>
     <div class="carousel">
-      <a class="carousel-item" href="#one!"><img style="width:350px" src="http://icicc-conf.com/img/ginm2.jpg"></a>
-      <a class="carousel-item" href="#two!"><img style="width:350px" src="http://icicc-conf.com/img/ginm2.jpg"></a>
-      <a class="carousel-item" href="#three!"><img style="width:350px" src="http://icicc-conf.com/img/ginm2.jpg"></a>
-      <a class="carousel-item" href="#four!"><img style="width:350px" src="http://icicc-conf.com/img/ginm2.jpg"></a>
-      <a class="carousel-item" href="#five!"><img style="width:350px" src="http://icicc-conf.com/img/ginm2.jpg"></a>
+      <% @photogallery.each do |pic| %>
+      <a class="carousel-item"><img style="width:350px" src="<%= "/gallery/" + pic.url %>"></a>
+      <% end %>
     </div>
   </main>
 </div>
