@@ -29,7 +29,7 @@ body .container {
 
       <div class="row" >
 
-        <div class="col m12 s12 l3" >
+        <div class="col m6 s6 l3" >
           <div class="card-panel  hoverable "style="height:300px">
             <span class="white-text">
               <h5>News Update</h5><hr>
@@ -74,7 +74,7 @@ body .container {
           </div>
         </div>
 
-        <div class="col m12 s12 l4">
+        <div class="col m6 s6 l4">
           <div class="card-panel  hoverable" style=" height:300px">
             <span class="white-text">
               <h5>Important Dates</h5><hr>
@@ -90,7 +90,7 @@ body .container {
             </span>
           </div>
         </div>
-        <div class="col m12 s12 l4"  style="height: 350px;">
+        <div class="col m6 s6 l4"  style="height: 350px;">
 
           <div class="card-panel  hoverable" style="height: 328px">
             <span class="white-text">
@@ -99,7 +99,7 @@ body .container {
               <div class="row">
                 <% @keynotespeaker.each do |keynotespeaker| %>
                     <div class="col s3 m3 l6">
-                      <img src="<%="/keynotespeaker/" + keynotespeaker.image%>"  style="width:150px;">
+                      <img src="<%="/keynotespeaker/" + keynotespeaker.image%>"  style="width:10vw;">
                       <span><a href="<%= keynotespeaker.url %>"><%= keynotespeaker.caption %></a></span>
                     </div>
                 <% end %>
@@ -120,16 +120,32 @@ body .container {
 
 
       </div>
-      <div class="row sponsors card-panel hoverable" style="  background-color: #74b5eb; margin: 0 10px 0 10px;">
-        <div class="col m12 l12 s12">
-          <h4 style="margin-left:460px;">SPONSORS</h4>
-          <hr><br>
+      <div class="row sponsors" style="  background-color: #74b5eb; margin: 0 10px 0 10px;">
+        <div class="col m12 l6 s12">
+          <div >
+            <h4>SPONSORS</h4>
+            <hr><br>
+            <% @sponsors.each do |sponsor| %>
+            <!-- <div class="col s12 m12 l12"> -->
+            <%= render 'sponsor' , sponsor: sponsor %>
+            <!-- </div> -->
+            <% end %>
+          </div>
+
+      </div>
+        <div class="col m12 s12 l6">
+          <div>
+            <span class="white-text">
+              <h4>Recent Visitors</h4><hr>
+              <div class="card">
+                <div class="card-image">
+                  <img src="/map1.png" class="responsive-img activator">
+                </div>
+              </div>
+
+            </span>
+          </div>
         </div>
-        <% @sponsors.each do |sponsor| %>
-        <!-- <div class="col s12 m12 l12"> -->
-        <%= render 'sponsor' , sponsor: sponsor %>
-        <!-- </div> -->
-        <% end %>
       </div>
 
       <div class="row">
@@ -174,19 +190,7 @@ body .container {
 
 
 
-        <div class="col m12 s12 l12">
-          <div class="card-panel  hoverable">
-            <span class="white-text">
-              <h5>Recent Visitors</h5><hr>
-              <div class="card">
-                <div class="card-image">
-                  <img src="/map1.png" class="responsive-img activator">
-                </div>
-              </div>
 
-            </span>
-          </div>
-        </div>
 
 
       </div>
