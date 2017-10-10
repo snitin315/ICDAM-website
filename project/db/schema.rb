@@ -87,7 +87,7 @@ ActiveRecord::Schema.define(version: 20171002091811) do
     t.datetime "updated_at",      null: false
   end
 
-  add_index "call_for_paper_sub_headings", ["callforpaper_id"], name: "index_call_for_paper_sub_headings_on_callforpaper_id", using: :btree
+  # add_index "call_for_paper_sub_headings", ["callforpaper_id"], name: "index_call_for_paper_sub_headings_on_callforpaper_id", using: :btree
 
   create_table "call_for_papers", force: :cascade do |t|
     t.string   "title"
@@ -159,7 +159,7 @@ ActiveRecord::Schema.define(version: 20171002091811) do
     t.datetime "updated_at",      null: false
   end
 
-  add_index "steer_com_mems", ["steercompost_id"], name: "index_steer_com_mems_on_steercompost_id", using: :btree
+  # add_index "steer_com_mems", ["steercompost_id"], name: "index_steer_com_mems_on_steercompost_id", using: :btree
 
   create_table "steer_com_posts", force: :cascade do |t|
     t.string   "position"

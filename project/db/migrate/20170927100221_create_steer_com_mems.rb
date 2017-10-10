@@ -3,7 +3,7 @@ class CreateSteerComMems < ActiveRecord::Migration
     create_table :steer_com_mems do |t|
       t.string :name
       t.string :information
-      t.references :steercompost, index: true, foreign_key: true
+        t.integer :steercompost_id
 
       t.timestamps null: false
     end
