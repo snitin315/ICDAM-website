@@ -12,7 +12,7 @@ default: &default
 
 development:
   <<: *default
-  database: iciccconf_development
+  database: iciccconf_development_database
   username: pguser
   password: iciccconf##
 
@@ -21,12 +21,12 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: iciccconf_test
+  database: iciccconf_test_database
   username: pguser
   password: iciccconf##
 
 production:
   <<: *default
-  database: iciccconf_production
+  database: iciccconf_production_database
   username: pguser
   password: iciccconf##
