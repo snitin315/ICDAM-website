@@ -1,0 +1,249 @@
+<section class="abstract">
+  <div class="container">
+    <div class="row">
+      <div class="col m12 s12 l8">
+        <div class="card-panel ">
+          <b>Paper Submission </b>
+<hr>
+            Paper Submission : - Paper should be in the format strictly specified on the conference website. Only the selected papers will get the intimation who will be accepted for publication. Kindly do not submit the paper multiple times, it may lead to cancellation of an article/paper.
+Submit your paper .............
+<hr>
+            <%=link_to url_for(controller: 'home', action: 'download_paper_template') do%>
+             Download Paper Template (ICICC) <i class="fa fa-download" aria-hidden="true"></i>
+
+            <%end%>
+<hr>
+
+
+
+        </div>
+
+
+      </div>
+      <div class="col m12 s12 l4">
+        <div class="card-panel ">
+          <span class="white-text">
+            <b>Important Dates</b>
+            <hr />
+            <marquee direction="up" onmouseover="this.stop();" onmouseout="this.start();">
+
+         <% @important_dates.each do |impdate| %>
+             <b><%= impdate.title %></b>
+             <br>
+             <%= impdate.date.to_date.to_formatted_s(:long_ordinal) %>
+             <br><hr />
+
+         <% end %>
+       </marquee>
+       </span>
+     </div>
+     </div>
+     <div class="col m12 s12 l12">
+
+
+
+       <%=form_tag '/home/abstract/post', method: :POST, :enctype =>"multipart/form-data",authenticity_token: true,remote: true   do%>
+       <div class="input-field col s6" id="name_field_div">
+         <i class="material-icons prefix">account_circle</i>
+         <%=label_tag :name,"Name*"%>
+         <%= text_field_tag :name,nil,class: "validate", id: "icon_prefix"%>
+       </div>
+       <div class="input-field col s6" id="Designation_field_div">
+
+         <%= text_field_tag :Designation,nil,class: "validate"%>
+         <%=label_tag :Designation,"Designation*"%>
+
+       </div>
+       <div class="input-field col s6" id="email_field_div">
+         <i class="material-icons prefix">email</i>
+         <%= email_field_tag :email,nil,class: "validate", id: "icon_prefix"%>
+         <%=label_tag :email,"email*"%>
+
+       </div>
+       <div class="input-field col s6" id="number_field_div">
+         <i class="material-icons prefix">phone</i>
+         <%= number_field_tag :number,nil,class: "validate", id: "icon_prefix"%>
+         <%=label_tag :number,"Phone Number*"%>
+
+       </div>
+       <div class="input-field col s6" id="organization_field_div">
+         <!-- <i class="material-icons prefix">phone</i> -->
+         <%= text_field_tag :organization,nil,class: "validate"%>
+         <%=label_tag :organization,"Organization*"%>
+
+       </div>
+       <div class="input-field col s12" id="area_of_paper_div">
+         <select name="area_of_paper">
+           <option value="select">select</option>
+        <option value="Simulation and Modeling">Simulation and Modeling</option>
+        <option value="Machine Learning Techniques">Machine Learning Techniques</option>
+        <option value="Parallel and Distributed Algorithms">Parallel and Distributed Algorithms</option>
+        <option value="Game Theory">Game Theory</option>
+        <option value="Approximation Algorithms">Approximation Algorithms</option>
+                <option value="Design and Analysis of Algorithms">Design and Analysis of Algorithms</option>
+                <option value="Computational Biology">Computational Biology</option>
+                <option value="Optimization">Optimization</option>
+                       <option value="Hybrid Systems">Hybrid Systems</option>
+                       <option value="Numerical Analysis">Numerical Analysis</option>
+                       <option value="Computational Mathematics">Computational Mathematics</option>
+                       <option value="Computational geometry">Computational geometry</option>
+                       <option value="Approximation and randomized algorithms International Conference on Innovative Computing and Communication">Approximation and randomized algorithms International Conference on Innovative Computing and Communication</option>
+                       <option>----Software Engineering----</option>
+                       <option value="Software Architecture">Software Architecture</option>
+                       <option value="Software Design Patterns">Software Design Patterns</option>
+                       <option value="Component Based Software">Component Based Software</option>
+                       <option value="Agile Software Engineering">Agile Software Engineering</option>
+                       <option value="Software Development Tools">Software Development Tools</option>
+                       <option value="Software Verification and Validation">Software Verification and Validation</option>
+                       <option value="Aspect Oriented Software">Aspect Oriented Software</option>
+                       <option value="Object Oriented Software Design &amp; UML">Object Oriented Software Design &amp; UML</option>
+                       <option value="Software Project Management">Software Project Management</option>
+                       <option value="Software Quality Assurance">Software Quality Assurance</option>
+                       <option value="Software Reverse Engineering">Software Reverse Engineering</option>
+                       <option value="Software Testing">Software Testing</option>
+                       <option value="Software Metrics">Software Metrics</option>
+                       <option value="System Software">System Software</option>
+                       <option>----Computational Intelligence----</option>
+                       <option value="Data Science">Data Science</option>
+                       <option value="Machine Learning">Machine Learning</option>
+                       <option value="Artificial Intelligence">Artificial Intelligence</option>
+                       <option value="Signal Processing">Signal Processing</option>
+                       <option value="Computer vision">Computer vision</option>
+                       <option value="Decision Support and Decision making">Decision Support and Decision making</option>
+                       <option>----High Performance Computing----</option>
+                       <option value="High Performance Data Analysis">High Performance Data Analysis</option>
+                       <option value="Advanced Multi-core Software Technologies">Advanced Multi-core Software Technologies</option>
+                       <option value="Case Studies and Benchmarking of Applications">Case Studies and Benchmarking of Applications</option>
+                       <option value="Mapping and Scheduling of Parallel and Real-Time Applications">Mapping and Scheduling of Parallel and Real-Time Applications</option>
+                       <option value="Computing Technologies for Challenging Form Factors">Computing Technologies for Challenging Form Factors</option>
+                       <option value="ASIC and FPGA Advances">ASIC and FPGA Advances</option>
+                       <option value="Open System Architectures">Open System Architectures</option>
+                       <option value="Data Intensive Computing">Data Intensive Computing</option>
+                       <option value="Interactive and Real-Time Supercomputing">Interactive and Real-Time Supercomputing</option>
+                       <option value="Graph Analytics and Network Science">Graph Analytics and Network Science</option>
+                       <option value="Fault-Tolerant Computing">Fault-Tolerant Computing</option>
+                       <option value="Embedded Cloud Computing">Embedded Cloud Computing</option>
+                       <option value="General Purpose GPU Computing">General Purpose GPU Computing</option>
+                       <option value="Advanced Processor Architectures">Advanced Processor Architectures</option>
+                       <option value="Secure Computing and Anti-Tamper Technologies">Secure Computing and Anti-Tamper Technologies</option>
+                       <option>----Data Communication and Networking----</option>
+                       <option value="Mobile Communication">Mobile Communication</option>
+                       <option value="Wireless Networking">Wireless Networking</option>
+                       <option value="Vehicle Communication">Vehicle Communication</option>
+                       <option value="Cloud Communications and Networking">Cloud Communications and Networking</option>
+                       <option value="Future Internet Architecture and protocols">Future Internet Architecture and protocols</option>
+                       <option value="Satellite Communication">Satellite Communication</option>
+                       <option value="Software Defined Networking">Software Defined Networking</option>
+                       <option value="Real Time Communication Services">Real Time Communication Services</option>
+                       <option value="Next Generation Networking">Next Generation Networking</option>
+                       <option value="Quantum Networking">Quantum Networking</option>
+                       <option value="Qos Provisioning and Architectures">Qos Provisioning and Architectures</option>
+                       <option value="Telecommunication Services and Applications">Telecommunication Services and Applications</option>
+                       <option value="Optical Communication">Optical Communication</option>
+                       <option value="Network Performance">Network Performance</option>
+                       <option value="Innovative Network Technologies">Innovative Network Technologies</option>
+                       <option>----Database Systems----</option>
+                       <option value="Data Engineering">Data Engineering</option>
+                       <option value="Data Mining">Data Mining</option>
+                       <option value="Data Warehousing">Data Warehousing</option>
+                       <option value="Knowledge Engineering">Knowledge Engineering</option>
+                       <option value="Web Mining">Web Mining</option>
+                       <option value="NoSQL">NoSQL</option>
+                       <option value="Management Information Systems">Management Information Systems</option>
+                       <option value="Medical Informatics">Medical Informatics</option>
+                       <option value="Knowledge based web systems">Knowledge based web systems</option>
+                       <option>----Human Computer Interaction----</option>
+                       <option value="Information visualization">Information visualization</option>
+                       <option value="Virtual reality and haptic applications">Virtual reality and haptic applications</option>
+                       <option value="Collaborative HCI applications">Collaborative HCI applications</option>
+                       <option value="Wearable computing and interaction">Wearable computing and interaction</option>
+                       <option value="Haptic systems interaction">Haptic systems interaction</option>
+                       <option value="New devices and sensors">New devices and sensors</option>
+                       <option value="Evaluation methods and frameworks">Evaluation methods and frameworks</option>
+                       <option value="Human-centred design practices and methods">Human-centred design practices and methods</option>
+                       <option value="Multimodal interaction and interfaces">Multimodal interaction and interfaces</option>
+                       <option value="HCI theory and practice">HCI theory and practice</option>
+                       <option value="Mathematical and computational aspects of HCI">Mathematical and computational aspects of HCI</option>
+                       <option>----Information Security----</option>
+                       <option value="Data Encryption">Data Encryption</option>
+                       <option value="Computer Security">Computer Security</option>
+                       <option value="Digital Signature">Digital Signature</option>
+                       <option value="Forensics">Forensics</option>
+                       <option value="Information Security">Information Security</option>
+                       <option value="Network Security">Network Security</option>
+                       <option value="Cyber Security">Cyber Security</option>
+                       <option value="System Security">System Security</option>
+                       <option value="Cryptography">Cryptography</option>
+                       <option value="Intellectual Property Security">Intellectual Property Security</option>
+                       <option>----Information and Communication Technology----</option>
+                       <option value="ICT and sustainability">ICT and sustainability</option>
+                       <option value="Virtualization in everyday life">Virtualization in everyday life</option>
+                       <option value="Mobile applications and services">Mobile applications and services</option>
+                       <option value="e-business, e-learning, e-government, e-tourism">e-business, e-learning, e-government, e-tourism</option>
+                       <option value="m-business, m-learning, m-government, m-tourism">m-business, m-learning, m-government, m-tourism</option>
+                       <option value="Advances in decision support systems, expert systems and artificial intelligence">Advances in decision support systems, expert systems and artificial intelligence</option>
+                       <option value="Bio-Informatics and Health Informatics">Bio-Informatics and Health Informatics</option>
+                       <option value="Computational Simulations and Modelling">Computational Simulations and Modelling</option>
+                       <option value="Smart technologies">Smart technologies</option>
+               <option value="others">others</option>
+         </select>
+         <label>Area of Paper*</label>
+       </div>
+
+       <div class="input-field col s12" id="address_field_div">
+         <%=label_tag :address,"Address for correspondence*"%>
+         <%= text_area_tag :address,nil, id: "textarea1",class: "materialize-textarea"%>
+
+       </div>
+
+      <div class="input-field col s12" id="participant_category_div">
+        <select name="participant_category">
+          <option value="select">select</option>
+        <option value="Students / Research Scholars">Students / Research Scholars</option>
+        <option value="Academic / R&amp;D">Academic / R&amp;D</option>
+        <option value="Industry">Industry</option>
+        <option value="Accompanying Person">Accompanying Person</option>
+        </select>
+        <label>Participant Category*</label>
+      </div>
+      <div class="input-field col s6" id="paper_title_field_div">
+
+        <%=label_tag :paper_title,"Paper Title*"%>
+        <%= text_field_tag :paper_title,nil,class: "validate"%>
+      </div>
+      <div class="input-field col s6" id="authors_field_div">
+        <i class="material-icons prefix">account_circle</i>
+        <%=label_tag :author,"Contributing Authors*"%>
+        <%= text_field_tag :author,nil,class: "validate", id: "icon_prefix"%>
+      </div>
+
+
+
+       <div class="file-field input-field col s12">
+         <div class="btn">
+           <span>Upload Full Paper</span>
+           <%=file_field_tag :file, accept: 'application/pdf'%>
+         </div>
+         <div class="file-path-wrapper">
+           <input class="file-path validate" type="text">
+         </div>
+       </div>
+
+       <div class="input-field col s6">
+         <%=button_tag(type: "submit", class: "btn waves-effect waves-light", id: "abstract_submit") do%>
+         Send
+         <%end%>
+       </div>
+       <div class="input-field col s6">
+         <a class="waves-effect waves-light btn" id="reset">Reset</a>
+
+       </div>
+
+
+       <%end%>
+
+     </div>
+
+  </div>
+  </div>
+</section>

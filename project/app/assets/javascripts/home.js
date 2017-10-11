@@ -1,4 +1,8 @@
 $(document).ready(function(){
+  $(document).ready(function() {
+   $('select').material_select();
+ });
+          
 
 if (document.getElementById("special_submission_submit") !=null){
   document.getElementById("special_submission_submit").addEventListener('click',function(){

@@ -17,6 +17,7 @@ class HomeController < ApplicationController
 
   end
 
+
   def about_irdindia
     @about_irdindia = AboutIrdind.last.content
     @important_dates = ImportantDate.all
@@ -171,6 +172,14 @@ class HomeController < ApplicationController
     filename: "paper_template.pdf",
     type: "application/pdf"
   )
+  end
+
+  def abstract
+    @important_dates = ImportantDate.all
+
+  end
+  def abstract_post
+
   end
 
 

@@ -19,6 +19,8 @@ Rails.application.routes.draw do
   post 'home/special_submission/post' => 'home#special_submission_post'
   get 'home/paper_submission'
   get 'home/download_paper_template'
+  get 'home/abstract'
+  post 'home/abstract/abstract_post' => 'home#abstract_post'
 
   get 'home/conference_venue'
   get 'home/important_dates'
