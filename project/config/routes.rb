@@ -2,28 +2,28 @@ Rails.application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
   devise_for :users
   ActiveAdmin.routes(self)
-  get 'home/index'
-  get 'home/about_institute'
-  get 'home/about_irdindia'
-  get 'home/about_universal_innovators'
-  get 'home/call_for_papers'
-  get 'home/registration'
-  get 'home/steeringcommittee'
-  get 'home/technicalprogramcommittee'
-  get 'home/advisorycommittee'
-  get 'home/sponsorship'
-  get 'home/publication'
-  get 'home/contact_us'
+  get '/index'   => "home#index"
+  get '/about_institute' => "home#about_institute"
+  get '/about_irdindia' => "home#about_irdindia"
+  get '/about_universal_innovators' => "home#about_universal_innovators"
+  get '/call_for_papers' => "home#call_for_papers"
+  get '/registration' => "home#registration"
+  get '/steeringcommittee' => "home#steeringcommittee"
+  get '/technicalprogramcommittee' => "home#technicalprogramcommittee"
+  get '/advisorycommittee' => "home#advisorycommittee"
+  get '/sponsorship' => "home#sponsorship"
+  get '/publication' => "home#publication"
+  get '/contact_us' => "home#contact_us"
   post 'home/contact_us/post' => 'home#contact_us_post'
-  get 'home/special_submission'
+  get '/special_submission' => "home#special_submission"
   post 'home/special_submission/post' => 'home#special_submission_post'
-  get 'home/paper_submission'
-  get 'home/download_paper_template'
-  get 'home/abstract'
+  get '/paper_submission' => "home#paper_submission"
+  get '/download_paper_template' => "home#download_paper_template"
+  get '/abstract' => "home#abstract"
   post 'home/abstract/abstract_post' => 'home#abstract_post'
 
-  get 'home/conference_venue'
-  get 'home/important_dates'
+  get '/conference_venue' => "home#conference_venue"
+  get '/important_dates' => "home#important_dates"
 
 
 

@@ -128,6 +128,7 @@ button{
 
 }
 section.technicalprogramcommittee, section.steeringcommittee, section.paper_submission, section.call_for_papers, section.registration, section.special_submission, section.publication, section.advisorycommittee, section.sponsorship, section.about_institute,section.about_irdindia,section.about_universal_innovators{
+  text-align: justify;
   button,a.btn,div.btn{
     background-color: #74b5eb;
 
@@ -153,6 +154,8 @@ section.technicalprogramcommittee, section.steeringcommittee, section.paper_subm
 
 }
 section.contact_us{
+  text-align: justify;
+
   margin-top: 140px;
   form{
     margin-bottom: 200px;
@@ -160,6 +163,8 @@ section.contact_us{
   }
 }
 section.steeringcommittee{
+  text-align: justify;
+
   h5{
     // font-size: 3em;
     font-weight: 400;
@@ -178,6 +183,7 @@ section.steeringcommittee{
   }
 }
 section.sponsorship{
+  text-align: justify;
 
   color: white;
   div.card{
@@ -196,6 +202,8 @@ section.sponsorship{
   }
 }
 section.important_dates{
+  text-align: justify;
+
   div.card-panel{
     background-color: #74b5eb;
   }
