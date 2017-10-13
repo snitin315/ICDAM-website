@@ -4,7 +4,7 @@ class UserMailer < ApplicationMailer
     @email=email
     @content=content
     @subject=subject
-    mail to: "prnv_singhal@yahoo.co.in", subject: "response to your website"
+    mail to: "icicc.conf@gmail.com", subject: "response to your website"
   end
 
   def special_submission(name,email,number,introduction,objective,paper_count,file)
@@ -18,7 +18,7 @@ class UserMailer < ApplicationMailer
     if file !=nil
       attachments['cv.pdf'] =File.open(Dir.pwd + "/public/uploads/" + file, 'rb'){|f| f.read}
     end
-    mail to: "prnv_singhal@yahoo.co.in", subject: "response to your special_submission"
+    mail to: "icicc.conf@gmail.com", subject: "response to your special_submission"
 
   end
 
