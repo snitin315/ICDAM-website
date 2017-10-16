@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   ActiveAdmin.routes(self)
   get '/index'   => "home#index"
   get '/about_institute' => "home#about_institute"
+  get '/special_session' => 'home#special_session'
   get '/about_irdindia' => "home#about_irdindia"
   get '/about_universal_innovators' => "home#about_universal_innovators"
   get '/call_for_papers' => "home#call_for_papers"
@@ -19,6 +20,11 @@ Rails.application.routes.draw do
   post 'home/special_submission/post' => 'home#special_submission_post'
   get '/paper_submission' => "home#paper_submission"
   get '/download_paper_template' => "home#download_paper_template"
+  get '/ss1' => 'home#ss1'
+  get '/ss2' => 'home#ss2'
+  get '/ss3' => 'home#ss3'
+  get '/ss4' => 'home#ss4'
+  get '/ss5' => 'home#ss5'
   get '/abstract' => "home#abstract"
   post 'home/abstract/abstract_post' => 'home#abstract_post'
 

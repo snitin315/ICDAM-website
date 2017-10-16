@@ -69,7 +69,7 @@ body .container {
             <span class="white-text">
               <h4 >About Conference</h4>
               <hr>
-            <p style="text-align: justify; color: white;"><%= @aboutconference %></p>  
+            <p style="text-align: justify; color: white;"><%= @aboutconference %></p>
             </span>
           </div>
         </div>
@@ -157,7 +157,7 @@ body .container {
               <% @papersubmission.each do |papersubmission| %>
               <div class="card" style="background:none">
                 <div class="card-image">
-                  <img src="<%="/PaperSubmission/" + papersubmission.url%>" class="responsive-img activator"  >
+            <a target="_blank" href="https://easychair.org/account/signin.cgi?key=60489177.hbSzeYXjl0Ojsx33"><img src="<%="/PaperSubmission/" + papersubmission.url%>" class="responsive-img activator"  ></a>
                 </div>
               </div>
               <% end %>
