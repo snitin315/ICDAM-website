@@ -16,6 +16,52 @@ class HomeController < ApplicationController
     @important_dates = ImportantDate.all
 
   end
+  def special_session
+
+  end
+
+  def ss1
+    filepath= Dir.pwd + '/app/assets/downloads/SS1.pdf'
+    send_file(
+    filepath,
+    filename: "SS1 - Advanced Data Mining and Machine Learning with Soft Computing.pdf",
+    type: "application/pdf"
+  )
+  end
+  def ss2
+    filepath= Dir.pwd + '/app/assets/downloads/SS2.pdf'
+    send_file(
+    filepath,
+    filename: "SS2 - Recent Advances in Networks and Data Security.pdf",
+    type: "application/pdf"
+  )
+  end
+  def ss3
+    filepath= Dir.pwd + '/app/assets/downloads/SS3.pdf'
+    send_file(
+    filepath,
+    filename: "SS3 - Innovative trends in Machine Learning and Cloud Computing.pdf",
+    type: "application/pdf"
+  )
+  end
+  def ss4
+    filepath= Dir.pwd + '/app/assets/downloads/SS4.pdf'
+    send_file(
+    filepath,
+    filename: "SS4 - Computational Intelligence in Big Data analysis.pdf",
+    type: "application/pdf"
+  )
+
+  end
+  def ss5
+    filepath= Dir.pwd + '/app/assets/downloads/SS5.pdf'
+    send_file(
+    filepath,
+    filename: "SS5 - Computational Intelligence using Data Sciences.pdf",
+    type: "application/pdf"
+  )
+
+  end
 
 
   def about_irdindia
