@@ -25,6 +25,14 @@ Rails.application.routes.draw do
   get '/ss3' => 'home#ss3'
   get '/ss4' => 'home#ss4'
   get '/ss5' => 'home#ss5'
+  get '/ss6' => 'home#ss6'
+  get '/ss7' => 'home#ss7'
+  get '/ss8' => 'home#ss8'
+  get '/ss9' => 'home#ss9'
+  get '/ss10' => 'home#ss10'
+  get '/ss11' => 'home#ss11'
+  get '/ss12' => 'home#ss12'
+
   get '/abstract' => "home#abstract"
   post 'home/abstract/abstract_post' => 'home#abstract_post'
 
