@@ -32,7 +32,9 @@ Rails.application.routes.draw do
   get '/ss10' => 'home#ss10'
   get '/ss11' => 'home#ss11'
   get '/ss12' => 'home#ss12'
-
+  get '/ss13' => 'home#ss13'
+  get '/ss14' => 'home#ss14'
+  get '/ss15' => 'home#ss15'
   get '/abstract' => "home#abstract"
   post 'home/abstract/abstract_post' => 'home#abstract_post'
 
