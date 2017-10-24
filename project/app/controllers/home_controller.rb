@@ -126,7 +126,7 @@ class HomeController < ApplicationController
 
   end
   def ss13
-    filepath= Dir.pwd + '/app/assets/downloads/SS12.pdf'
+    filepath= Dir.pwd + '/app/assets/downloads/SS13.pdf'
     send_file(
     filepath,
     filename: "SS13 - Recent Trends and Advances in Fuzzy System in Engineering & Management .pdf",
@@ -135,7 +135,7 @@ class HomeController < ApplicationController
 
   end
   def ss14
-    filepath= Dir.pwd + '/app/assets/downloads/SS12.pdf'
+    filepath= Dir.pwd + '/app/assets/downloads/SS14.pdf'
     send_file(
     filepath,
     filename: "SS14 - Current Trends in Software Engineering and Machine Learning.pdf",
@@ -144,7 +144,7 @@ class HomeController < ApplicationController
 
   end
   def ss15
-    filepath= Dir.pwd + '/app/assets/downloads/SS12.pdf'
+    filepath= Dir.pwd + '/app/assets/downloads/SS15.pdf'
     send_file(
     filepath,
     filename: "SS15 - INTELLIGENT NETWORKING & ADVANCE SYSTEMS.pdf",
