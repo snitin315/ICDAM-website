@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get '/index'   => "home#index"
   get '/about_institute' => "home#about_institute"
   get '/special_session' => 'home#special_session'
+  get '/download' => 'home#download'
   get '/about_irdindia' => "home#about_irdindia"
   get '/about_universal_innovators' => "home#about_universal_innovators"
   get '/call_for_papers' => "home#call_for_papers"
