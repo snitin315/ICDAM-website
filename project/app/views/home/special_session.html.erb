@@ -3,81 +3,12 @@
     <div class="row">
   <div class="col s12 m12 l12">
 <div class="card-panel">
-  <%=link_to url_for(controller: 'home', action: 'ss1') do%>
-   SS1 - Advanced Data Mining and Machine Learning with Soft Computing <i class="fa fa-download" aria-hidden="true"></i>
-
+<%@special_session.each do |special_sesion|%>
+  <%=link_to url_for controller: "home", action: "download", filename: special_sesion.file do %>
+  <%=special_sesion.file%> <i class="fa fa-download" aria-hidden="true"></i>
   <%end%>
   <hr>
-  <%=link_to url_for(controller: 'home', action: 'ss2') do%>
-   SS2 - Recent Advances in Networks and Data Security <i class="fa fa-download" aria-hidden="true"></i>
-
-  <%end%>
-  <hr>
-  <%=link_to url_for(controller: 'home', action: 'ss3') do%>
-   SS3 - Innovative trends in Machine Learning and Cloud Computing <i class="fa fa-download" aria-hidden="true"></i>
-
-  <%end%>
-  <hr>
-  <%=link_to url_for(controller: 'home', action: 'ss4') do%>
-   SS4 - Computational Intelligence in Big Data analysis <i class="fa fa-download" aria-hidden="true"></i>
-
-  <%end%>
-  <hr>
-  <%=link_to url_for(controller: 'home', action: 'ss5') do%>
-   SS5 - Computational Intelligence using Data Sciences <i class="fa fa-download" aria-hidden="true"></i>
-
-  <%end%>
-  <hr>
-  <%=link_to url_for(controller: 'home', action: 'ss6') do%>
-   SS6 - ENGINEERING APPLICATION OF NATURE INSPIRED ALGORITHMS <i class="fa fa-download" aria-hidden="true"></i>
-
-  <%end%>
-  <hr>
-  <%=link_to url_for(controller: 'home', action: 'ss7') do%>
-   SS7 - Intelligent Cyber Systems and Security <i class="fa fa-download" aria-hidden="true"></i>
-
-  <%end%>
-  <hr>
-  <%=link_to url_for(controller: 'home', action: 'ss8') do%>
-   SS8 - Application of Bio Inspired Computing for Knowledge Discovery and Data Mining <i class="fa fa-download" aria-hidden="true"></i>
-
-  <%end%>
-  <hr>
-  <%=link_to url_for(controller: 'home', action: 'ss9') do%>
-   SS9 - Recent Trends in Computing, Communication and Information Technology <i class="fa fa-download" aria-hidden="true"></i>
-
-  <%end%>
-  <hr>
-  <%=link_to url_for(controller: 'home', action: 'ss10') do%>
-   SS10 - SOFT COMPUTING TECHNIQUES FOR WIRELESS NETWORKS <i class="fa fa-download" aria-hidden="true"></i>
-
-  <%end%>
-
-  <hr>
-  <%=link_to url_for(controller: 'home', action: 'ss11') do%>
-   SS11 - COMMUNICATIONS AND INFORMATION SYSTEM SECURITY  <i class="fa fa-download" aria-hidden="true"></i>
-
-  <%end%>
-  <hr>
-  <%=link_to url_for(controller: 'home', action: 'ss12') do%>
-   SS12 - NEXT GENERATION NETWORKING AND WIRELESS COMMUNICATIONS <i class="fa fa-download" aria-hidden="true"></i>
-
-  <%end%>
-  <hr>
-  <%=link_to url_for(controller: 'home', action: 'ss13') do%>
-   SS13 - Recent Trends and Advances in Fuzzy System in Engineering & Management <i class="fa fa-download" aria-hidden="true"></i>
-
-  <%end%>
-  <hr>
-  <%=link_to url_for(controller: 'home', action: 'ss14') do%>
-   SS14 - Current Trends in Software Engineering and Machine Learning<i class="fa fa-download" aria-hidden="true"></i>
-
-  <%end%>
-  <hr>
-  <%=link_to url_for(controller: 'home', action: 'ss15') do%>
-   SS15 - INTELLIGENT NETWORKING & ADVANCE SYSTEMS <i class="fa fa-download" aria-hidden="true"></i>
-
-  <%end%>
+<%end%>
 </div>
   </div>
     </div>

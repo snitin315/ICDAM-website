@@ -17,141 +17,19 @@ class HomeController < ApplicationController
 
   end
   def special_session
+    @special_session=SpecialSession.all
+
+  end
+  def download
+    filepath=Dir.pwd + '/app/assets/downloads/'+ params['filename']
+    send_file(
+      filepath,
+      filename: params['filename'],
+      type: 'application/pdf'
+    )
 
   end
 
-  def ss1
-    filepath= Dir.pwd + '/app/assets/downloads/SS1.pdf'
-    send_file(
-    filepath,
-    filename: "SS1 - Advanced Data Mining and Machine Learning with Soft Computing.pdf",
-    type: "application/pdf"
-  )
-  end
-  def ss2
-    filepath= Dir.pwd + '/app/assets/downloads/SS2.pdf'
-    send_file(
-    filepath,
-    filename: "SS2 - Recent Advances in Networks and Data Security.pdf",
-    type: "application/pdf"
-  )
-  end
-  def ss3
-    filepath= Dir.pwd + '/app/assets/downloads/SS3.pdf'
-    send_file(
-    filepath,
-    filename: "SS3 - Innovative trends in Machine Learning and Cloud Computing.pdf",
-    type: "application/pdf"
-  )
-  end
-  def ss4
-    filepath= Dir.pwd + '/app/assets/downloads/SS4.pdf'
-    send_file(
-    filepath,
-    filename: "SS4 - Computational Intelligence in Big Data analysis.pdf",
-    type: "application/pdf"
-  )
-
-  end
-  def ss5
-    filepath= Dir.pwd + '/app/assets/downloads/SS5.pdf'
-    send_file(
-    filepath,
-    filename: "SS5 - Computational Intelligence using Data Sciences.pdf",
-    type: "application/pdf"
-  )
-
-  end
-  def ss6
-    filepath= Dir.pwd + '/app/assets/downloads/SS6.pdf'
-    send_file(
-    filepath,
-    filename: "SS6 - ENGINEERING APPLICATION OF NATURE INSPIRED ALGORITHMS.pdf",
-    type: "application/pdf"
-  )
-
-  end
-  def ss7
-    filepath= Dir.pwd + '/app/assets/downloads/SS7.pdf'
-    send_file(
-    filepath,
-    filename: "SS7 - Intelligent Cyber Systems and Security .pdf",
-    type: "application/pdf"
-  )
-
-  end
-  def ss8
-    filepath= Dir.pwd + '/app/assets/downloads/SS8.pdf'
-    send_file(
-    filepath,
-    filename: "SS8 - Application of Bio Inspired Computing for Knowledge Discovery and Data Mining.pdf",
-    type: "application/pdf"
-  )
-
-  end
-  def ss9
-    filepath= Dir.pwd + '/app/assets/downloads/SS9.pdf'
-    send_file(
-    filepath,
-    filename: "SS9 - Recent Trends in Computing, Communication and Information Technology.pdf",
-    type: "application/pdf"
-  )
-
-  end
-  def ss10
-    filepath= Dir.pwd + '/app/assets/downloads/SS10.pdf'
-    send_file(
-    filepath,
-    filename: "SS10 - SOFT COMPUTING TECHNIQUES FOR WIRELESS NETWORKS.pdf",
-    type: "application/pdf"
-  )
-
-  end
-  def ss11
-    filepath= Dir.pwd + '/app/assets/downloads/SS11.pdf'
-    send_file(
-    filepath,
-    filename: "SS11 - COMMUNICATIONS AND INFORMATION SYSTEM SECURITY .pdf",
-    type: "application/pdf"
-  )
-
-  end
-  def ss12
-    filepath= Dir.pwd + '/app/assets/downloads/SS12.pdf'
-    send_file(
-    filepath,
-    filename: "SS12 - NEXT GENERATION NETWORKING AND WIRELESS COMMUNICATIONS.pdf",
-    type: "application/pdf"
-  )
-
-  end
-  def ss13
-    filepath= Dir.pwd + '/app/assets/downloads/SS13.pdf'
-    send_file(
-    filepath,
-    filename: "SS13 - Recent Trends and Advances in Fuzzy System in Engineering & Management .pdf",
-    type: "application/pdf"
-  )
-
-  end
-  def ss14
-    filepath= Dir.pwd + '/app/assets/downloads/SS14.pdf'
-    send_file(
-    filepath,
-    filename: "SS14 - Current Trends in Software Engineering and Machine Learning.pdf",
-    type: "application/pdf"
-  )
-
-  end
-  def ss15
-    filepath= Dir.pwd + '/app/assets/downloads/SS15.pdf'
-    send_file(
-    filepath,
-    filename: "SS15 - INTELLIGENT NETWORKING & ADVANCE SYSTEMS.pdf",
-    type: "application/pdf"
-  )
-
-  end
 
 
   def about_irdindia
