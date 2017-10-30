@@ -29,6 +29,9 @@ class HomeController < ApplicationController
     )
 
   end
+  def downloads_page
+    
+  end
 
 
 
