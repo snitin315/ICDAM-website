@@ -111,7 +111,8 @@ section.conference_venue{
 
 }
 
-section.special_submission{
+
+section.special_submission,section.downloads_page{
 margin-top: 140px;
 }
 section.contact_us{
@@ -127,7 +128,7 @@ button{
   background-color: #74b5eb;
 
 }
-section.technicalprogramcommittee, section.special_session,section.steeringcommittee, section.paper_submission, section.call_for_papers, section.registration, section.special_submission, section.publication, section.advisorycommittee, section.sponsorship, section.about_institute,section.about_irdindia,section.about_universal_innovators{
+section.technicalprogramcommittee, section.special_session,section.steeringcommittee, section.paper_submission, section.call_for_papers, section.registration, section.special_submission,section.downloads_page, section.publication, section.advisorycommittee, section.sponsorship, section.about_institute,section.about_irdindia,section.about_universal_innovators{
   text-align: justify;
   button,a.btn,div.btn{
     background-color: #74b5eb;
@@ -155,7 +156,7 @@ section.technicalprogramcommittee, section.special_session,section.steeringcommi
 
 }
 
-section.special_session{
+section.special_session,section.downloads_page{
   margin-top: 140px;
   margin-bottom: 140px;
   a{
