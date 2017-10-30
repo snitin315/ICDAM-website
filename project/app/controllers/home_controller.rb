@@ -21,16 +21,16 @@ class HomeController < ApplicationController
 
   end
   def download
+    # byebug
     filepath=Dir.pwd + '/app/assets/downloads/'+ params['filename']
     send_file(
       filepath,
       filename: params['filename'],
-      type: 'application/pdf'
     )
 
   end
   def downloads_page
-    
+    @downloads=Download.all
   end
 
 
