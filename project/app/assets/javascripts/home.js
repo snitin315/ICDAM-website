@@ -9,10 +9,21 @@ if (document.getElementById("special_submission_submit") !=null){
    this.innerHTML="please wait";
   });
 }
-  $('.carousel').carousel();
-  console.log("here");
-  console.log($('.carousel'));
-  console.log("here");
+  // $('.carousel1').carousel();
+  $('.carousel-slider').carousel({
+    padding: 200
+});
+autoplay()
+function autoplay() {
+    $('.carousel-slider').carousel('next');
+    setTimeout(autoplay, 3000);
+}
+
+$('.carousel').carousel();
+
+
+
+
   var reset = $('#reset')
   reset.click(function(){
     location.reload();
