@@ -2,7 +2,7 @@ $(document).ready(function(){
   $(document).ready(function() {
    $('select').material_select();
  });
-          
+
 
 if (document.getElementById("special_submission_submit") !=null){
   document.getElementById("special_submission_submit").addEventListener('click',function(){
@@ -10,6 +10,9 @@ if (document.getElementById("special_submission_submit") !=null){
   });
 }
   $('.carousel').carousel();
+  console.log("here");
+  console.log($('.carousel'));
+  console.log("here");
   var reset = $('#reset')
   reset.click(function(){
     location.reload();
