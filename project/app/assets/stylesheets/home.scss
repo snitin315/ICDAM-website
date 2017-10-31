@@ -76,6 +76,10 @@ section.paper_submission{
       text-align: center;
     }
     ul{
+      li{
+        list-style: decimal;
+      }
+      list-style: circle;
       li#heading_li{
         font-weight: bold;
 
