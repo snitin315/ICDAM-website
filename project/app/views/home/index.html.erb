@@ -37,7 +37,7 @@ body .container {
       <div class="row" >
 
         <div class="col m6 s6 l3" >
-          <div class="card-panel  hoverable "style="height:300px">
+          <div class="card-panel  hoverable "style="height:650px">
             <span class="">
               <h5>News Update</h5><hr>
               <marquee style="height:200px" direction="up" onmouseover="this.stop();" onmouseout="this.start();">
@@ -49,25 +49,7 @@ body .container {
             </marquee>
             </span>
           </div>
-          <div class="card-panel  hoverable" style="height: 328px;">
-            <span class="">
 
-              <h5>Publishing Partner</h5><hr>
-
-                <marquee direction="up" onmouseover="this.stop();" onmouseout="this.start();" style="height:200px" >
-              <% @publishpartners.each do |publishpartner| %>
-                    <!-- <div class="col m3 s3 l9"> --> <br>
-                      <img src="<%="/PublishPartner/" + publishpartner.image%>" style="width:150px;"><br>
-                      <span><a href="<%= publishpartner.url %>"><%= publishpartner.content %></a></span>
-                    <!-- </div> -->
-
-              <% end %>
-            </marquee>
-
-
-
-            </span>
-          </div>
         </div>
 
 
@@ -82,7 +64,7 @@ body .container {
         </div>
 
         <div class="col m6 s6 l4">
-          <div class="card-panel  hoverable" style=" height:300px">
+          <div class="card-panel  hoverable" style=" height:650px">
             <span class="">
               <h5>Important Dates</h5><hr>
 <marquee direction="up" onmouseover="this.stop();" onmouseout="this.start();" >
@@ -97,25 +79,7 @@ body .container {
             </span>
           </div>
         </div>
-        <div class="col m6 s6 l4"  style="height: 350px;">
 
-          <div class="card-panel  hoverable" style="height: 328px">
-            <span class="">
-              <h5>KeyNote Speaker</h5><hr>
-              <marquee style="height:200px" direction="up" onmouseover="this.stop();" onmouseout="this.start();">
-              <div class="row">
-                <% @keynotespeaker.each do |keynotespeaker| %>
-                    <div class="col s3 m3 l6">
-                      <img src="<%="/keynotespeaker/" + keynotespeaker.image%>"  style="width:10vw;"><br>
-                      <span><a href="<%= keynotespeaker.url %>"><%= keynotespeaker.caption %></a></span>
-                    </div>
-                <% end %>
-              </marquee>
-
-              </div>
-            </span>
-          </div>
-        </div>
         <!-- <div class="col m12 s12 l3" style="height: 300px;"> -->
 
 
@@ -127,14 +91,45 @@ body .container {
 
 
       </div>
+      <div class="row">
+        <div class="col m6 s2 l6" style="height: 350px;">
+          <div class="card-panel  hoverable" style="height: 328px;">
+              <h5>Publishing Partner</h5><hr>
+                <marquee direction="up" onmouseover="this.stop();" onmouseout="this.start();" style="height:200px" >
+              <% @publishpartners.each do |publishpartner| %>
+                     <br>
+                      <img src="<%="/PublishPartner/" + publishpartner.image%>" style="width:150px;"><br>
+                      <span><a href="<%= publishpartner.url %>"><%= publishpartner.content %></a></span>
+              <% end %>
+            </marquee>
+          </div>
+        </div>
+        <div class="col m6 s12 l6"  style="height: 350px;">
+          <div class="card-panel  hoverable" style="height: 328px">
+              <h5>KeyNote Speaker</h5><hr>
+              <marquee style="height:200px" direction="up" onmouseover="this.stop();" onmouseout="this.start();">
+              <div class="row">
+                <% @keynotespeaker.each do |keynotespeaker| %>
+                    <div class="col s3 m3 l6">
+                      <img src="<%="/keynotespeaker/" + keynotespeaker.image%>"  style="width:10vw;"><br>
+                      <span><a href="<%= keynotespeaker.url %>"><%= keynotespeaker.caption %></a></span>
+                    </div>
+                <% end %>
+              </marquee>
+              </div>
+          </div>
+        </div>
+
+
+      </div>
       <div class="row sponsors" style="  background-color: white; margin: 0 10px 0 10px;">
         <div class="col m6 l6 s12">
           <div >
             <h4>SPONSORS</h4>
             <hr><br>
+            <!-- <img src="/sponsors/image1.png" alt="">
             <img src="/sponsors/image1.png" alt="">
-            <img src="/sponsors/image1.png" alt="">
-            <img src="/sponsors/image1.png" alt="">
+            <img src="/sponsors/image1.png" alt=""> -->
             <% @sponsors.each do |sponsor| %>
             <!-- <div class="col s12 m12 l12"> -->
             <%= render 'sponsor' , sponsor: sponsor %>
@@ -143,7 +138,22 @@ body .container {
           </div>
 
       </div>
-        <div class="col m12 s12 l6">
+      <div class="col m12 s12 l6">
+        <!-- <div class="card-panel hoverable" style="height: 480px;"> -->
+          <span class="">
+            <h4>Paper Submission</h4><hr>
+            <% @papersubmission.each do |papersubmission| %>
+            <div class="card" style="background:none">
+              <div class="card-image">
+          <a target="_blank" href="https://easychair.org/conferences/?conf=icicc2018"><img src="<%="/PaperSubmission/" + papersubmission.url%>" class="responsive-img activator"  ></a>
+              </div>
+            </div>
+            <% end %>
+          </span>
+        <!-- </div> -->
+
+      </div>
+        <!-- <div class="col m12 s12 l6">
           <div>
             <span class="">
               <h4>Recent Visitors</h4><hr>
@@ -155,29 +165,15 @@ body .container {
 
             </span>
           </div>
-        </div>
+        </div> -->
       </div>
 
       <div class="row">
 
-        <div class="col m12 s12 l6">
-          <div class="card-panel hoverable" style="height: 480px;">
-            <span class="">
-              <h5>Paper Submission</h5><hr>
-              <% @papersubmission.each do |papersubmission| %>
-              <div class="card" style="background:none">
-                <div class="card-image">
-            <a target="_blank" href="https://easychair.org/conferences/?conf=icicc2018"><img src="<%="/PaperSubmission/" + papersubmission.url%>" class="responsive-img activator"  ></a>
-                </div>
-              </div>
-              <% end %>
-            </span>
-          </div>
 
-        </div>
 
         <div class="col m12 s12 l6">
-          <div class="card-panel  hoverable"  style="height: 480px">
+          <!-- <div class="card-panel  hoverable"  style="height: 480px">
             <span class="">
               <h5>Tourism Selection</h5><hr>
               <div class="card"5
@@ -188,7 +184,7 @@ body .container {
               </div>
 
             </span>
-          </div>
+          </div> -->
 
         </div>
       </div>
