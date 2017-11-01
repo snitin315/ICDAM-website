@@ -11,7 +11,6 @@ if (document.getElementById("special_submission_submit") !=null){
 }
   // $('.carousel1').carousel();
   $('.carousel-slider').carousel({
-    padding: 200
 });
 autoplay()
 function autoplay() {

@@ -78,7 +78,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 
 body {
-  background-color: #ffffff;
+  background-color: #e9ebee;
   font-family: helvetica, arial, sans-serif;
   font-size: 16px;
   /*padding-top: 195px;*/
@@ -100,7 +100,7 @@ h2 {
 p {
   margin-bottom: 2rem;
   line-height: 2;
-  color: #7f8c8d;
+  color: black;
 }
 
 
@@ -121,5 +121,6 @@ header *{
 
 
 footer.page-footer {
-  background-color: #3ba7ef;
+  color: black !important;
+  background-color: #a1a4a7;
 }
