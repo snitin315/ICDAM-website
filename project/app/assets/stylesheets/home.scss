@@ -172,7 +172,7 @@ section.technicalprogramcommittee, section.special_session,section.steeringcommi
     div.card-panel{
       height: 300px;
       marquee{
-        height: 550px;
+        height: 200px;
       }
     }
   }
@@ -306,6 +306,7 @@ section.conference_venue{
 }
 section.publication{
 margin-top: 140px;
+color: black !important;
 }
 section.registration{
 margin-top: 140px;
@@ -315,6 +316,7 @@ section.sponsorship{
 
 }
 section.steeringcommittee{
+  color: black !important;
 margin-top: 140px;
 }
 section.technicalprogramcommittee{
