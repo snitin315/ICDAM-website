@@ -13,10 +13,10 @@ header{
   padding-top:0px;
   text-transform: uppercase;
   z-index: 100;
-  background-color: #3498DB;
+  background-color: #e9ebee;
 
   h3{
-    color: white;
+    color: black;
     margin-top: 0px;
     font-size: 2vw;
     font-weight:100;
@@ -31,7 +31,7 @@ header{
 
     nav{
 
-        background-color: #2F89C5;
+        background-color: #f6f7f9;
         position: relative;
         bottom: -10px;
         height:40px;
@@ -42,6 +42,7 @@ header{
 
         a{
           height: 40px;
+          color: black;
 
         }
 
@@ -52,6 +53,7 @@ header{
       height: 60px;
     }
     li{
+      color: black;
       height: 80px;
     }
   }
@@ -59,17 +61,17 @@ header{
 }
 section.paper_submission{
   margin-top: 140px;
-  color:white;
+  color:black;
   h1{
-    color:white;
+    color:black;
     text-align: center;
   }
   div.card-panel{
     a{
-      color: white;
+      color: black;
     }
     i.fa-download{
-      color:white;
+      color:black;
     }
 
     h4{
@@ -102,7 +104,7 @@ footer{
   a.fa{
     font-size: 30px;
     padding-right: 5px;
-    color: white;
+    color: black;
   }
   h5{
     text-align: center;
@@ -114,7 +116,9 @@ section.conference_venue{
   }
 
 }
-
+div.card-panel{
+  background-color: white !important;
+}
 
 section.special_submission,section.downloads_page{
 margin-top: 140px;
@@ -125,7 +129,7 @@ section.contact_us{
 
   }
   div.card-panel{
-    background-color: #74b5eb;
+    background-color: #ffffff;
   }
 }
 button{
@@ -152,6 +156,7 @@ section.technicalprogramcommittee, section.special_session,section.steeringcommi
   }
   div.l4{
     span.white-text{
+      color: black !important;
       b{
         text-transform: capitalize;
       }
@@ -164,7 +169,7 @@ section.special_session,section.downloads_page{
   margin-top: 140px;
   margin-bottom: 140px;
   a{
-    color: white;}
+    color: black;}
 }
 section.contact_us{
   text-align: justify;
@@ -198,7 +203,7 @@ section.steeringcommittee{
 section.sponsorship{
   text-align: justify;
 
-  color: white;
+  color: black;
   div.card{
     background-color: #74b5eb;
   }
@@ -221,6 +226,7 @@ section.important_dates{
     background-color: #74b5eb;
   }
   span.white-text{
+    color: black !important;
       b{
         font-size: 22px;
       }
