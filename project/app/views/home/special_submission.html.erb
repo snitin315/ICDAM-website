@@ -98,7 +98,7 @@ if (paper_count_field.val()==""){
 
             <b>Important Dates</b>
             <hr />
-            <marquee direction="up" onmouseover="this.stop();" onmouseout="this.start();">
+            <!-- <marquee direction="up" onmouseover="this.stop();" onmouseout="this.start();"> -->
 
             <% @important_dates.each do |impdate| %>
             <b><%= impdate.title %></b>
@@ -107,7 +107,7 @@ if (paper_count_field.val()==""){
             <br><hr />
 
             <% end %>
-          </marquee>
+          <!-- </marquee> -->
 
           </span>
         </div>
