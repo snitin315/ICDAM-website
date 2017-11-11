@@ -240,6 +240,18 @@ section.sponsorship{
     background-color: #74b5eb;
   }
   div.card-panel{
+    p#sponsor-content{
+      padding: 2px 5px 0 5px;
+      b{
+        font-weight: bold;
+        font-style: italic;
+        font-size: 1.2em;
+      }
+      img{
+        width: 600px;
+        
+      }
+    }
     h5{
       text-align: center;
     }
