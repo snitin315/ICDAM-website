@@ -16,10 +16,10 @@ Rails.application.routes.draw do
   get '/advisorycommittee' => "home#advisorycommittee"
   get '/sponsorship' => "home#sponsorship"
   get '/publication' => "home#publication"
-  get '/contact_us' => "home#contact_us"
-  post 'home/contact_us/post' => 'home#contact_us_post'
-  get '/special_submission' => "home#special_submission"
-  post 'home/special_submission/post' => 'home#special_submission_post'
+  # get '/contact_us' => "home#contact_us"
+  # post 'home/contact_us/post' => 'home#contact_us_post'
+  # get '/special_submission' => "home#special_submission"
+  # post 'home/special_submission/post' => 'home#special_submission_post'
   get '/paper_submission' => "home#paper_submission"
   get '/download_paper_template' => "home#download_paper_template"
   get '/ss1' => 'home#ss1'
