@@ -72,21 +72,21 @@
       height: 100%;
     }
     .item:nth-child(1) {
-      background: url('https://s-media-cache-ak0.pinimg.com/originals/65/0f/64/650f644193a62defef7686a7314de124.jpg');
+      background: url('/img1.jpg');
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
     }
 
     .item:nth-child(2) {
-      background: url('/carousel/img2.jpeg');
+      background: url('/img2.jpg');
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
     }
 
     .item:nth-child(3) {
-      background: url('/carousel/img3.jpeg');
+      background: url('/img3.jpg');
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
