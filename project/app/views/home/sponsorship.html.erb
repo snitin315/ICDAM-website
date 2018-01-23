@@ -1,65 +1,96 @@
-<section class="sponsorship">
-   <div class="container">
-     <div class="row">
-       <div class="col m12 s12 l8 card-panel">
-<p id="sponsor-content">Dear Technology Leader, <br>
- In the era of digital revolution where world is becoming smaller and a lot of new technologies are being launched simultaneously. The ongoing saga of the computing and communication digital revolution, the new mantra - Extend and Adapt, has produced ripples of excitement in the industry and academia! Therefore, to make a developed India and to match the speed of these above mentioned changes joint efforts from Industry and Academia are required.  Academia is doing its bit by organizing the international conference ICICC-2018 and bringing together worlds the best technological brains and ideas under one roof. <b>This kind of initiative require lot of efforts and funding.</b> <br>
- International Conference on Innovative Computing and Communication (ICICC-2018) is organized with the objective of bringing together innovative scientists, professors, research scholars, students and industrial experts in the field of Computing and Communication to a common forum. The primary goal of the conference is to promote the exchange of innovative scientific information between researchers, developers, engineers, students, and practitioners. Another goal is to promote the transformation of fundamental research into institutional and industrialized research and to convert applied exploration into real time application. Overall the conference will provide the researchers and attendees with prospects for national and international collaboration and networking among universities and institutions from India and abroad for promoting research. ICICC-2018 will be hosted by Guru Nanak Institute of Management, a place to pursue knowledge beyond traditional boundaries. An institute initiated to impart quality education to the youth while equipping them with knowledge and skills which would enable them to leave their individual mark in the business world.
-
-
-
-
-
-
-
-
-
-The committee of professionals dedicated towards the conference is striving to achieve a high quality technical program with Tracks on <b>Innovative Computing, Innovative Communication Network and Security, and Internet of Things.</b> The highlights of the conference are as follows: <br>
-<img src="/sponsor-content.png" alt="">
- As a spearheading force in the industry driving forward this revolution, ICICC-2018 provides just the right platform and visibility to showcase your company, its vision and its technological offerings to a wide spectrum of professionals. Your participation will give an opportunity to nurture the talent pool and spur a collaborative atmosphere necessary for progress.  Kindly see the various sponsorship packages and offers and give us an opportunity to collaborate on this initiative and work together for its
-success right from the outset.  <br>
-Yours sincerely <br>
-  General Chair</p>
-
-
-
-              <h5>Sponsors</h5><hr>
-             <% @sponsors.each do |sponsor| %>
-            <div class="col m6 s6 l6">
-             <div class="card small">
-                 <div class="card-image waves-effect waves-block waves-light">
-                   <img src="<%="/sponsors/" + sponsor.image%>" class="responsive-img activator">
-                 </div>
-                 <div class="card-content">
-                   <span class="card-title activator grey-text text-darken-1"><%= sponsor.caption %></span>
-                 </div>
-               </div>
-
-             </div>
-             <%end%>
-
-
-       </div>
-       <div class="col m12 s12 l4">
-         <div class="card-panel ">
-           <span class="">
-             <b>Important Dates</b>
-             <hr />
-             <!-- <marquee direction="up" onmouseover="this.stop();" onmouseout="this.start();"> -->
-
-          <% @important_dates.each do |impdate| %>
-              <b><%= impdate.title %></b>
-              <br>
-              <%= impdate.date.to_date.to_formatted_s(:long_ordinal) %>
-              <br><hr />
-
-          <% end %>
-        <!-- </marquee> -->
-        </span>
+<section class="sub-page" id="sponsorship">
+  <div class="row">
+    <div class="col-md-8">
+      <div class="left">
+        <h1>Sponsorship</h1>
+        <hr>
+        <p>
+          Dear Technology Leader, <br>
+           In the era of digital revolution where world is becoming smaller and a lot of new technologies are being launched simultaneously. The ongoing saga of the computing and communication digital revolution, the new mantra - Extend and Adapt, has produced ripples of excitement in the industry and academia! Therefore, to make a developed India and to match the speed of these above mentioned changes joint efforts from Industry and Academia are required.  Academia is doing its bit by organizing the international conference ICICC-2018 and bringing together worlds the best technological brains and ideas under one roof. <b>This kind of initiative require lot of efforts and funding.</b> <br>
+           International Conference on Innovative Computing and Communication (ICICC-2018) is organized with the objective of bringing together innovative scientists, professors, research scholars, students and industrial experts in the field of Computing and Communication to a common forum. The primary goal of the conference is to promote the exchange of innovative scientific information between researchers, developers, engineers, students, and practitioners. Another goal is to promote the transformation of fundamental research into institutional and industrialized research and to convert applied exploration into real time application. Overall the conference will provide the researchers and attendees with prospects for national and international collaboration and networking among universities and institutions from India and abroad for promoting research. ICICC-2018 will be hosted by Guru Nanak Institute of Management, a place to pursue knowledge beyond traditional boundaries. An institute initiated to impart quality education to the youth while equipping them with knowledge and skills which would enable them to leave their individual mark in the business world.
+        </p>
+        <p>
+          The committee of professionals dedicated towards the conference is striving to achieve a high quality technical program with Tracks on <b>Innovative Computing, Innovative Communication Network and Security, and Internet of Things.</b> The highlights of the conference are as follows: <br>
+          <img src="/sponsor-content.png" alt="" style="max-width: 100%">
+           As a spearheading force in the industry driving forward this revolution, ICICC-2018 provides just the right platform and visibility to showcase your company, its vision and its technological offerings to a wide spectrum of professionals. Your participation will give an opportunity to nurture the talent pool and spur a collaborative atmosphere necessary for progress.  Kindly see the various sponsorship packages and offers and give us an opportunity to collaborate on this initiative and work together for its
+          success right from the outset.  <br>
+          Yours sincerely, <br>
+        <b>  General Chair</b>
+        </p>
       </div>
+    </div>
+    <div class="col-md-4">
+      <div class="box right">
+          <h1 class="custom-font">Important Dates</h1>
+          <hr>
+
+            <marquee behavior="" direction="up">
+              <% @important_dates.each do |impdate| %>
+                  <b><%= impdate.title %></b>
+                  <br>
+                  <%= impdate.date.to_date.to_formatted_s(:long_ordinal) %>
+                  <br><hr />
+
+              <% end %>
+
+
+            </marquee>
+            <span> <a href="/important_dates">Read More...</a> </span>
+
       </div>
+
+    </div>
   </div>
-
-
-</div>
+  <div class="row">
+    <div class="col-md-12">
+      <h1 style="text-align:center;">Our Sponsors</h1>
+      <br>
+      <div class="slick">
+        <% @sponsors.each do |sponsor| %>
+            <div class="slick-item">
+              <img src="<%="/sponsors/" + sponsor.image%>">
+              <span class="card-title activator grey-text text-darken-1"><%= sponsor.caption %></span>
+            </div>
+        <%end%>
+      </div>
+      <script type="text/javascript">
+        $(document).ready(function(){
+          $('.slick').slick({
+            dots: false,
+            infinite: true,
+            autoplay: true,
+            speen: 1000,
+            speed: 300,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            responsive: [
+              {
+                breakpoint: 1024,
+                settings: {
+                  slidesToShow: 1,
+                  slidesToScroll: 1,
+                  infinite: true,
+                  dots: true
+                }
+              },
+              {
+                breakpoint: 600,
+                settings: {
+                  slidesToShow: 1,
+                  slidesToScroll: 1
+                }
+              },
+              {
+                breakpoint: 480,
+                settings: {
+                  slidesToShow: 1,
+                  slidesToScroll: 1
+                }
+              }
+            ]
+          });
+        });
+      </script>
+    </div>
+  </div>
 </section>

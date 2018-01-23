@@ -1,16 +1,16 @@
-<section class="special_session">
-  <div class="container">
-    <div class="row">
-  <div class="col s12 m12 l12">
-<div class="card-panel">
-<%@special_session.each do |special_sesion|%>
-  <%=link_to url_for controller: "home", action: "download", filename: special_sesion.file do %>
-  <%=special_sesion.file%> <i class="fa fa-download" aria-hidden="true"></i>
-  <%end%>
-  <hr>
-<%end%>
-</div>
-  </div>
+<section class="sub-page" id="special_sesion">
+  <div class="row">
+    <div class="col-md-12">
+      <%@special_session.each do |special_sesion|%>
+        <div class="col-md-3 ">
+          <div class="card">
+            <%=link_to url_for controller: "home", action: "download", filename: special_sesion.file do %>
+            <%=special_sesion.file%> <i class="fa fa-download" aria-hidden="true"></i>
+            <%end%>
+          </div>
+
+        </div>
+    <%end%>
     </div>
   </div>
 </section>

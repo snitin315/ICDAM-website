@@ -1,60 +1,43 @@
-<section class="publication">
-   <div class="container">
-     <div class="row">
-       <div class="col m12 s12 l12">
+<section class="sub-page" id="publication">
+  <div class="row">
+    <div class="col-md-8">
+      <div class="left">
+        <p>
+          All Accepted Paper are published by Springer(Pending Approval) and selected extended papers of the conference will be
+          invited to submit for publication in the special issues of the following journals:
+        </p>
 
-
-              <div class="card-panel ">
-All Accepted Paper are published by Springer(Pending Approval) and selected extended papers of the conference will be invited to submit for publication in the special issues of the following journals:
-           </div>
-
-
-       </div>
-
-  </div>
-
-
-     <div class="row">
-       <div class="col m12 s12 l8">
-
-
-              <div class="card-panel ">
-
-                  <h5>Publication</h5><hr>
-
-                   <% @publication.each do |publish| %>
-                   <i class="fa fa-eercast" aria-hidden="true"></i>
-<b><%= publish.title %></b>
-                   <br>
-                      <a href="<%= publish.weblink %>"><%= publish.weblink %></a>
-                   <br>
-                   <%= publish.description %>
-                   <br><br />
-                   <br />
-               <% end %>
-
-
-           </div>
-
-
-       </div>
-       <div class="col m12 s12 l4">
-         <div class="card-panel ">
-             <b>Important Dates</b>
-             <hr />
-             <!-- <marquee direction="up" onmouseover="this.stop();" onmouseout="this.start();"> -->
-          <% @important_dates.each do |impdate| %>
-              <b><%= impdate.title %></b>
-              <br>
-              <%= impdate.date.to_date.to_formatted_s(:long_ordinal) %>
-              <br><hr />
-
-          <% end %>
-        <!-- </marquee> -->
+      <h3>Publications</h3>
+      <% @publication.each do |publish| %>
+      <div class="col-md-12">
+        <div class="card">
+          <b><%= publish.title %></b> <br>
+          <a href="<%= publish.weblink %>"><%= publish.weblink %></a> <br>
+          <%= publish.description %>
+        </div>
       </div>
+        <% end %>
       </div>
+    </div>
+    <div class="col-md-4">
+      <div class="box right">
+          <h1 class="custom-font">Important Dates</h1>
+          <hr>
+
+            <marquee behavior="" direction="up">
+              <% @important_dates.each do |impdate| %>
+                  <b><%= impdate.title %></b>
+                  <br>
+                  <%= impdate.date.to_date.to_formatted_s(:long_ordinal) %>
+                  <br><hr />
+
+              <% end %>
+
+
+            </marquee>
+            <span> <a href="/important_dates">Read More...</a> </span>
+
+      </div>
+    </div>
   </div>
-
-
-</div>
 </section>

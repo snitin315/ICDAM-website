@@ -2,131 +2,110 @@
 <html>
 <head>
   <title>ICICC | International Conference on Innovative Computing and Communication</title>
+
+
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+
   <%= csrf_meta_tags %>
-<link rel="shortcut icon" href="/gallery/gurunanak.png" />
 
-    <script src="https://use.fontawesome.com/80c624d313.js"></script>
-  <!-- Compiled and minified CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Compiled and minified JavaScript -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" >
-  <script src="https://use.fontawesome.com/4f2a04482d.js"></script>
-
-  <link href="https://fonts.googleapis.com/css?family=Ropa+Sans" rel="stylesheet">
-
-
-  <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
-
-
+  <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script src="https://use.fontawesome.com/396999c087.js"></script>
+  <script type="text/javascript" src="slick/slick.min.js"></script>
+  <link rel="shortcut icon" href="/gallery/gurunanak.png">
 
 </head>
 <body>
-  <header>
-    <div class="main_header">
-
-        <div class="leftheader">
-          <img style="width: 100px;" src="/gallery/gurunanak.png" alt="logo">
-        </div>
-        <div class="rightheader">
-          <h3>International Conference on Innovative Computing and Communication <br>(ICICC-2018)</h3>
-          <h6>Organised by : Guru Nanak Institute of Management <br>
-      5th-6th May,2018</h6>
-        </div>
-
-    </div>
-
-      <nav>
-        <%= link_to "Home", url_for(controller: 'home', action: 'index') %>
-        <a class="dropdown-button" data-activates="dropdown2" data-hover="true">About</a>
-
-        <a class="dropdown-button" data-activates="dropdown3" data-hover="true">Papers</a>
-
-        <%= link_to "Registration", url_for(controller: 'home', action: 'registration') %>
-        <%= link_to "Sponsorship", url_for(controller: 'home', action: 'sponsorship') %>
-        <%= link_to "Publication", url_for(controller: 'home', action: 'publication') %>
-        <a class="dropdown-button" data-activates="dropdown4" data-hover="true">Committee</a>
-        <a class="dropdown-button" data-activates="dropdown1" data-hover="true">Explore</a>
-        <%= link_to "downloads", url_for(controller: "home", action: "downloads_page")%>
-
-      </nav>
-
-    <ul id="dropdown4" class="dropdown-content">
-      <li> <%= link_to "Steering Committee", url_for(controller: 'home', action: 'steeringcommittee') %></li>
-      <li class="divider"></li>
-      <li> <%= link_to "Technical Program Committee", url_for(controller: 'home', action: 'technicalprogramcommittee') %></li>
-      <li class="divider"></li>
-      <li> <%= link_to "Advisory Committee", url_for(controller: 'home', action: 'advisorycommittee') %></li>
-    </ul>
-
-    <ul id="dropdown1" class="dropdown-content">
-      <li> <%= link_to "Important Dates", url_for(controller: 'home', action: 'important_dates') %></li>
-      <li class="divider"></li>
-      <li> <%= link_to "Conference Venue", url_for(controller: 'home', action: 'conference_venue') %></li>
-      <li class="divider"></li>
-      
-    </ul>
-    <ul id="dropdown2" class="dropdown-content">
-      <li> <%= link_to "About Institute", url_for(controller: 'home', action: 'about_institute') %></li>
-      <li class="divider"></li>
-      <li> <%= link_to "About IRD India", url_for(controller: 'home', action: 'about_irdindia') %></li>
-      <li class="divider"></li>
-      <li> <%= link_to "About Universal Innovators", url_for(controller: 'home', action: 'about_universal_innovators') %></li>
-    </ul>
-
-    <ul id="dropdown3" class="dropdown-content">
-      <li> <%= link_to "Call For Papers", url_for(controller: 'home', action: 'call_for_papers') %></li>
-      <li class="divider"></li>
-
-      <li class="divider"></li>
-      <li> <%= link_to "Paper Submission", url_for(controller: 'home', action: 'paper_submission') %></li>
-      <li class="divider"></li>
-      <li> <%= link_to "Special Session", url_for(controller: 'home', action: 'special_session') %></li>
-    </ul>
+  <div class="container-fluid">
 
 
+  <div class="non-sticky-header">
 
-  </header>
+      <div class="logo-header">
+        <img src="/gallery/gurunanak.png" alt="logo">
+      </div>
 
+      <div class="title-for-header custom-font">
 
-  <%= yield %>
-  <footer class="page-footer">
-
-      <div class="row">
-        <div class="col l6 s12">
-          <h5 >Contact Us</h5>
-          <p >Contact Us
-              For any information or queries regarding the conference, feel free to call or email us on the below mentioned details
+          <h2> INTERNATIONAL CONFERENCE ON INNOVATIVE COMPUTING AND COMMUNICATION <br /> (ICICC-2018) </h2>
+          <h5>ORGANISED BY : GURU NANAK INSTITUTE OF MANAGEMENT <br />5TH-6TH MAY,2018</h5>
 
 
-              <br>
-              E-mail : icicc.conf@gmail.com
+      </div>
+      <div class="logo-header">
 
-            </p>
-
-
-        </div>
-        <div class="col l6 s12" id="social">
-
-          <h5>Get Connected With Us</h5>
-
-            <a target="_blank" href="https://m.facebook.com/icicc2018/" class="fa fa-facebook"></a>
-            <a target="_top" href="mailto:icicc.conf@gmail.com" class="fa fa-envelope"></a>
-        </div>
+        <img src="/gallery/Springer.png" alt="logo">
 
       </div>
 
-    <div class="footer-copyright">
-      <div class="container">
-        copyright © International Conference on Innovative Computing and Communication all rights reserved.
 
+  </div>
+
+  <div class="sticky-header-main-all">
+
+    <nav class="navbar">
+      <div class="container-fluid">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="/">Home</a></li>
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">About
+            <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="/about_institute">About Institute</a></li>
+              <li><a href="/about_irdindia">About IRB India</a></li>
+              <li><a href="/about_universal_innovators">About Universal Innovators</a></li>
+            </ul>
+          </li>
+
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Papers
+            <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="/call_for_papers">Call For Papers</a></li>
+              <li><a href="/paper_submission">Paper Submission</a></li>
+              <li><a href="/special_session">Special Session</a></li>
+            </ul>
+          </li>
+          <li><a href="/registration">Registrations</a></li>
+          <li><a href="/sponsorship">Sponsorship</a></li>
+          <li><a href="/publication">Publications</a></li>
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Committee
+            <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="/steeringcommittee">Steering Committee</a></li>
+              <li><a href="/technicalprogramcommittee">Technical Program Committee</a></li>
+              <li><a href="/advisorycommittee">Advisory Committee</a></li>
+            </ul>
+          </li>
+          <!-- <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Conference Venue
+            <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Page 1-1</a></li>
+              <li><a href="#">Page 1-2</a></li>
+            </ul>
+          </li> -->
+          <li><a href="/conference_venue"> Conference Venue</a></li>
+          <li><a href="/downloads_page">Downloads</a></li>
+
+
+        </ul>
       </div>
-    </div>
-  </footer>
+    </nav>
+
+
+
+  </div>
+
+
+
+<%= yield %>
+  </div>
 </body>
 </html>

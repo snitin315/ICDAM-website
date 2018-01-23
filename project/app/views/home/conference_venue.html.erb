@@ -1,30 +1,44 @@
-<section class="conference_venue">
-  <h1>We Are Located At...</h1>
-  <div class="container">
-    <div class="row">
-      <div class="col m12 s12 l12">
+<section class="sub-page" id="conference_venue">
+  <div class="row">
+    <div class="col-md-8">
+      <div class="">
+        <h1>We Are Located At...</h1>
 
-      <div class="card large">
-        <div class="card-image">
-          <img src="/venue.jpg" />
-          <span class="card-title">Guru Nanak Institute of Management</span>
-        </div>
-        <div class="card-content">
-          <p><i class="fa fa-map-marker" aria-hidden="true"></i>
-          <b>Guru Nanak Institute of Management ,
-          Road No : 75 West Punjabi Bagh ,
+        <img src="/venue.jpg" />
+
+        <p>
+          <b>Guru Nanak Institute of Management , <br>
+          Road No : 75 West Punjabi Bagh , <br>
           New Delhi - 110026</b>
           <br />
-          <i class="fa fa-envelope" aria-hidden="true"></i><b> icicc.conf@gmail.com</b>
-          <br /><br /></p>
-        </div>
-
+          <b> icicc.conf@gmail.com</b>
+        </p>
       </div>
+    </div>
+    <div class="col-md-4">
+      <div class="box right">
+          <h1 class="custom-font">Important Dates</h1>
+          <hr>
+
+            <marquee behavior="" direction="up">
+              <% @important_dates.each do |impdate| %>
+                  <b><%= impdate.title %></b>
+                  <br>
+                  <%= impdate.date.to_date.to_formatted_s(:long_ordinal) %>
+                  <br><hr />
+
+              <% end %>
+
+
+            </marquee>
+            <span> <a href="/important_dates">Read More...</a> </span>
 
       </div>
     </div>
-
   </div>
-          <div style="width: 100%"><iframe width="100%" height="300" src="https://www.mapsdirections.info/en/custom-google-maps/map.php?width=100%&height=300&hl=ru&q=Guru%20Nanak%20Institute%20of%20Management%2C%20Best%20PGDM%20College%20in%20delhi+(Guru%20Nanak%20Institute%20of%20Management)&ie=UTF8&t=&z=14&iwloc=B&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"><a href="https://www.mapsdirections.info/en/custom-google-maps/">Create a custom Google Map</a> by <a href="https://www.mapsdirections.info/en/">Measure area on map</a></iframe></div>
-
+  <div class="row">
+    <div class="col-md-12">
+      <div style="width: 100%"><iframe width="100%" height="300" src="https://www.mapsdirections.info/en/custom-google-maps/map.php?width=100%&height=300&hl=ru&q=Guru%20Nanak%20Institute%20of%20Management%2C%20Best%20PGDM%20College%20in%20delhi+(Guru%20Nanak%20Institute%20of%20Management)&ie=UTF8&t=&z=14&iwloc=B&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"><a href="https://www.mapsdirections.info/en/custom-google-maps/">Create a custom Google Map</a> by <a href="https://www.mapsdirections.info/en/">Measure area on map</a></iframe></div>
+    </div>
+  </div>
 </section>
