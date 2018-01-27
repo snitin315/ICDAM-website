@@ -72,6 +72,16 @@ div.non-sticky-header{
     }
 
 }
+.responsive-navbar{
+  display: none;
+  @media(max-width: 479px){
+    display: block;
+  }
+  a{color:black;};
+  .icon-bar{
+    background-color:black;
+  }
+}
 div.sticky-header-main-all{
   @media only screen and (max-width: 768px) {
     display: none;
@@ -133,11 +143,22 @@ marquee{
         height: 100%;
         display: flex;
 
+
+        @media(max-width: 479px){
+          flex-direction: column;
+        }
+
       .images-key-note,{
         max-width: 50%;
 
+                @media(max-width: 479px){
+                  max-width: 80%;
+
+                          }
         img{
           max-height: 100%;
+
+
         }
       }
       .link-key-note{
@@ -241,12 +262,7 @@ section.home-page{
 
   }
 
-  br#invisible{
-    display: none;
-    @media( max-width: 481px){
-      display: block;
-    }
-  }
+
 
   .publish-partner{
     img{

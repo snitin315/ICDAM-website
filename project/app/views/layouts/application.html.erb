@@ -101,10 +101,71 @@
 
 
 
+
+
+
       </div>
 
 
+      <nav class="navbar responsive-navbar">
+          <div class="container-fluid">
+          <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              </button>
+          </div>
+          <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="/">Home</a></li>
+              <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">About
+                  <span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="/about_institute">About Institute</a></li>
+                    <li><a href="/about_irdindia">About IRB India</a></li>
+                    <li><a href="/about_universal_innovators">About Universal Innovators</a></li>
+                  </ul>
+                </li>
 
+                <li class="dropdown">
+                  <a class="dropdown-toggle" data-toggle="dropdown" href="#">Papers
+                    <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                      <li><a href="/call_for_papers">Call For Papers</a></li>
+                      <li><a href="/paper_submission">Paper Submission</a></li>
+                      <li><a href="/special_session">Special Session</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="/registration">Registrations</a></li>
+                  <li><a href="/sponsorship">Sponsorship</a></li>
+                  <li><a href="/publication">Publications</a></li>
+                  <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Committee
+                      <span class="caret"></span></a>
+                      <ul class="dropdown-menu">
+                        <li><a href="/steeringcommittee">Steering Committee</a></li>
+                        <li><a href="/technicalprogramcommittee">Technical Program Committee</a></li>
+                        <li><a href="/advisorycommittee">Advisory Committee</a></li>
+                      </ul>
+                    </li>
+                    <!-- <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Conference Venue
+                    <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                    <li><a href="#">Page 1-1</a></li>
+                    <li><a href="#">Page 1-2</a></li>
+                  </ul>
+                </li> -->
+                <li><a href="/conference_venue"> Conference Venue</a></li>
+                <li><a href="/downloads_page">Downloads</a></li>
+
+
+              </ul>  
+          </div>
+          </div>
+      </nav>
       <%= yield %>
 
       <!-- footer -->
