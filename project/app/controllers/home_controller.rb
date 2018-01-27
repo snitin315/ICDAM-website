@@ -13,7 +13,8 @@ class HomeController < ApplicationController
 
   def about_institute
     @about_institute = AboutInstitute.last.content
-    @important_dates = ImportantDate.all
+    @important_dates = ImportantDate.all.sort_by &:date
+
 
   end
   def special_session
@@ -31,57 +32,67 @@ class HomeController < ApplicationController
   end
   def downloads_page
     @downloads=Download.all
-    @important_dates = ImportantDate.all
+    @important_dates = ImportantDate.all.sort_by &:date
+
   end
 
 
 
   def about_irdindia
     @about_irdindia = AboutIrdind.last.content
-    @important_dates = ImportantDate.all
+    @important_dates = ImportantDate.all.sort_by &:date
+
   end
 
   def about_universal_innovators
     @about_universal_innovators = AboutUniversalInnovator.last.content
-    @important_dates = ImportantDate.all
+    @important_dates = ImportantDate.all.sort_by &:date
+
   end
 
   def call_for_papers
     @call_for_papers = CallForPaper.all
-    @important_dates = ImportantDate.all
+    @important_dates = ImportantDate.all.sort_by &:date
+
   end
 
 
   def registration
-    @important_dates = ImportantDate.all
+    @important_dates = ImportantDate.all.sort_by &:date
+
 
 
   end
 
   def steeringcommittee
     @steercompost = SteerComPost.all
-    @important_dates = ImportantDate.all
+    @important_dates = ImportantDate.all.sort_by &:date
+
   end
 
   def technicalprogramcommittee
     @techcom = TechCom.all
-    @important_dates = ImportantDate.all
+    @important_dates = ImportantDate.all.sort_by &:date
+
   end
 
   def advisorycommittee
     @advcom = AdvCom.all
-    @important_dates = ImportantDate.all
+    @important_dates = ImportantDate.all.sort_by &:date
+
   end
 
   def sponsorship
     @sponsors = Sponsor.all
-    @important_dates = ImportantDate.all
+    @important_dates = ImportantDate.all.sort_by &:date
+
 
   end
 
   def publication
     @publication = Publication.all
-    @important_dates = ImportantDate.all
+    @important_dates = ImportantDate.all.sort_by &:date
+
 
   end
 
@@ -121,7 +132,7 @@ class HomeController < ApplicationController
   end
 
   def special_submission
-    @important_dates = ImportantDate.all
+    @important_dates = ImportantDate.all.sort_by &:date
     @response= session[:response]
   end
 
@@ -170,16 +181,19 @@ class HomeController < ApplicationController
     end
   end
   def conference_venue
-    @important_dates = ImportantDate.all
+    @important_dates = ImportantDate.all.sort_by &:date
+
   end
 
 
   def important_dates
-    @important_dates = ImportantDate.all
+    @important_dates = ImportantDate.all.sort_by &:date
+
 
   end
   def paper_submission
-    @important_dates = ImportantDate.all
+    @important_dates = ImportantDate.all.sort_by &:date
+
 
   end
 
@@ -194,7 +208,8 @@ class HomeController < ApplicationController
   end
 
   def abstract
-    @important_dates = ImportantDate.all
+    @important_dates = ImportantDate.all.sort_by &:date
+
 
   end
   def abstract_post
