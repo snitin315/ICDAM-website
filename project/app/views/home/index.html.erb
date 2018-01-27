@@ -29,7 +29,17 @@
   </div>
   <div class="col-md-4">
     <div class="box">
-      <h3 class="custom-font"> Downloads</h3>
+      <h1 class="custom-font"> Downloads</h1>
+      <hr>
+      <marquee behavior="" direction="up">
+        <%@downloads.each do |download|%>
+          <%=link_to url_for(controller: "home", action: "download", filename: download.download_file) do %>
+          <%=download.file_name.titleize%> <i class="fa fa-download" aria-hidden="true"></i>
+          <%end%>
+          <br> <hr>
+        <%end%>
+      </marquee>
+      <span> <a href="/downloads_page">See More...</a> </span>
     </div>
 
   </div>
@@ -38,23 +48,33 @@
 <div class="row imp-dates-notice">
   <div class="col-md-6">
       <div class="box">
-          <h3 class="custom-font">Important Dates</h3>
-          <hr>
-          <div class="scrolling marque">
-
-          </div>
-
+        <h1 class="custom-font">Important Dates</h1>
+        <hr>
+          <marquee behavior="" direction="up">
+            <% @important_dates.each do |impdate| %>
+                <b><%= impdate.title %></b>
+                <br>
+                <%= impdate.date.to_date.to_formatted_s(:long_ordinal) %>
+                <br><hr />
+            <% end %>
+          </marquee>
+          <span> <a href="/important_dates">Read More...</a> </span>
       </div>
   </div>
 
 
   <div class="col-md-6">
       <div class="box">
-          <h3 class="custom-font">Notices</h3>
-          <hr>
-          <div class="scrolling marque">
+        <h1 class="custom-font">Notices</h1>
+          <marquee behavior="" direction="up">
+            <%@newsupdate.each do |news|%>
+              <b><%=news.news%></b> <br><br>
+              <hr>
+              <%end%>
+          </marquee>
 
-          </div>
+
+
       </div>
   </div>
 

@@ -8,7 +8,7 @@ class HomeController < ApplicationController
     @papersubmission = PaperSubmission.all
     @publishpartners = PublishPartner.all
     @keynotespeaker = KeyNoteSpeaker.all
-
+    @downloads=Download.all
   end
 
   def about_institute
