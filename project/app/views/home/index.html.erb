@@ -2,122 +2,123 @@
   <div class="carousel-section-home-page">
 
     <img src="/img3.jpg" style="visibility:hidden;" />
-        <div>
-          <%= render "customcarousel"%>
+    <div>
+      <%= render "customcarousel"%>
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+  <div class="row about-conference">
+    <div class="col-md-8">
+
+      <div >
+        <div class="left">
+          <h1 class="custom-font">About Conference</h1><hr>
+          <p><%= @aboutconference %></p>
         </div>
 
-  </div>
-
-
-
-
-
-
-
-<div class="row about-conference">
-  <div class="col-md-8">
-
-    <div >
-      <div class="left">
-      <h1 class="custom-font">About Conference</h1><hr>
-      <p>
-        International Conference on Innovative Computing and Communication (ICICC-2018) is organized with the objective of bringing together innovative scientists, professors, research scholars, students and industrial experts in the field of Computing and Communication to a common forum. The primary goal of the conference is to promote the exchange of innovative scientific information between researchers, developers, engineers, students, and practitioners. Another goal is to promote the transformation of fundamental research into institutional and industrialized research and to convert applied exploration into real time application. Overall the conference will provide the researchers and attendees with prospects for national and international collaboration and networking among universities and institutions from India and abroad for promoting research. ICICC-2018 will be held at Guru Nanak Institute of Management (GNIM), Delhi, India on 5th-6th May 2018. All the accepted papers (after double blinded peer review) are published by springer (approval pending) and extended selected papers will be published in the special issues of SCI/SCOPUS/WoS/DBLP/ACM indexed Journals.
-      </p>
+      </div>
     </div>
-
-    </div>
-  </div>
-  <div class="col-md-4">
-    <div class="box">
-      <h1 class="custom-font"> Downloads</h1>
-      <hr>
-      <marquee behavior="" direction="up">
-        <%@downloads.each do |download|%>
+    <div class="col-md-4">
+      <div class="box">
+        <h1 class="custom-font"> Downloads</h1>
+        <hr>
+        <marquee behavior="" direction="up">
+          <%@downloads.each do |download|%>
           <%=link_to url_for(controller: "home", action: "download", filename: download.download_file) do %>
           <%=download.file_name.titleize%> <i class="fa fa-download" aria-hidden="true"></i>
           <%end%>
           <br> <hr>
-        <%end%>
-      </marquee>
-      <span> <a href="/downloads_page">See More...</a> </span>
-    </div>
+          <%end%>
+        </marquee>
+        <span> <a href="/downloads_page">See More...</a> </span>
+      </div>
 
+    </div>
   </div>
-</div>
-<br>
-<div class="row imp-dates-notice">
-  <div class="col-md-6">
+  <br>
+  <div class="row imp-dates-notice">
+    <div class="col-md-6">
       <div class="box">
         <h1 class="custom-font">Important Dates</h1>
         <hr>
-          <marquee behavior="" direction="up">
-            <% @important_dates.each do |impdate| %>
-                <b><%= impdate.title %></b>
-                <br>
-                <%= impdate.date.to_date.to_formatted_s(:long_ordinal) %>
-                <br><hr />
-            <% end %>
-          </marquee>
-          <span> <a href="/important_dates">Read More...</a> </span>
+        <marquee behavior="" direction="up">
+          <% @important_dates.each do |impdate| %>
+          <b><%= impdate.title %></b>
+          <br>
+          <%= impdate.date.to_date.to_formatted_s(:long_ordinal) %>
+          <br><hr />
+          <% end %>
+        </marquee>
+        <span> <a href="/important_dates">Read More...</a> </span>
       </div>
-  </div>
+    </div>
 
 
-  <div class="col-md-6">
+    <div class="col-md-6">
       <div class="box">
         <h1 class="custom-font">Notices</h1>
-          <marquee behavior="" direction="up">
-            <%@newsupdate.each do |news|%>
-              <b><%=news.news%></b> <br><br>
-              <hr>
-              <%end%>
-          </marquee>
+        <marquee behavior="" direction="up">
+          <%@newsupdate.each do |news|%>
+          <b><%=news.news%></b> <br><br>
+          <hr>
+          <%end%>
+        </marquee>
 
 
 
       </div>
-  </div>
-
-</div>
-
-
-<div class="row key-note">
-
-  <div class="col-md-6 left">
-        <h1>Key Note<br>Speakers</h1>
-  </div>
-  <div class="col-md-6 right">
-
-
-                    <div class="slick-keynote">
-                      <div>
-                        <div class="images-key-note"><img src="http://icicc-conf.com/keynotespeaker/covuni.png"></div>
-                        <div class="link-key-note"><a href="">Dr. Valentina Emilia Balas Professor, Aurel Vlaicu University of Arad, Romania.</a></div>
-                      </div>
-                      <div>
-                        <div class="images-key-note"><img src="http://icicc-conf.com/keynotespeaker/covuni.png"></div>
-                        <div class="link-key-note"><a href="">Dr. Valentina Emilia Balas Professor, Aurel Vlaicu University of Arad, Romania.</a></div>
-                      </div>
-                      <div>
-                        <div class="images-key-note"><img src="http://icicc-conf.com/keynotespeaker/covuni.png"></div>
-                        <div class="link-key-note"><a href="">Dr. Valentina Emilia Balas Professor, Aurel Vlaicu University of Arad, Romania.</a></div>
-                      </div>
-
-                    </div>
-
-                    <script type="text/javascript" src="slick/slick.min.js"></script>
-
-
-                    <script type="text/javascript">
-                      $(document).ready(function(){
-                        $('.slick-keynote').slick({
-                          autoplay: true,
-                          autoplaySpeed: 2500
-                        });
-                      });
-                    </script>
+    </div>
 
   </div>
+
+
+  <div class="row key-note">
+
+    <div class="col-md-6 left">
+      <h1>Key Note<br>Speakers</h1>
+    </div>
+    <div class="col-md-6 right">
+
+
+      <div class="slick-keynote">
+        <div>
+          <div class="images-key-note"><img src="http://icicc-conf.com/keynotespeaker/covuni.png"></div>
+          <div class="link-key-note"><a href="">Dr. Valentina Emilia Balas Professor, Aurel Vlaicu University of Arad, Romania.</a></div>
+        </div>
+        <div>
+          <div class="images-key-note"><img src="http://icicc-conf.com/keynotespeaker/covuni.png"></div>
+          <div class="link-key-note"><a href="">Dr. Valentina Emilia Balas Professor, Aurel Vlaicu University of Arad, Romania.</a></div>
+        </div>
+        <div>
+          <div class="images-key-note"><img src="http://icicc-conf.com/keynotespeaker/covuni.png"></div>
+          <div class="link-key-note"><a href="">Dr. Valentina Emilia Balas Professor, Aurel Vlaicu University of Arad, Romania.</a></div>
+        </div>
+
+      </div>
+
+      <script type="text/javascript" src="slick/slick.min.js"></script>
+
+
+      <script type="text/javascript">
+      $(document).ready(function(){
+        $('.slick-keynote').slick({
+          autoplay: true,
+          autoplaySpeed: 2500
+        });
+      });
+      </script>
+
+    </div>
+
+  </div>
+  <div class="row publish-partner">
 
 </div>
 <div class="row publish-partner">
@@ -155,6 +156,22 @@
   </div>
 
 </div>
+<div class="row">
+  <div class="col-md-6">
+    <h2>Sponsors</h2>
+  </div>
+  <div class="col-md-6">
+    <h2>Paper Submission</h2>
+  </div>
+</div>
 
 
-</section>
+<div class="row">
+  <div class="col-md-12">
+
+    <%= render "gallery"%>
+  </div>
+</div>
+
+
+  </section>
