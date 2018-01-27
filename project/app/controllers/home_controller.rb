@@ -2,7 +2,7 @@ class HomeController < ApplicationController
   def index
     @photogallery = PhotoGallery.all
     @newsupdate = NewsUpdate.all
-    @important_dates = ImportantDate.all
+    @important_dates = ImportantDate.all.sort_by &:date
     @aboutconference = AboutConference.last.description
     @sponsors = Sponsor.all
     @papersubmission = PaperSubmission.all
