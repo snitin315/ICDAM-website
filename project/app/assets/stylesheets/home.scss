@@ -222,6 +222,7 @@ section.home-page{
     }
 
 
+
     .left{
 
       height: 100%;
@@ -234,6 +235,12 @@ section.home-page{
       }
 
     }
+    br{
+      display: none;
+      @media( max-width: 481px){
+        display: block;
+      }
+    }
 
 
 
@@ -244,6 +251,12 @@ section.home-page{
   .publish-partner{
     img{
       height: 300px;
+    }
+    br{
+      display: none;
+      @media( max-width: 481px){
+        display: block;
+      }
     }
 
 
