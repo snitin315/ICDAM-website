@@ -144,9 +144,9 @@ marquee{
         display: flex;
 
 
-        @media(max-width: 479px){
-          flex-direction: column;
-        }
+        // @media(max-width: 479px){
+        //   flex-direction: column;
+        // }
 
       .images-key-note,{
         max-width: 50%;
