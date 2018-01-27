@@ -24,7 +24,7 @@
   <div class="container-fluid">
 
 
-  <div class="non-sticky-header">
+    <div class="non-sticky-header">
 
       <div class="logo-header">
         <img src="/gallery/gurunanak.png" alt="logo">
@@ -32,8 +32,8 @@
 
       <div class="title-for-header custom-font">
 
-          <h2> INTERNATIONAL CONFERENCE ON INNOVATIVE COMPUTING AND COMMUNICATION <br /> (ICICC-2018) </h2>
-          <h5>ORGANISED BY : GURU NANAK INSTITUTE OF MANAGEMENT <br />5TH-6TH MAY,2018</h5>
+        <h2> INTERNATIONAL CONFERENCE ON INNOVATIVE COMPUTING AND COMMUNICATION <br /> (ICICC-2018) </h2>
+        <h5>ORGANISED BY : GURU NANAK INSTITUTE OF MANAGEMENT <br />5TH-6TH MAY,2018</h5>
 
 
       </div>
@@ -44,123 +44,115 @@
       </div>
 
 
-  </div>
+    </div>
 
-  <div class="sticky-header-main-all">
+    <div class="sticky-header-main-all">
 
-    <nav class="navbar">
-      <div class="container-fluid">
-        <ul class="nav navbar-nav">
-          <li class="active"><a href="/">Home</a></li>
-          <li class="dropdown">
-            <a class="dropdown-toggle" data-toggle="dropdown" href="#">About
-            <span class="caret"></span></a>
-            <ul class="dropdown-menu">
-              <li><a href="/about_institute">About Institute</a></li>
-              <li><a href="/about_irdindia">About IRB India</a></li>
-              <li><a href="/about_universal_innovators">About Universal Innovators</a></li>
+      <nav class="navbar">
+        <div class="container-fluid">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="/">Home</a></li>
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#">About
+                <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="/about_institute">About Institute</a></li>
+                  <li><a href="/about_irdindia">About IRB India</a></li>
+                  <li><a href="/about_universal_innovators">About Universal Innovators</a></li>
+                </ul>
+              </li>
+
+              <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Papers
+                  <span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="/call_for_papers">Call For Papers</a></li>
+                    <li><a href="/paper_submission">Paper Submission</a></li>
+                    <li><a href="/special_session">Special Session</a></li>
+                  </ul>
+                </li>
+                <li><a href="/registration">Registrations</a></li>
+                <li><a href="/sponsorship">Sponsorship</a></li>
+                <li><a href="/publication">Publications</a></li>
+                <li class="dropdown">
+                  <a class="dropdown-toggle" data-toggle="dropdown" href="#">Committee
+                    <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                      <li><a href="/steeringcommittee">Steering Committee</a></li>
+                      <li><a href="/technicalprogramcommittee">Technical Program Committee</a></li>
+                      <li><a href="/advisorycommittee">Advisory Committee</a></li>
+                    </ul>
+                  </li>
+                  <!-- <li class="dropdown">
+                  <a class="dropdown-toggle" data-toggle="dropdown" href="#">Conference Venue
+                  <span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                  <li><a href="#">Page 1-1</a></li>
+                  <li><a href="#">Page 1-2</a></li>
+                </ul>
+              </li> -->
+              <li><a href="/conference_venue"> Conference Venue</a></li>
+              <li><a href="/downloads_page">Downloads</a></li>
+
+
             </ul>
-          </li>
-
-          <li class="dropdown">
-            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Papers
-            <span class="caret"></span></a>
-            <ul class="dropdown-menu">
-              <li><a href="/call_for_papers">Call For Papers</a></li>
-              <li><a href="/paper_submission">Paper Submission</a></li>
-              <li><a href="/special_session">Special Session</a></li>
-            </ul>
-          </li>
-          <li><a href="/registration">Registrations</a></li>
-          <li><a href="/sponsorship">Sponsorship</a></li>
-          <li><a href="/publication">Publications</a></li>
-          <li class="dropdown">
-            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Committee
-            <span class="caret"></span></a>
-            <ul class="dropdown-menu">
-              <li><a href="/steeringcommittee">Steering Committee</a></li>
-              <li><a href="/technicalprogramcommittee">Technical Program Committee</a></li>
-              <li><a href="/advisorycommittee">Advisory Committee</a></li>
-            </ul>
-          </li>
-          <!-- <li class="dropdown">
-            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Conference Venue
-            <span class="caret"></span></a>
-            <ul class="dropdown-menu">
-              <li><a href="#">Page 1-1</a></li>
-              <li><a href="#">Page 1-2</a></li>
-            </ul>
-          </li> -->
-          <li><a href="/conference_venue"> Conference Venue</a></li>
-          <li><a href="/downloads_page">Downloads</a></li>
+          </div>
+        </nav>
 
 
-        </ul>
+
       </div>
-    </nav>
 
 
 
-  </div>
+      <%= yield %>
+
+      <!-- footer -->
+
+      <div class="row" id="footer">
+        <div class="col-xs-12 col-md-12 pull-left">
+          <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
+              <h3>CONTACT DETAILS</h3>
+              <span class="fa fa-envelope">&nbsp;</span>icicc.conf@gmail.com<br>
+              <br>
 
 
+              <h3>SOCIAL MEDIA</h3>
+              <a href="https://m.facebook.com/icicc2018/" class="fa fa-facebook"></a>
+              <a href="mailto:icicc.conf@gmail.com" class="fa fa-envelope"></a>
+              <a href="https://www.linkedin.com/in/icicc-conf-31a3b6151" class="fa fa-linkedin"></a>
 
-<%= yield %>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-lg-6 footer-links">
+              <h3>Quick Links</h3>
+              <ul>
+                <li><a href="/call_for_papers">Call For Papers</a></li>
+                <li><a href="/important_dates">Important Dates</a></li>
+                <li><a href="/conference_venue">Conference Venue</a></li>
+                <li><a href="/downloads_page">Downloads</a></li>
 
- <!-- footer -->
-
- <div class="row" id="footer">
-   <div class="col-xs-12 col-md-12 pull-left">
-             <div class="row">
-               <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
-                   <h3>CONTACT DETAILS</h3>
-                   <span class="fa fa-envelope">&nbsp;</span>icicc.conf@gmail.com<br>
-                   <br>
-
-
-                   <h3>SOCIAL MEDIA</h3>
-                   <a target="_blank">
-                     <span class="fa-stack fa-lg">
-                       <i class="fa fa-circle fa-stack-2x"></i>
-                       <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
-                     </span>
-                   </a>
+              </ul>
+            </div>
 
 
-                   <a target="_blank" >
-                     <span class="fa-stack fa-lg">
-                       <i class="fa fa-circle fa-stack-2x"></i>
-                       <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
-                     </span>
-                   </a>
+          </div>
+        </div>
+      </div>
 
-               </div>
-               <div class="class col-xs-12 col-sm-12 col-lg-6 footer-links">
-                 <h3>Quick Links</h3>
-                 <ul>
-                   <li><a href="/">Home</a></li>
+      <div class="row" id="copyright">
+        <hr>
+        <p>Copyright © International Conference on Innovative Computing and Communication | All Rights Reserved | Site By Harshit Singhal , Pranav Singhal and Sanket Singh</p>
+      </div>
 
-                 </ul>
-               </div>
-
-
-             </div>
-           </div>
- </div>
-
- <div class="row" id="copyright">
-   <hr>
-   <p>Copyright © 2017 highflyers | All Rights Reserved | Site By Harshit Singhal and Pranav Singhal</p>
- </div>
-
-<!--
- footer ends -->
+      <!--
+      footer ends -->
 
 
 
 
 
 
-  </div>
-</body>
-</html>
+    </div>
+  </body>
+  </html>
