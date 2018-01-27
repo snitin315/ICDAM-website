@@ -1,226 +1,185 @@
-<style type="text/css">
-body div.container div.row div.l4 div.card-panel{
-  height: 300px
-}
+<section class="home-page">
+  <div class="carousel-section-home-page">
 
-body div.sponsors h4{
-  color: black;
-}
+    <img src="/img3.jpg" style="visibility:hidden;" />
+    <div>
+      <%= render "customcarousel"%>
+    </div>
 
-body div.container div.row div.l4 marquee{
-  height: 550px;
-}
-body div.card-panel{
-  background-color: #74b5eb;
-}
-body .container {
-  margin: 0 auto;
-  max-width: 1390px;
-  width: 90%;
-}
-</style>
-<body>
-<div class="row">
-  <div class="carousel carousel-slider">
-    <br>
-      <a class="carousel-item"><img src="/carousel/img1.jpeg"></a>
-      <a class="carousel-item"><img src="/carousel/img2.jpeg"></a>
-      <a class="carousel-item"><img src="/carousel/img3.jpeg"></a>
+  </div>
+
+
+
+
+
+
+
+  <div class="row about-conference">
+    <div class="col-md-8">
+
+      <div >
+        <div class="left">
+          <h1 class="custom-font">About Conference</h1><hr>
+          <p><%= @aboutconference %></p>
+        </div>
+
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="box">
+        <h1 class="custom-font"> Downloads</h1>
+        <hr>
+        <marquee behavior="" direction="up">
+          <%@downloads.each do |download|%>
+          <%=link_to url_for(controller: "home", action: "download", filename: download.download_file) do %>
+          <%=download.file_name.titleize%> <i class="fa fa-download" aria-hidden="true"></i>
+          <%end%>
+          <br> <hr>
+          <%end%>
+        </marquee>
+        <span> <a href="/downloads_page">See More...</a> </span>
+      </div>
 
     </div>
-</div>
+  </div>
+  <br>
+  <div class="row imp-dates-notice">
+    <div class="col-md-6">
+      <div class="box">
+        <h1 class="custom-font">Important Dates</h1>
+        <hr>
+        <marquee behavior="" direction="up">
+          <% @important_dates.each do |impdate| %>
+          <b><%= impdate.title %></b>
+          <br>
+          <%= impdate.date.to_date.to_formatted_s(:long_ordinal) %>
+          <br><hr />
+          <% end %>
+        </marquee>
+        <span> <a href="/important_dates">Read More...</a> </span>
+      </div>
+    </div>
 
 
-
-    <div class="container">
-
-      <div class="row" >
-
-        <div class="col m6 s6 l3" >
-          <div class="card-panel  hoverable "style="height:650px">
-            <span class="">
-              <h5>News Update</h5><hr>
-              <!-- <marquee style="height:550px" direction="up" onmouseover="this.stop();" onmouseout="this.start();"> -->
-              <% @newsupdate.each do |newsupdate| %>
-              <b><%= newsupdate.news %></b><br>
-              <br>
-
-              <% end %>
-            <!-- </marquee> -->
-            </span>
-          </div>
-
-        </div>
-
-
-        <div class="col m12 s12 l5">
-          <div class="card-panel  hoverable" style="overflow:hidden; height:650px">
-            <span class="">
-              <h4 >About Conference</h4>
-              <hr>
-            <p style="text-align: justify;"><%= @aboutconference %></p>
-            </span>
-          </div>
-        </div>
-
-        <div class="col m6 s6 l4">
-          <div class="card-panel  hoverable" style=" height:650px">
-            <span class="">
-              <h5>Important Dates</h5><hr>
-<!-- <marquee direction="up" onmouseover="this.stop();" onmouseout="this.start();" > -->
-              <% @important_dates.each do |impdate| %>
-              <b><%= impdate.title %></b>
-              <br>
-              <%= impdate.date.to_date.to_formatted_s(:long_ordinal) %>
-              <br><hr />
-
-              <% end %>
-              <!-- </marquee> -->
-            </span>
-          </div>
-        </div>
-
-        <!-- <div class="col m12 s12 l3" style="height: 300px;"> -->
-
-
-        <!-- </div> -->
-
-
-
+    <div class="col-md-6">
+      <div class="box">
+        <h1 class="custom-font">Notices</h1>
+        <marquee behavior="" direction="up">
+          <%@newsupdate.each do |news|%>
+          <b><%=news.news%></b> <br><br>
+          <hr>
+          <%end%>
+        </marquee>
 
 
 
       </div>
-      <div class="row">
-        <div class="col m6 s2 l6" style="height: 350px;">
-          <div class="card-panel  hoverable" style="height: 328px;">
-              <h5>Publishing Partner</h5><hr>
-                <marquee direction="up" onmouseover="this.stop();" onmouseout="this.start();" style="height:200px" >
-              <% @publishpartners.each do |publishpartner| %>
-                     <br>
-                      <img src="<%="/PublishPartner/" + publishpartner.image%>" style="width:150px;"><br>
-                      <span><a href="<%= publishpartner.url %>"><%= publishpartner.content %></a></span>
-              <% end %>
-            </marquee>
-          </div>
+    </div>
+
+  </div>
+
+
+  <div class="row key-note">
+
+    <div class="col-md-6 left">
+      <h1>Key Note<br>Speakers</h1>
+    </div>
+    <div class="col-md-6 right">
+
+
+      <div class="slick-keynote">
+        <% @keynotespeaker.each do |keynotespeaker| %>
+        <div>
+          <div class="images-key-note">  <img src="<%="/keynotespeaker/" + keynotespeaker.image%>" ></div>
+          <div class="link-key-note"> <a href="<%= keynotespeaker.url %>"><%= keynotespeaker.caption %></a></div>
         </div>
-        <div class="col m6 s12 l6"  style="height: 350px;">
-          <div class="card-panel  hoverable" style="height: 328px">
-              <h5>KeyNote Speaker</h5><hr>
-              <marquee style="height:200px" direction="up" onmouseover="this.stop();" onmouseout="this.start();">
-              <div class="row">
-                <% @keynotespeaker.each do |keynotespeaker| %>
-                    <div class="col s3 m3 l6">
-                      <img src="<%="/keynotespeaker/" + keynotespeaker.image%>"  style="width:10vw;"><br>
-                      <span><a href="<%= keynotespeaker.url %>"><%= keynotespeaker.caption %></a></span>
-                    </div>
-                <% end %>
-              </marquee>
-              </div>
-          </div>
-        </div>
+        <% end %>
+
 
 
       </div>
-      <div class="row sponsors" style="  background-color: white; margin: 0 10px 0 10px;">
-        <div class="col m6 l6 s12">
-          <div >
-            <h4>SPONSORS</h4>
-            <hr><br>
-            <!-- <img src="/sponsors/image1.png" alt="">
-            <img src="/sponsors/image1.png" alt="">
-            <img src="/sponsors/image1.png" alt=""> -->
-            <% @sponsors.each do |sponsor| %>
-            <!-- <div class="col s12 m12 l12"> -->
-            <%= render 'sponsor' , sponsor: sponsor %>
-            <!-- </div> -->
-            <% end %>
-          </div>
 
+      <script type="text/javascript" src="slick/slick.min.js"></script>
+
+
+      <script type="text/javascript">
+      $(document).ready(function(){
+        $('.slick-keynote').slick({
+          autoplay: true,
+          autoplaySpeed: 2500
+        });
+      });
+      </script>
+
+    </div>
+
+  </div>
+  <div class="row publish-partner">
+
+  </div>
+  <div class="row publish-partner">
+
+
+
+    <div class=" col-sm-12 col-md-6 col-md-push-6 right">
+      <h1>Publishing<br>Partner</h1>
+    </div>
+
+    <div class=" col-sm-12 col-md-6 col-md-pull-6 left">
+      <div class="slick-publishing">
+
+
+        <% @publishpartners.each do |publishpartner| %>
+        <div>
+          <div class="images-key-note"><img src="<%="/PublishPartner/" + publishpartner.image%>"></div> 
+          <div class="link-key-note"><a href="<%= publishpartner.url %>"><%= publishpartner.content %></a></div>
+        </div>
+        <% end %>
+
+        </div>
+        <script type="text/javascript" src="slick/slick.min.js"></script>
+
+        <script type="text/javascript">
+        $(document).ready(function(){
+          $('.slick-publishing').slick({
+            autoplay: true,
+            autoplaySpeed: 2500
+          });
+        });
+        </script>
       </div>
-      <div class="col m12 s12 l6">
-        <!-- <div class="card-panel hoverable" style="height: 480px;"> -->
-          <span class="">
-            <h4>Paper Submission</h4><hr>
-            <% @papersubmission.each do |papersubmission| %>
-            <div class="card" style="background:none">
-              <div class="card-image">
-          <a target="_blank" href="https://easychair.org/conferences/?conf=icicc2018"><img src="<%="/PaperSubmission/" + papersubmission.url%>" class="responsive-img activator"  ></a>
-              </div>
+
+    </div>
+    <div class="row" id="sponsors-and-papers">
+      <div class="col-md-6">
+        <h2>Sponsors</h2>
+
+        <% @sponsors.each do |sponsor| %>
+            <div class="col-md-4">
+              <img src="<%="/sponsors/" + sponsor.image%>">
+              <span class="card-title activator grey-text text-darken-1"><%= sponsor.caption.titleize %></span>
             </div>
-            <% end %>
-          </span>
-        <!-- </div> -->
+        <%end%>
 
       </div>
-        <!-- <div class="col m12 s12 l6">
-          <div>
-            <span class="">
-              <h4>Recent Visitors</h4><hr>
-              <div class="card">
-                <div class="card-image">
-                  <img src="/map1.png" class="responsive-img activator">
-                </div>
-              </div>
+      <div class="col-md-6">
+        <h2>Paper Submission</h2>
 
-            </span>
-          </div>
-        </div> -->
-      </div>
+        <% @papersubmission.each do |papersubmission| %>
 
-      <div class="row">
+        <a href="https://easychair.org/conferences/?conf=icicc2018"><img src="<%="/PaperSubmission/" + papersubmission.url%>" ></a>
 
-
-
-        <div class="col m12 s12 l6">
-          <!-- <div class="card-panel  hoverable"  style="height: 480px">
-            <span class="">
-              <h5>Tourism Selection</h5><hr>
-              <div class="card"5
-                <div class="card-image">
-                  <img src="/akshardham.jpg" class="responsive-img activator">
-                </div>
-
-              </div>
-
-            </span>
-          </div> -->
-
-        </div>
-      </div>
-
-
-
-      <div class="row">
-
-
-
-
-
-
+        <% end %>
 
       </div>
-
-
     </div>
-    <!-- container ends here -->
-<div class="row">
-  <main style="background-color: white;padding-bottom40px;">
-  <h3 style="text-align:center">Photo Gallery</h3><hr>
-    <div class="carousel">
-      <% @photogallery.each do |pic| %>
-      <a class="carousel-item"><img style="width:350px" src="<%= "/gallery/" + pic.url %>"></a>
-      <% end %>
+
+
+    <div class="row">
+      <div class="col-md-12">
+        <%= render "gallery"%>
+      </div>
     </div>
-  </main>
-</div>
 
 
-
-
-
-
-
-  </body>
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js'></script>
+  </section>

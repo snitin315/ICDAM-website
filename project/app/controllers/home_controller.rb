@@ -8,7 +8,7 @@ class HomeController < ApplicationController
     @papersubmission = PaperSubmission.all
     @publishpartners = PublishPartner.all.reverse
     @keynotespeaker = KeyNoteSpeaker.all
-
+    @downloads=Download.all
   end
 
   def about_institute
@@ -31,6 +31,7 @@ class HomeController < ApplicationController
   end
   def downloads_page
     @downloads=Download.all
+    @important_dates = ImportantDate.all
   end
 
 
@@ -169,6 +170,7 @@ class HomeController < ApplicationController
     end
   end
   def conference_venue
+    @important_dates = ImportantDate.all
   end
 
 

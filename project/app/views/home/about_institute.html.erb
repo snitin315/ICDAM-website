@@ -1,40 +1,35 @@
 
-<section class="about_institute">
-   <div class="container">
-     <div class="row">
-       <div class="col m12 s12 l8">
-
-                 <div class="card-panel ">
-                   <span>
-                     <b>About Institute</b>
-                     <hr />
-                     <%=@about_institute%>
-                   </span>
-                 </div>
-
-
-       </div>
-       <div class="col m12 s12 l4">
-         <div class="card-panel ">
-           <span>
-
-             <b>Important Dates</b>
-             <hr />
-             <!-- <marquee direction="up" onmouseover="this.stop();" onmouseout="this.start();"> -->
-
-          <% @important_dates.each do |impdate| %>
-              <b><%= impdate.title %></b>
-              <br>
-              <%= impdate.date.to_date.to_formatted_s(:long_ordinal) %>
-              <br><hr />
-
-          <% end %>
-        <!-- </marquee> -->
-        </span>
+<section class="sub-page" id="about_institute">
+  <div class="row">
+    <div class="col-md-8">
+      <div class="left">
+        <h1>About Institute</h1>
+        <hr>
+        <p>
+          <%=@about_institute%>
+        </p>
       </div>
+
+    </div>
+    <div class="col-md-4">
+      <div class="box left">
+          <h1 class="custom-font">Important Dates</h1>
+          <hr>
+
+            <marquee behavior="" direction="up">
+              <% @important_dates.each do |impdate| %>
+                  <b><%= impdate.title %></b>
+                  <br>
+                  <%= impdate.date.to_date.to_formatted_s(:long_ordinal) %>
+                  <br><hr />
+
+              <% end %>
+
+
+            </marquee>
+            <span> <a href="/important_dates">Read More...</a> </span>
+
       </div>
+    </div>
   </div>
-
-
-</div>
 </section>

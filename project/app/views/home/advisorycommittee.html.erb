@@ -1,40 +1,40 @@
-<section class="advisorycommittee">
-   <div class="container">
-     <div class="row">
-       <div class="col m12 s12 l8">
-         <div class="card-panel ">
-           <span>
-             <h5>Advisory Committee</h5><hr>
-            <% @advcom.each do |members| %>
-                 <b><%= members.name %></b><%="  "%><%= members.information %><br>
-                  <hr>
-            <%end%>
+<section class="sub-page" id="advisorycommittee">
+  <div class="row">
+    <div class="col-md-8">
+      <div class="left">
+        <h1>Advisory Committee</h1>
+        <hr>
+        <div class="row">
 
-
-         </span>
-         </div>
-
-       </div>
-       <div class="col m12 s12 l4">
-         <div class="card-panel ">
-           <span>
-             <b>Important Dates</b>
-             <hr />
-             <!-- <marquee direction="up" onmouseover="this.stop();" onmouseout="this.start();"> -->
-
-          <% @important_dates.each do |impdate| %>
-              <b><%= impdate.title %></b>
-              <br>
-              <%= impdate.date.to_date.to_formatted_s(:long_ordinal) %>
-              <br><hr />
-
-          <% end %>
-        <!-- </marquee> -->
-        </span>
+          <% @advcom.each do |members| %>
+          <div class="col-md-6">
+            <div class="card">
+              <b><%= members.name %></b><%="  "%><%= members.information %><br>
+            </div>
+          </div>
+          <%end%>
+        </div>
       </div>
+    </div>
+    <div class="col-md-4">
+      <div class="box right">
+          <h1 class="custom-font">Important Dates</h1>
+          <hr>
+
+            <marquee behavior="" direction="up">
+              <% @important_dates.each do |impdate| %>
+                  <b><%= impdate.title %></b>
+                  <br>
+                  <%= impdate.date.to_date.to_formatted_s(:long_ordinal) %>
+                  <br><hr />
+
+              <% end %>
+
+
+            </marquee>
+            <span> <a href="/important_dates">Read More...</a> </span>
+
       </div>
+    </div>
   </div>
-
-
-</div>
 </section>

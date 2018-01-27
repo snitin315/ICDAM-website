@@ -13,7 +13,3 @@
 //= require jquery_ujs
 
 //= require_tree .
-//= require jquery.noty.packaged.min.js
-$ = jQuery
-
-$.noty.defaults.timeout = 8000

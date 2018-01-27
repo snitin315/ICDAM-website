@@ -1,45 +1,50 @@
-<section class="steeringcommittee">
-   <div class="container">
-     <div class="row">
-       <div class="col m12 s12 l8">
-         <div class="card-panel ">
+<section class="sub-page" id="steeringcommittee">
+  <div class="row">
+    <div class="col-md-8">
+      <div class="left">
+        <h1>Steering Committee Members</h1>
+        <hr>
+        <div class="row">
+        <% @steercompost.each do |post| %>
+          <div class="col-md-12">
+            <h3><%= post.position %><%=":"%></h3>
+                <div class="row">
+                  <% post.allmembers.each do |members| %>
 
-           <span class="">
-              <h5>Steering Committee</h5><hr>
-             <% @steercompost.each do |post| %>
-                 <b class="position"><%= post.position %><%=":"%></b><br>
-                   <% post.allmembers.each do |members| %>
-                      <b class="name"><%= members.name + "   "%></b>&nbsp &nbsp<%="("%><%= members.information %><%=")"%><br>
-                   <%end%>
-                   <hr>
+                    <div class="col-md-6">
+                      <div class="card">
+                         <b class="name"><%= members.name + "   "%></b> <br>
+                         <%="("%><%= members.information %><%=")"%>
+                      </div>
+                    </div>
 
 
-             <%end%>
+                    <%end%>
+                  </div>
+          </div>
+                <%end%>
 
-         </span>
-         </div>
+        </div>
 
-       </div>
-       <div class="col m12 s12 l4">
-         <div class="card-panel ">
-           <span class="">
-             <b>Important Dates</b>
-             <hr />
-             <!-- <marquee direction="up" onmouseover="this.stop();" onmouseout="this.start();"> -->
-
-          <% @important_dates.each do |impdate| %>
-              <b><%= impdate.title %></b>
-              <br>
-              <%= impdate.date.to_date.to_formatted_s(:long_ordinal) %>
-              <br><hr />
-
-          <% end %>
-        <!-- </marquee> -->
-        </span>
       </div>
+    </div>
+    <div class="col-md-4">
+      <div class="box right">
+          <h1 class="custom-font">Important Dates</h1>
+          <hr>
+
+            <marquee behavior="" direction="up">
+              <% @important_dates.each do |impdate| %>
+                  <b><%= impdate.title %></b>
+                  <br>
+                  <%= impdate.date.to_date.to_formatted_s(:long_ordinal) %>
+                  <br><hr />
+
+              <% end %>
+            </marquee>
+            <span> <a href="/important_dates">Read More...</a> </span>
+
       </div>
+    </div>
   </div>
-
-
-</div>
 </section>

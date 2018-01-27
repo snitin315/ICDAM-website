@@ -1,17 +1,41 @@
-<section class="downloads_page">
-  <div class="container">
-    <div class="row">
-  <div class="col s12 m12 l12">
-<div class="card-panel">
-<%@downloads.each do |download|%>
-  <%=link_to url_for(controller: "home", action: "download", filename: download.download_file) do %>
-  <%=download.file_name%> <i class="fa fa-download" aria-hidden="true"></i>
-  <%end%>
-  <hr>
+<section class="sub-page" id="download">
+  <div class="row">
+    <div class="col-md-8">
+      <div class="left">
+        <h1>Downloads </h1>
+        <hr>
+        <div class="row">
+          <%@downloads.each do |download|%>
+          <div class="col-md-6">
+            <div class="card">
+              <%=link_to url_for(controller: "home", action: "download", filename: download.download_file) do %>
+              <%=download.file_name.titleize%> <i class="fa fa-download" aria-hidden="true"></i>
+              <%end%>
+            </div>
+          </div>
+          <%end%>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="box right">
+          <h1 class="custom-font">Important Dates</h1>
+          <hr>
 
-<%end%>
-</div>
-  </div>
+            <marquee behavior="" direction="up">
+              <% @important_dates.each do |impdate| %>
+                  <b><%= impdate.title %></b>
+                  <br>
+                  <%= impdate.date.to_date.to_formatted_s(:long_ordinal) %>
+                  <br><hr />
+
+              <% end %>
+
+
+            </marquee>
+            <span> <a href="/important_dates">Read More...</a> </span>
+
+      </div>
     </div>
   </div>
 </section>

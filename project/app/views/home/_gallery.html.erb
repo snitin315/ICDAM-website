@@ -1,0 +1,34 @@
+<div class="photo-gallery">
+
+
+    <h1 class="custom-font">Gallery</h1>
+
+
+  <div id="pins">
+
+
+  <% @photogallery.each do |images| %>
+  <div class="box-gal">
+    <%= image_tag "/gallery/"+images.url %>
+  </div>
+  <% end %>
+
+  </div>
+  <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+  <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+
+  <script>
+  $(function() {
+    return $("#pins").imagesLoaded(function(){
+      return $("#pins").masonry({
+        itemSelector: '.box-gal',
+        isFitWidth: true
+      });
+  });
+  });
+
+  </script>
+
+
+
+</div>

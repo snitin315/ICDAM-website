@@ -1,61 +1,37 @@
-<section class="registration">
-  <div class="container">
-    <div class="row">
-      <div class="col m12 s12 l8">
-        <div class="card-panel ">
-          <span>
-            <b>Author/Co-Author Registration Fee Includes: Participation in the technical program Lunch Banquet Badge Conference Accessories CD of Proceedings Coffee breaks Welcome reception</b>
-            <hr />
-            Once Your paper is accepted the registration process begins. you have to complete the following four steps. Step1 - Registration Fee It is mandatory for at least one author of an accepted paper to register in order for the paper to appear in the proceedings and included in the Technical Program. If an author has got more than one accepted papers, there will be discount on additional papers registration. Fee includes listing the papers online in International Journal, The CD media of the proceedings and publication in various issues of Journals, Lunch, Morning and Evening Snacks. Registration Fees.<br><br />
-            <a class="waves-effect waves-light btn">Download Registration Form <i class="fa fa-download" aria-hidden="true"></i>
-            </a>
-
-
-            <br>
-            <br />
-            <b>Author/Co-Author Registration Fee Includes:</b>
-            <hr />
-            <ul>
-              <li><i class="fa fa-eercast" aria-hidden="true"></i> Welcome reception</li>
-              <li><i class="fa fa-eercast" aria-hidden="true"></i> Badge</li>
-              <li><i class="fa fa-eercast" aria-hidden="true"></i> Conference Accessories</li>
-              <li><i class="fa fa-eercast" aria-hidden="true"></i> Participation in the technical program</li>
-              <li><i class="fa fa-eercast" aria-hidden="true"></i> Coffee breaks</li>
-              <li><i class="fa fa-eercast" aria-hidden="true"></i> Lunch</li>
-              <li><i class="fa fa-eercast" aria-hidden="true"></i> Banquet</li>
-            </ul>
-
-
-
-
-          </span>
-        </div>
-      </div>
-      <div class="col m12 s12 l4">
-        <div class="card-panel ">
-          <span>
-            <b>Important Dates</b>
-            <hr />
-            <!-- <marquee direction="up" onmouseover="this.stop();" onmouseout="this.start();"> -->
-
-            <% @important_dates.each do |impdate| %>
-            <b><%= impdate.title %></b>
-            <br>
-            <%= impdate.date.to_date.to_formatted_s(:long_ordinal) %>
-            <br><hr />
-
-            <% end %>
-          <!-- </marquee> -->
-          </span>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col m12 s12 l12">
-
-        <h5><b>Early Bird Round</b></h5>
-        <br />
-        <table class="responsive-table centered">
+<section class="sub-page" id="registration">
+  <div class="row">
+    <div class="col-md-8">
+      <div class="left">
+        <p>
+          <b>Author/Co-Author Registration Fee Includes: Participation in the technical program Lunch Banquet Badge Conference
+            Accessories CD of Proceedings Coffee breaks Welcome reception
+          </b>
+        </p>
+        <hr>
+        <p>
+          Once Your paper is accepted the registration process begins. you have to complete the following steps.  <br>
+          Step1 - Registration Fee It is mandatory for at least one author of an accepted paper to register in order for the paper to
+          appear in the proceedings and included in the Technical Program. If an author has got more than one accepted papers,
+          there will be discount on additional papers registration. Fee includes listing the papers online in International Journal,
+          The CD media of the proceedings and publication in various issues of Journals, Lunch, Morning and Evening Snacks.
+          Registration Fees.
+        </p>
+        <a class="waves-effect waves-light btn">Download Registration Form <i class="fa fa-download" aria-hidden="true"></i>
+        </a>
+        <p>
+          <b>Author/Co-Author Registration Fee Includes:</b>
+        </p>
+        <ol>
+          <li><i  ></i> Welcome reception</li>
+          <li><i  ></i> Badge</li>
+          <li><i  ></i> Conference Accessories</li>
+          <li><i  ></i> Participation in the technical program</li>
+          <li><i  ></i> Coffee breaks</li>
+          <li><i  ></i> Lunch</li>
+          <li><i  ></i> Banquet</li>
+        </ol>
+        <h3>Early Bird Round</h3>
+        <table class="table">
           <thead>
             <tr>
               <th><b>Category</b></th>
@@ -90,12 +66,28 @@
             </tr>
           </tbody>
         </table>
-
-
       </div>
 
     </div>
+    <div class="col-md-4">
+      <div class="box right">
+          <h1 class="custom-font">Important Dates</h1>
+          <hr>
+
+            <marquee behavior="" direction="up">
+              <% @important_dates.each do |impdate| %>
+                  <b><%= impdate.title %></b>
+                  <br>
+                  <%= impdate.date.to_date.to_formatted_s(:long_ordinal) %>
+                  <br><hr />
+
+              <% end %>
 
 
+            </marquee>
+            <span> <a href="/important_dates">Read More...</a> </span>
+
+      </div>
+    </div>
   </div>
 </section>
