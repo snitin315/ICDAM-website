@@ -88,18 +88,14 @@
 
 
       <div class="slick-keynote">
+        <% @keynotespeaker.each do |keynotespeaker| %>
         <div>
-          <div class="images-key-note"><img src="http://icicc-conf.com/keynotespeaker/covuni.png"></div>
-          <div class="link-key-note"><a href="">Dr. Valentina Emilia Balas Professor, Aurel Vlaicu University of Arad, Romania.</a></div>
+          <div class="images-key-note">  <img src="<%="/keynotespeaker/" + keynotespeaker.image%>" ></div>
+          <div class="link-key-note"> <a href="<%= keynotespeaker.url %>"><%= keynotespeaker.caption %></a></div>
         </div>
-        <div>
-          <div class="images-key-note"><img src="http://icicc-conf.com/keynotespeaker/covuni.png"></div>
-          <div class="link-key-note"><a href="">Dr. Valentina Emilia Balas Professor, Aurel Vlaicu University of Arad, Romania.</a></div>
-        </div>
-        <div>
-          <div class="images-key-note"><img src="http://icicc-conf.com/keynotespeaker/covuni.png"></div>
-          <div class="link-key-note"><a href="">Dr. Valentina Emilia Balas Professor, Aurel Vlaicu University of Arad, Romania.</a></div>
-        </div>
+        <% end %>
+
+
 
       </div>
 
@@ -120,58 +116,70 @@
   </div>
   <div class="row publish-partner">
 
-</div>
-<div class="row publish-partner">
-
-
-
-  <div class=" col-sm-12 col-md-6 col-md-push-6 right">
-        <h1>Publishing<br>Partner</h1>
   </div>
-
-  <div class=" col-sm-12 col-md-6 col-md-pull-6 left">
-                  <div class="slick-publishing">
-                    <div>
-                      <div class="images-key-note"><img src="http://icicc-conf.com/keynotespeaker/covuni.png"></div>
-                      <div class="link-key-note"><a href="">Dr. Valentina Emilia Balas Professor, Aurel Vlaicu University of Arad, Romania.</a></div>
-                    </div>
-                    <div>
-                      <div class="images-key-note"><img src="http://icicc-conf.com/keynotespeaker/covuni.png"></div>
-                      <div class="link-key-note"><a href="">Dr. Valentina Emilia Balas Professor, Aurel Vlaicu University of Arad, Romania.</a></div>
-                    </div>
-                    <div>
-                      <div class="images-key-note"><img src="http://icicc-conf.com/keynotespeaker/covuni.png"></div>
-                      <div class="link-key-note"><a href="">Dr. Valentina Emilia Balas Professor, Aurel Vlaicu University of Arad, Romania.</a></div>                      </div>
-                      </div>
-                      <script type="text/javascript" src="slick/slick.min.js"></script>
-
-                      <script type="text/javascript">
-                        $(document).ready(function(){
-                          $('.slick-publishing').slick({
-                            autoplay: true,
-                            autoplaySpeed: 2500
-                          });
-                        });
-                      </script>
-  </div>
-
-</div>
-<div class="row">
-  <div class="col-md-6">
-    <h2>Sponsors</h2>
-  </div>
-  <div class="col-md-6">
-    <h2>Paper Submission</h2>
-  </div>
-</div>
+  <div class="row publish-partner">
 
 
-<div class="row">
-  <div class="col-md-12">
 
-    <%= render "gallery"%>
-  </div>
-</div>
+    <div class=" col-sm-12 col-md-6 col-md-push-6 right">
+      <h1>Publishing<br>Partner</h1>
+    </div>
+
+    <div class=" col-sm-12 col-md-6 col-md-pull-6 left">
+      <div class="slick-publishing">
+
+
+        <% @publishpartners.each do |publishpartner| %>
+        <div>
+          <div class="images-key-note"><img src="<%="/PublishPartner/" + publishpartner.image%>"></div>
+          <div class="link-key-note"><a href="<%= publishpartner.url %>"><%= publishpartner.content %></a></div>
+        </div>
+        <% end %>
+
+        </div>
+        <script type="text/javascript" src="slick/slick.min.js"></script>
+
+        <script type="text/javascript">
+        $(document).ready(function(){
+          $('.slick-publishing').slick({
+            autoplay: true,
+            autoplaySpeed: 2500
+          });
+        });
+        </script>
+      </div>
+
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <h2>Sponsors</h2>
+
+        <% @sponsors.each do |sponsor| %>
+            <div class="slick-item">
+              <img src="<%="/sponsors/" + sponsor.image%>">
+              <span class="card-title activator grey-text text-darken-1"><%= sponsor.caption %></span>
+            </div>
+        <%end%>
+
+      </div>
+      <div class="col-md-6">
+        <h2>Paper Submission</h2>
+
+        <% @papersubmission.each do |papersubmission| %>
+        <div>
+        <a href="https://easychair.org/conferences/?conf=icicc2018"><img src="<%="/PaperSubmission/" + papersubmission.url%>" ></a>
+        </div>
+        <% end %>
+
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col-md-12">
+        <%= render "gallery"%>
+      </div>
+    </div>
 
 
   </section>
