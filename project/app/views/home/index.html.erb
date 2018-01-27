@@ -90,7 +90,7 @@
       <div class="slick-keynote">
         <% @keynotespeaker.each do |keynotespeaker| %>
         <div>
-          <div class="images-key-note">  <img src="<%="/keynotespeaker/" + keynotespeaker.image%>" ></div> <br>
+          <div class="images-key-note">  <img src="<%="/keynotespeaker/" + keynotespeaker.image%>" ></div> <br class="invisible">
           <div class="link-key-note"> <a href="<%= keynotespeaker.url %>"><%= keynotespeaker.caption %></a></div>
         </div>
         <% end %>
@@ -131,7 +131,7 @@
 
         <% @publishpartners.each do |publishpartner| %>
         <div>
-          <div class="images-key-note"><img src="<%="/PublishPartner/" + publishpartner.image%>"></div> <br>
+          <div class="images-key-note"><img src="<%="/PublishPartner/" + publishpartner.image%>"></div> <br class="invisible">
           <div class="link-key-note"><a href="<%= publishpartner.url %>"><%= publishpartner.content %></a></div>
         </div>
         <% end %>

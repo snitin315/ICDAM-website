@@ -235,29 +235,24 @@ section.home-page{
       }
 
     }
-    br{
-      display: none;
-      @media( max-width: 481px){
-        display: block;
-      }
-    }
+
 
 
 
   }
 
-
+  br#invisible{
+    display: none;
+    @media( max-width: 481px){
+      display: block;
+    }
+  }
 
   .publish-partner{
     img{
       height: 300px;
     }
-    br{
-      display: none;
-      @media( max-width: 481px){
-        display: block;
-      }
-    }
+
 
 
       .left{
