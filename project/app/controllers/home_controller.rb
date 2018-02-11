@@ -90,7 +90,7 @@ class HomeController < ApplicationController
   end
 
   def publication
-    @publication = Publication.all
+    @publication = Publication.all.reverse
     @important_dates = ImportantDate.all.sort_by &:date
 
 
