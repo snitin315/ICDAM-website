@@ -75,14 +75,14 @@ class HomeController < ApplicationController
   end
 
   def technicalprogramcommittee
-    @techcom = TechCom.all
-    @important_dates = ImportantDate.all.sort_by &:rank
+    @techcom = TechCom.all.sort_by &:rank
+    @important_dates = ImportantDate.all.sort_by &:date
 
   end
 
   def advisorycommittee
-    @advcom = AdvCom.all
-    @important_dates = ImportantDate.all.sort_by &:rank
+    @advcom = AdvCom.all.sort_by &:rank
+    @important_dates = ImportantDate.all.sort_by &:date
 
   end
 
