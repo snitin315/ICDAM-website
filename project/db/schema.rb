@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171030175248) do
+ActiveRecord::Schema.define(version: 20180927091654) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -76,8 +76,9 @@ ActiveRecord::Schema.define(version: 20171030175248) do
   create_table "adv_coms", force: :cascade do |t|
     t.string   "name"
     t.string   "information"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
+    t.integer  "rank",        default: 0
   end
 
   create_table "call_for_paper_sub_headings", force: :cascade do |t|
@@ -113,6 +114,14 @@ ActiveRecord::Schema.define(version: 20171030175248) do
     t.string   "caption"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "new_special_sessions", force: :cascade do |t|
+    t.string   "file"
+    t.string   "name"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.string   "description"
   end
 
   create_table "news_updates", force: :cascade do |t|
@@ -180,8 +189,9 @@ ActiveRecord::Schema.define(version: 20171030175248) do
   create_table "tech_coms", force: :cascade do |t|
     t.string   "name"
     t.string   "information"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
+    t.integer  "rank",        default: 0
   end
 
   create_table "users", force: :cascade do |t|

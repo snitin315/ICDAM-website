@@ -12,7 +12,7 @@ ActiveAdmin.register AdvCom do
 #   permitted
 # end
 permit_params do
-  params = [:name,:information]
+  params = [:name,:information, :rank]
   # params.push :author_id if current_user.admin?
   params
 end

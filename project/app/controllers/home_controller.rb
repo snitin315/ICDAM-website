@@ -17,8 +17,12 @@ class HomeController < ApplicationController
 
 
   end
-  def special_session
+  def call_for_special_sessions
     @special_session=SpecialSession.all
+
+  end
+  def special_session
+    @new_special_session=NewSpecialSession.all
 
   end
   def download
@@ -72,13 +76,13 @@ class HomeController < ApplicationController
 
   def technicalprogramcommittee
     @techcom = TechCom.all
-    @important_dates = ImportantDate.all.sort_by &:date
+    @important_dates = ImportantDate.all.sort_by &:rank
 
   end
 
   def advisorycommittee
     @advcom = AdvCom.all
-    @important_dates = ImportantDate.all.sort_by &:date
+    @important_dates = ImportantDate.all.sort_by &:rank
 
   end
 
