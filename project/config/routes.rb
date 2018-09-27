@@ -6,7 +6,8 @@ Rails.application.routes.draw do
   get '/about_institute' => "home#about_institute"
   get '/downloads_page' => "home#downloads_page"
   get '/call_for_special_sessions' => 'home#call_for_special_sessions'
-  get '/special_session' => 'home#special_session'
+  get '/special_session' => 'home#call_for_special_sessions'
+  get '/new_special_session' => 'home#special_session'
   get '/download' => 'home#download'
   get '/about_irdindia' => "home#about_irdindia"
   get '/about_universal_innovators' => "home#about_universal_innovators"
