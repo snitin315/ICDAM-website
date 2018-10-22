@@ -32,7 +32,7 @@
       <div class="box">
         <h1 class="custom-font"> Downloads</h1>
         <hr>
-        <marquee behavior="" direction="up">
+        <marquee behavior="" direction="up"  truespeed="true" scrolldelay = "150" onmouseover="this.stop();" onmouseout="this.start();" >
           <%@downloads.each do |download|%>
           <%=link_to url_for(controller: "home", action: "download", filename: download.download_file) do %>
           <%=download.file_name.titleize%> <i class="fa fa-download" aria-hidden="true"></i>
@@ -51,7 +51,7 @@
       <div class="box">
         <h1 class="custom-font">Important Dates</h1>
         <hr>
-        <marquee behavior="" direction="up">
+        <marquee behavior="" direction="up"  truespeed="true" scrolldelay = "150" onmouseover="this.stop();" onmouseout="this.start();" >
           <% @important_dates.each do |impdate| %>
           <b><%= impdate.title %></b>
           <br>
@@ -67,7 +67,7 @@
     <div class="col-md-6">
       <div class="box">
         <h1 class="custom-font">Notices</h1>
-        <marquee behavior="" direction="up">
+        <marquee behavior="" direction="up"  truespeed="true" scrolldelay = "150" onmouseover="this.stop();" onmouseout="this.start();" >
           <%@newsupdate.each do |news|%>
           <b><%=news.news%></b> <br><br>
           <hr>
@@ -81,7 +81,6 @@
 
   </div>
 
-<!--
   <div class="row key-note">
 
     <div class="col-md-6 left">
@@ -116,8 +115,9 @@
 
     </div>
 
-  </div> -->
-  <!-- <div class="row publish-partner">
+  </div>
+
+  <div class="row publish-partner">
 
   </div>
   <div class="row publish-partner">
@@ -141,50 +141,52 @@
         </div>
         <% end %>
 
-        </div>
+      </div>
 
 
-        <script type="text/javascript">
-        $(document).ready(function(){
-          $('.slick-publishing').slick({
-            autoplay: true,
-            autoplaySpeed: 2500
-          });
+      <script type="text/javascript">
+      $(document).ready(function(){
+        $('.slick-publishing').slick({
+          autoplay: true,
+          autoplaySpeed: 2500
         });
-        </script>
-      </div>
-
-    </div> -->
-    <!-- <div class="row" id="sponsors-and-papers">
-      <div class="col-md-6">
-        <h2>Sponsors</h2>
-
-        <% @sponsors.each do |sponsor| %>
-            <div class="col-md-4">
-              <img src="<%="/sponsors/" + sponsor.image%>">
-              <span class="card-title activator grey-text text-darken-1"><%= sponsor.caption.titleize %></span>
-            </div>
-        <%end%>
-
-      </div>
-      <div class="col-md-6">
-        <h2>Paper Submission</h2>
-
-        <% @papersubmission.each do |papersubmission| %>
-
-        <a href="https://easychair.org/conferences/?conf=icicc2018"><img src="<%="/PaperSubmission/" + papersubmission.url%>" ></a>
-
-        <% end %>
-
-      </div>
-    </div> -->
-
-
-    <div class="row">
-      <div class="col-md-12">
-        <%= render "gallery"%>
-      </div>
+      });
+      </script>
     </div>
 
+  </div>
 
-  </section>
+
+  <!-- <div class="row" id="sponsors-and-papers">
+  <div class="col-md-6">
+  <h2>Sponsors</h2>
+
+  <% @sponsors.each do |sponsor| %>
+  <div class="col-md-4">
+  <img src="<%="/sponsors/" + sponsor.image%>">
+  <span class="card-title activator grey-text text-darken-1"><%= sponsor.caption.titleize %></span>
+</div>
+<%end%>
+
+</div>
+<div class="col-md-6">
+<h2>Paper Submission</h2>
+
+<% @papersubmission.each do |papersubmission| %>
+
+<a href="https://easychair.org/conferences/?conf=icicc2018"><img src="<%="/PaperSubmission/" + papersubmission.url%>" ></a>
+
+<% end %>
+
+</div>
+</div> -->
+
+
+<div class="row">
+  <div class="col-md-12">
+    <%= render "gallery"%>
+  </div>
+</div>
+
+
+</section>

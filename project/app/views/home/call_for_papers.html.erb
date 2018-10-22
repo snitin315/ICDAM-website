@@ -32,7 +32,7 @@
           <h1 class="custom-font">Important Dates</h1>
           <hr>
 
-            <marquee behavior="" direction="up">
+          <marquee behavior="" direction="up"  truespeed="true" scrolldelay = "150">
               <% @important_dates.each do |impdate| %>
                   <b><%= impdate.title %></b>
                   <br>
