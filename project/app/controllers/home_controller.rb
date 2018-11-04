@@ -22,7 +22,8 @@ class HomeController < ApplicationController
 
   end
   def special_session
-    @new_special_session=NewSpecialSession.all
+    @new_special_session=NewSpecialSession.all.sort_by &:rank
+    @new_special_session = @new_special_session.reverse
 
   end
   def download

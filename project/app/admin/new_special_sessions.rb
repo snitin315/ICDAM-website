@@ -3,6 +3,7 @@ ActiveAdmin.register NewSpecialSession do
     f.input :file, label: "file", as: :file
     f.input :name, label: "name"
     f.input :description, label: "description"
+    f.input :rank, label: "rank"
 
     f.actions
   end
@@ -12,6 +13,7 @@ ActiveAdmin.register NewSpecialSession do
       @file=NewSpecialSession.new
       @file.name = permitted_params["new_special_session"]["name"]
       @file.description = permitted_params["new_special_session"]["description"]
+      @file.rank = permitted_params["new_special_session"]["rank"]
       filedata = permitted_params["new_special_session"]["file"]
       filepath= Dir.pwd + '/app/assets/downloads/'+filedata.original_filename
       File.open(filepath,'wb') do |file|
@@ -32,7 +34,7 @@ ActiveAdmin.register NewSpecialSession do
 
 
 permit_params do
-  params = [:file,:name,:description]
+  params = [:file,:name,:description, :rank]
   params
 end
 
