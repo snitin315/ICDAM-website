@@ -18,6 +18,7 @@ Rails.application.routes.draw do
   get '/advisorycommittee' => "home#advisorycommittee"
   get '/sponsorship' => "home#sponsorship"
   get '/publication' => "home#publication"
+  get '/symposium' => "home#symposium"
   # get '/contact_us' => "home#contact_us"
   # post 'home/contact_us/post' => 'home#contact_us_post'
   # get '/special_submission' => "home#special_submission"

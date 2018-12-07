@@ -221,6 +221,10 @@ class HomeController < ApplicationController
 
   end
 
+  def symposium
+
+  end
+
 
   private
     def save_file(uploaded_file)
