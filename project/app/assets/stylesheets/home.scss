@@ -322,7 +322,11 @@ section.home-page{
     align-items: center;
     text-align: center;
   }
-
+  table
+  {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
   table, th, td {
     border: 2px solid black;
     border-collapse: collapse;
