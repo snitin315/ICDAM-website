@@ -1,6 +1,7 @@
 class HomeController < ApplicationController
   def index
     @photogallery = PhotoGallery.all
+    @photogal2019 = PhotoGallery2019.all
     @newsupdate = NewsUpdate.all
     @important_dates = ImportantDate.all.sort_by &:date
     @aboutconference = AboutConference.last.description
