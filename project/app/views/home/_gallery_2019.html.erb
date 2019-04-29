@@ -4,11 +4,11 @@
     <h1 class="custom-font">Gallery-2019</h1>
 
 
-  <div id="pins">
+  <div id="pins2">
 
 
   <% @photogal2019.each do |images| %>
-  <div class="box-gal">
+  <div class="box-gal-2">
     <%= image_tag "/gallery2019/"+images.url %>
   </div>
   <% end %>
@@ -19,9 +19,9 @@
 
   <script>
   $(function() {
-    return $("#pins").imagesLoaded(function(){
-      return $("#pins").masonry({
-        itemSelector: '.box-gal',
+    return $("#pins2").imagesLoaded(function(){
+      return $("#pins2").masonry({
+        itemSelector: '.box-gal-2',
         isFitWidth: true
       });
   });
