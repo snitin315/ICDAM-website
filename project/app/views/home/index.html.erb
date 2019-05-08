@@ -1,12 +1,12 @@
 <section class="home-page">
-  <!-- <div class="carousel-section-home-page">
+  <div class="carousel-section-home-page">
 
     <img src="/img1.jpg" style="visibility:hidden;" />
     <div>
-      <"%=" render "customcarousel" "%"> 
+      <%= render "customcarousel" %> 
     </div>
 
-  </div> -->
+  </div>
 
 
 
@@ -89,78 +89,23 @@
 
   </div>
 
+  <br>
+
+
   <div class="row key-note">
 
-    <div class="col-md-6 left">
-      <h1>Key Note<br>Speakers</h1>
-    </div>
-    <div class="col-md-6 right">
 
-
-      <div class="slick-keynote">
-        <% @keynotespeaker.each do |keynotespeaker| %>
-        <div>
-          <div class="images-key-note">  <img src="<%="/keynotespeaker/" + keynotespeaker.image%>" ></div>
-          <div class="link-key-note"> <a href="<%= keynotespeaker.url %>"><%= keynotespeaker.caption %></a></div>
-        </div>
-        <% end %>
-
-
-
-      </div>
-
-
-
-
-      <script type="text/javascript">
-      $(document).ready(function(){
-        $('.slick-keynote').slick({
-          autoplay: true,
-          autoplaySpeed: 2500
-        });
-      });
-      </script>
-
-    </div>
+    <%= render "key_note"%>
 
   </div>
 
+  
   <div class="row publish-partner">
 
-  </div>
-  <div class="row publish-partner">
+    <br><br>
 
+    <%= render "publish_partner"%>
 
-
-    <div class=" col-sm-12 col-md-6 col-md-push-6 right">
-      <h1>Publishing<br>Partner</h1>
-    </div>
-
-    <div class=" col-sm-12 col-md-6 col-md-pull-6 left">
-
-
-      <div class="slick-publishing">
-
-
-        <% @publishpartners.each do |publishpartner| %>
-        <div>
-          <div class="images-key-note"><img src="<%="/PublishPartner/" + publishpartner.image%>"></div>
-          <div class="link-key-note"><a href="<%= publishpartner.url %>"><%= publishpartner.content %></a></div>
-        </div>
-        <% end %>
-
-      </div>
-
-
-      <script type="text/javascript">
-      $(document).ready(function(){
-        $('.slick-publishing').slick({
-          autoplay: true,
-          autoplaySpeed: 2500
-        });
-      });
-      </script>
-    </div>
 
   </div>
 
@@ -191,18 +136,7 @@
 
 
 
-<div class="row">
-  <div class="col-md-12">
-    <%= render "gallery_2019"%>
-  </div>
-</div>
-<br><br><br>
 
-<div class="row">
-  <div class="col-md-12">
-    <%= render "gallery"%>
-  </div>
-</div>
 
 
 </section>
