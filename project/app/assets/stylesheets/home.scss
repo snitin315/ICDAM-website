@@ -44,7 +44,7 @@ div.non-sticky-header{
       box-sizing: border-box;
 
           img{
-            height: 10vw;
+            height: 9vw;
           }
 
 
@@ -132,51 +132,38 @@ h3.custom-font{
 marquee{
   height: 200px;
 }
-.right, .left{
-  height: 100%;
-  padding: 2em;
-  .slick-keynote, .slick-publishing{
-    height: 100%;
+/*  .right, .left{
+    padding: 2em;
+    .slick-keynote, .slick-publishing{
+      height: 100%;
 
-    div{
+      div{
 
-        height: 100%;
-        display: flex;
+          width: auto;
 
+          // @media(max-width: 479px){
+          //   flex-direction: column;
+          // }
 
-        // @media(max-width: 479px){
-        //   flex-direction: column;
-        // }
-
-      .images-key-note,{
-        max-width: 50%;
-
-                @media(max-width: 479px){
-                  max-width: 80%;
-
-                          }
-        img{
-          max-height: 100%;
-          max-width: 100%;
-
+        .images-key-note
+        {
+          align-content: center;
+                  @media(max-width: 479px){
+                    max-width: 80%;
+              }
         }
-      }
-      .link-key-note{
-          height: auto;
-          padding: 1em;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          vertical-align: middle;
+        .link-key-note
+        {
+            text-align: center;
+            margin-top: 5px;
+        }
+
 
       }
-
 
     }
-
   }
-}
-
+*/
 
 section#call_for_papers{
   ul{
@@ -239,22 +226,58 @@ section.home-page{
   }
 
 
-  .key-note{
-    img{
-      height: 300px;
-    }
-
-
+  .key-note, .publish-partner{
+  
 
     .left{
-
-      height: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-
       h1{
-        font-size: 5em !important;
+        text-align: center;
+        font-size: 4em;
+      }
+    }
+
+    .right{
+
+      margin-top: 20px;
+
+      .slick-keynote, .slick-publishing{
+
+        .outer_div_slick{
+
+
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          .images-key-note{
+
+
+              display:table-cell;
+              vertical-align: middle;
+              text-align: center;
+
+            img{
+              height: 200px;
+
+               @media(max-width: 479px){
+                    max-width: 80%;
+              }
+
+            }
+          }
+
+          .link-key-note{
+            margin-top: 10px;
+
+            text-align: center;
+          }
+
+
+
+        }
+
+
+
       }
 
     }
@@ -266,30 +289,27 @@ section.home-page{
 
 
 
-  .publish-partner{
+/*  .publish-partner{
     img{
-      height: 300px;
+      height: 150px;
+    }
+
+    .left
+    {
+      text-align: center;
     }
 
 
 
-      .left{
-        height: 100%;
-      }
-
     .right{
-      height: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
       h1{
-        font-size: 5em !important;
+        font-size: 4em !important;
         text-align: center;
       }
 
     }
 
-  }
+  }*/
 
 }
 #sponsors-and-papers{

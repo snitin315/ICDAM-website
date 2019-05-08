@@ -1,7 +1,5 @@
 class HomeController < ApplicationController
   def index
-    @photogallery = PhotoGallery.all
-    @photogal2019 = PhotoGallery2019.all
     @newsupdate = NewsUpdate.all
     @important_dates = ImportantDate.all.sort_by &:date
     @aboutconference = AboutConference.last.description
@@ -10,6 +8,11 @@ class HomeController < ApplicationController
     @publishpartners = PublishPartner.all.reverse
     @keynotespeaker = KeyNoteSpeaker.all
     @downloads=Download.all
+  end
+
+  def gallery
+    @photogallery = PhotoGallery.all
+    @photogal2019 = PhotoGallery2019.all
   end
 
   def about_institute
