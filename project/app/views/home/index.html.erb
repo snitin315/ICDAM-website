@@ -1,7 +1,7 @@
 <section class="home-page">
   <div class="carousel-section-home-page">
 
-    <img src="/img1.jpg" style="visibility:hidden;" />
+    <img src="/carousel/1.png" style="visibility:hidden;" />
     <div>
       <%= render "customcarousel" %> 
     </div>
@@ -19,8 +19,15 @@
 
       <div >
         <div class="left">
-          <a href="/icicc2019.pdf" download>E-Proceeding of ICICC-2019</a><br>
-          <a href="/E-ProceedingofICICC-2018.pdf" download>E-Proceeding of ICICC-2018</a>
+          <br>
+          <form action="/icicc2019.pdf">
+              <input type="submit" value="Proceeding of ICICC-2019" />
+          </form>
+          <br>
+          <form action="/E-ProceedingofICICC-2018.pdf">
+              <input type="submit" value="Proceeding of ICICC-2018" />
+          </form>
+
 
           <br><br>
           <h1 class="custom-font">About Conference</h1><hr>
