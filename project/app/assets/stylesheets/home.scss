@@ -226,7 +226,7 @@ section.home-page{
   }
 
 
-  .key-note, .publish-partner{
+  .key-note, .publish-partner, .sponsored-by{
   
 
     .left{
@@ -240,7 +240,7 @@ section.home-page{
 
       margin-top: 20px;
 
-      .slick-keynote, .slick-publishing{
+      .slick-keynote, .slick-publishing, .slick-sponsors{
 
         .outer_div_slick{
 
@@ -277,6 +277,18 @@ section.home-page{
         }
 
 
+
+      }
+
+
+      .slick-sponsors{
+
+        .images-key-note{
+
+          img{
+            max-width: 100%;
+          }
+        }
 
       }
 
