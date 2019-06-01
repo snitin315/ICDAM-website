@@ -1,0 +1,33 @@
+    <div class="col-md-12 left">
+      <h1>Supported By</h1>
+    </div>
+    <div class="col-md-12 right">
+
+
+      <div class="slick-sponsors">
+        <% @sponsors.each do |sponsors| %>
+        <div class="outer_div_slick">
+          <div class="images-key-note">  <img src="<%="/sponsors/" + sponsors.image%>" ></div>
+          <div class="link-key-note"><%= sponsors.caption %></div>
+        </div>
+        <% end %>
+
+
+
+      </div>
+
+
+
+
+      <script type="text/javascript">
+      $(document).ready(function(){
+        $('.slick-sponsors').slick({
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          autoplay: true,
+          autoplaySpeed: 2500
+        });
+      });
+      </script>
+
+    </div>
