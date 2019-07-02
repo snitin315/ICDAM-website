@@ -8,6 +8,7 @@ class HomeController < ApplicationController
     @publishpartners = PublishPartner.all.reverse
     @keynotespeaker = KeyNoteSpeaker.all
     @downloads=Download.all
+    @proceeding_partners = ProceedingPartner.all
   end
 
   def gallery
