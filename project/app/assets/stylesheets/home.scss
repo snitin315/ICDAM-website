@@ -71,6 +71,26 @@ div.non-sticky-header{
         margin-top: 5px !important;
       }
 
+
+
+      @media(max-width: 479px){
+
+        h2,h5{
+          padding: 0px !important;
+          margin: 5px !important;
+        }
+        h2{
+          margin-top: 30px !important;
+          font-size: 10px;
+        }
+        h5{
+          margin-top: 5px !important;
+          font-size: 10px;
+        }
+
+
+      }
+
     }
 
 }
