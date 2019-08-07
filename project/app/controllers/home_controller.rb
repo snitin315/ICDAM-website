@@ -20,12 +20,22 @@ class HomeController < ApplicationController
     @about_institute = AboutInstitute.last.content
     @important_dates = ImportantDate.all.sort_by &:date
 
+  def awards
+  end
+
+  def doctorate_symposium
+    
+  end
 
   end
   def call_for_special_sessions
     @special_session=SpecialSession.all
 
   end
+
+  def call_for_poster_paper
+  end
+
   def special_session
     @new_special_session=NewSpecialSession.all.sort_by &:rank
     @new_special_session = @new_special_session.reverse
