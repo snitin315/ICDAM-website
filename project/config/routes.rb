@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   get '/downloads_page' => "home#downloads_page"
   get '/call_for_special_sessions' => 'home#call_for_special_sessions'
   get '/special_session' => 'home#call_for_special_sessions'
+  get '/call_for_poster_paper' => 'home#call_for_poster_paper'
   get '/new_special_session' => 'home#special_session'
   get '/download' => 'home#download'
   get '/about_irdindia' => "home#about_irdindia"
@@ -20,6 +21,8 @@ Rails.application.routes.draw do
   get '/publication' => "home#publication"
   get '/symposium' => "home#symposium"
   get '/gallery' => "home#gallery"
+  get '/doctorate_symposium' => "home#doctorate_symposium"
+  get '/awards' => "home#awards"
   # get '/contact_us' => "home#contact_us"
   # post 'home/contact_us/post' => 'home#contact_us_post'
   # get '/special_submission' => "home#special_submission"

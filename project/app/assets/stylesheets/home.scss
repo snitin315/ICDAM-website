@@ -112,7 +112,12 @@ div.sticky-header-main-all{
     .container-fluid{
       display: flex;
       justify-content: center;
-      a{color:black;}
+      a{
+        color:black;
+        font-size: 12px;
+      }
+
+
     }
   }
 
