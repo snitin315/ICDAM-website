@@ -21,7 +21,7 @@ Rails.application.routes.draw do
   get '/publication' => "home#publication"
   get '/symposium' => "home#symposium"
   get '/gallery' => "home#gallery"
-  get '/doctorate_symposium' => "home#doctorate_symposium"
+  get '/doctoral_symposium' => "home#doctoral_symposium"
   get '/awards' => "home#awards"
   # get '/contact_us' => "home#contact_us"
   # post 'home/contact_us/post' => 'home#contact_us_post'
