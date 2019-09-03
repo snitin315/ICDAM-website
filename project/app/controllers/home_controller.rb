@@ -23,7 +23,7 @@ class HomeController < ApplicationController
   def awards
   end
 
-  def doctorate_symposium
+  def doctoral_symposium
     
   end
 
