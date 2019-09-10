@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   get '/call_for_papers' => "home#call_for_papers"
   get '/registration' => "home#registration"
   get '/steeringcommittee' => "home#steeringcommittee"
+  get '/industryexpert' => "home#industryexpert"
   get '/technicalprogramcommittee' => "home#technicalprogramcommittee"
   get '/advisorycommittee' => "home#advisorycommittee"
   get '/sponsorship' => "home#sponsorship"

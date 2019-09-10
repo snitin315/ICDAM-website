@@ -11,6 +11,11 @@ class HomeController < ApplicationController
     @proceeding_partners = ProceedingPartner.all
   end
 
+  def industryexpert
+    @techcom = IndustryExpert.all
+    @important_dates = ImportantDate.all.sort_by &:date
+  end
+  
   def gallery
     @photogallery = PhotoGallery.all
     @photogal2019 = PhotoGallery2019.all
