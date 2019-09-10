@@ -1,0 +1,39 @@
+<section class="sub-page" id="technicalprogramcommittee">
+  <div class="row">
+    <div class="col-md-8">
+      <div class="left">
+        <h1>Industry Experts</h1>
+        <hr>
+        <div class="row">
+          <% @techcom.each do |members| %>
+            <div class="col-md-6">
+              <div class="card">
+                <b><%= members.name %></b><%="  :  "%><%= members.description %><br>
+              </div>
+            </div>
+          <%end%>
+      </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="box right">
+          <h1 class="custom-font">Important Dates</h1>
+          <hr>
+
+          <marquee behavior="" direction="up"  truespeed="true" scrolldelay = "150" onmouseover="this.stop();" onmouseout="this.start();" >
+              <% @important_dates.each do |impdate| %>
+                  <b><%= impdate.title %></b>
+                  <br>
+                  <%= impdate.date.to_date.to_formatted_s(:long_ordinal) %>
+                  <br><hr />
+
+              <% end %>
+
+
+            </marquee>
+            <span> <a href="/important_dates">Read More...</a> </span>
+
+      </div>
+    </div>
+  </div>
+</section>
