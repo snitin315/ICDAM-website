@@ -2,13 +2,14 @@ class HomeController < ApplicationController
   def index
     @newsupdate = NewsUpdate.all
     @important_dates = ImportantDate.all.sort_by &:date
-    @aboutconference = AboutConference.last.description
     @sponsors = Sponsor.all
     @papersubmission = PaperSubmission.all
     @publishpartners = PublishPartner.all.reverse
     @keynotespeaker = KeyNoteSpeaker.all
     @downloads=Download.all
     @proceeding_partners = ProceedingPartner.all
+    @aboutconference = AboutConference.last.description
+
   end
 
   def industryexpert
