@@ -23,6 +23,7 @@ Rails.application.routes.draw do
   get '/symposium' => "home#symposium"
   get '/gallery' => "home#gallery"
   get '/doctoral_symposium' => "home#doctoral_symposium"
+  get '/poster_symposium' => "home#poster_symposium"
   get '/awards' => "home#awards"
   # get '/contact_us' => "home#contact_us"
   # post 'home/contact_us/post' => 'home#contact_us_post'
