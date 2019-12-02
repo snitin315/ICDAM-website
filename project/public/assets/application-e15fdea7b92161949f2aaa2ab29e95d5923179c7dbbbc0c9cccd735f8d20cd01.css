@@ -1,0 +1,675 @@
+/* line 1, /root/deepak-sir-colg-project/project/app/assets/stylesheets/card.scss */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  height: 100px;
+  background-color: #3a66b8;
+  padding: 10px;
+  margin-top: 6px;
+  border-radius: 5px;
+  text-align: center;
+  color: white;
+}
+/* line 11, /root/deepak-sir-colg-project/project/app/assets/stylesheets/card.scss */
+.card a {
+  color: white;
+}
+/* line 14, /root/deepak-sir-colg-project/project/app/assets/stylesheets/card.scss */
+.card a:hover {
+  color: white;
+  text-decoration: none;
+}
+
+/* line 23, /root/deepak-sir-colg-project/project/app/assets/stylesheets/card.scss */
+.new_card_details {
+  width: auto;
+  height: auto;
+}
+
+/* line 30, /root/deepak-sir-colg-project/project/app/assets/stylesheets/card.scss */
+section#publication .card, section#steeringcommittee .card, section#technicalprogramcommittee .card, section#advisorycommittee .card, section#download .card {
+  height: auto;
+  text-align: left;
+}
+/* line 2, /root/deepak-sir-colg-project/project/app/assets/stylesheets/custom-carousel.scss */
+.carousel-fade .carousel-inner .item {
+  opacity: 0;
+  transition-property: opacity;
+}
+
+/* line 8, /root/deepak-sir-colg-project/project/app/assets/stylesheets/custom-carousel.scss */
+.carousel-fade .carousel-inner .active {
+  opacity: 1;
+}
+
+/* line 12, /root/deepak-sir-colg-project/project/app/assets/stylesheets/custom-carousel.scss */
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+  left: 0;
+  opacity: 0;
+  z-index: 1;
+}
+
+/* line 19, /root/deepak-sir-colg-project/project/app/assets/stylesheets/custom-carousel.scss */
+.carousel-fade .carousel-inner .next.left,
+.carousel-fade .carousel-inner .prev.right {
+  opacity: 1;
+}
+
+/* line 24, /root/deepak-sir-colg-project/project/app/assets/stylesheets/custom-carousel.scss */
+.carousel-fade .carousel-control {
+  z-index: 2;
+}
+
+@media all and (transform-3d), (-webkit-transform-3d) {
+  /* line 28, /root/deepak-sir-colg-project/project/app/assets/stylesheets/custom-carousel.scss */
+  .carousel-fade .carousel-inner > .item.next,
+  .carousel-fade .carousel-inner > .item.active.right {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+
+  /* line 34, /root/deepak-sir-colg-project/project/app/assets/stylesheets/custom-carousel.scss */
+  .carousel-fade .carousel-inner > .item.prev,
+  .carousel-fade .carousel-inner > .item.active.left {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+
+  /* line 40, /root/deepak-sir-colg-project/project/app/assets/stylesheets/custom-carousel.scss */
+  .carousel-fade .carousel-inner > .item.next.left,
+  .carousel-fade .carousel-inner > .item.prev.right,
+  .carousel-fade .carousel-inner > .item.active {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+/* line 48, /root/deepak-sir-colg-project/project/app/assets/stylesheets/custom-carousel.scss */
+.carousel-caption {
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.9);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/* line 56, /root/deepak-sir-colg-project/project/app/assets/stylesheets/custom-carousel.scss */
+.carousel-caption * {
+  font-family: 'Pacifico', cursive;
+}
+
+/* line 59, /root/deepak-sir-colg-project/project/app/assets/stylesheets/custom-carousel.scss */
+.carousel-caption h2 {
+  font-size: 6em;
+}
+
+/* line 63, /root/deepak-sir-colg-project/project/app/assets/stylesheets/custom-carousel.scss */
+.carousel-caption p {
+  font-size: 1.9em;
+}
+
+/* line 67, /root/deepak-sir-colg-project/project/app/assets/stylesheets/custom-carousel.scss */
+html,
+body,
+.carousel,
+.carousel-inner,
+.carousel-inner .item {
+  height: 100%;
+}
+
+/* line 74, /root/deepak-sir-colg-project/project/app/assets/stylesheets/custom-carousel.scss */
+.item:nth-child(1) {
+  background: url("/carousel/1.png");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+/* line 81, /root/deepak-sir-colg-project/project/app/assets/stylesheets/custom-carousel.scss */
+.item:nth-child(2) {
+  background: url("/carousel/0.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+/* line 88, /root/deepak-sir-colg-project/project/app/assets/stylesheets/custom-carousel.scss */
+.item:nth-child(3) {
+  background: url("/carousel/2.png");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+/* line 94, /root/deepak-sir-colg-project/project/app/assets/stylesheets/custom-carousel.scss */
+.item:nth-child(4) {
+  background: url("/carousel/3.png");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+/* line 100, /root/deepak-sir-colg-project/project/app/assets/stylesheets/custom-carousel.scss */
+.item:nth-child(5) {
+  background: url("/carousel/4.png");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+/* line 1, /root/deepak-sir-colg-project/project/app/assets/stylesheets/footer.scss */
+#footer, #copyright {
+  background-color: #3a66b8;
+  color: #fff;
+  text-align: center;
+}
+
+/* line 7, /root/deepak-sir-colg-project/project/app/assets/stylesheets/footer.scss */
+#footer a {
+  color: #fff;
+}
+
+/* line 13, /root/deepak-sir-colg-project/project/app/assets/stylesheets/footer.scss */
+#copyright p {
+  color: #fff;
+  text-align: center;
+}
+
+/* line 20, /root/deepak-sir-colg-project/project/app/assets/stylesheets/footer.scss */
+#footer .fa {
+  font-size: 1.5em;
+  margin-right: 5px;
+}
+/* line 5, /root/deepak-sir-colg-project/project/app/assets/stylesheets/home.scss */
+.slick-next:before, .slick-next {
+  display: none !important;
+}
+
+/* line 10, /root/deepak-sir-colg-project/project/app/assets/stylesheets/home.scss */
+section#conference_venue img {
+  width: 100%;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 2px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* line 19, /root/deepak-sir-colg-project/project/app/assets/stylesheets/home.scss */
+section#registration ol {
+  padding-left: 20px;
+}
+
+/* line 26, /root/deepak-sir-colg-project/project/app/assets/stylesheets/home.scss */
+.slick .slick-item {
+  text-align: center;
+  font-size: 1.2em;
+}
+/* line 29, /root/deepak-sir-colg-project/project/app/assets/stylesheets/home.scss */
+.slick .slick-item img {
+  width: 24vw;
+  margin: 0 auto;
+}
+
+/* line 35, /root/deepak-sir-colg-project/project/app/assets/stylesheets/home.scss */
+div.non-sticky-header {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 10em;
+  padding: 0.5em;
+}
+/* line 43, /root/deepak-sir-colg-project/project/app/assets/stylesheets/home.scss */
+div.non-sticky-header div.logo-header {
+  box-sizing: border-box;
+  display: flex;
+}
+/* line 47, /root/deepak-sir-colg-project/project/app/assets/stylesheets/home.scss */
+div.non-sticky-header div.logo-header img {
+  height: 9vw;
+  margin-right: 10px;
+}
+/* line 55, /root/deepak-sir-colg-project/project/app/assets/stylesheets/home.scss */
+div.non-sticky-header div.title-for-header {
+  box-sizing: border-box;
+  width: 100%;
+  align-self: center;
+  text-align: center;
+}
+/* line 63, /root/deepak-sir-colg-project/project/app/assets/stylesheets/home.scss */
+div.non-sticky-header div.title-for-header h2, div.non-sticky-header div.title-for-header h5 {
+  padding: 0px !important;
+  margin: 0px !important;
+}
+/* line 67, /root/deepak-sir-colg-project/project/app/assets/stylesheets/home.scss */
+div.non-sticky-header div.title-for-header h2 {
+  font-size: 1em;
+}
+/* line 70, /root/deepak-sir-colg-project/project/app/assets/stylesheets/home.scss */
+div.non-sticky-header div.title-for-header h5 {
+  margin-top: 5px !important;
+}
+@media (max-width: 479px) {
+  /* line 78, /root/deepak-sir-colg-project/project/app/assets/stylesheets/home.scss */
+  div.non-sticky-header div.title-for-header h2, div.non-sticky-header div.title-for-header h5 {
+    padding: 0px !important;
+    margin: 5px !important;
+  }
+  /* line 82, /root/deepak-sir-colg-project/project/app/assets/stylesheets/home.scss */
+  div.non-sticky-header div.title-for-header h2 {
+    margin-top: 30px !important;
+    font-size: 10px;
+  }
+  /* line 86, /root/deepak-sir-colg-project/project/app/assets/stylesheets/home.scss */
+  div.non-sticky-header div.title-for-header h5 {
+    margin-top: 5px !important;
+    font-size: 10px;
+  }
+}
+
+/* line 97, /root/deepak-sir-colg-project/project/app/assets/stylesheets/home.scss */
+.responsive-navbar {
+  display: none;
+}
+@media (max-width: 479px) {
+  /* line 97, /root/deepak-sir-colg-project/project/app/assets/stylesheets/home.scss */
+  .responsive-navbar {
+    display: block;
+  }
+}
+/* line 102, /root/deepak-sir-colg-project/project/app/assets/stylesheets/home.scss */
+.responsive-navbar a {
+  color: black;
+}
+/* line 103, /root/deepak-sir-colg-project/project/app/assets/stylesheets/home.scss */
+.responsive-navbar .icon-bar {
+  background-color: black;
+}
+
+/* line 107, /root/deepak-sir-colg-project/project/app/assets/stylesheets/home.scss */
+div.sticky-header-main-all {
+  position: sticky;
+  top: 0px;
+  left: 0px;
+  text-align: center;
+  z-index: 3;
+  background-color: white;
+  color: black;
+  width: 100%;
+  box-sizing: border-box;
+}
+@media only screen and (max-width: 768px) {
+  /* line 107, /root/deepak-sir-colg-project/project/app/assets/stylesheets/home.scss */
+  div.sticky-header-main-all {
+    display: none;
+  }
+}
+/* line 112, /root/deepak-sir-colg-project/project/app/assets/stylesheets/home.scss */
+div.sticky-header-main-all .navbar .container-fluid {
+  display: flex;
+  justify-content: center;
+}
+/* line 115, /root/deepak-sir-colg-project/project/app/assets/stylesheets/home.scss */
+div.sticky-header-main-all .navbar .container-fluid a {
+  color: black;
+  font-size: 12px;
+}
+
+/* line 151, /root/deepak-sir-colg-project/project/app/assets/stylesheets/home.scss */
+p {
+  color: #3e3e3e;
+  text-align: justify;
+}
+
+/* line 155, /root/deepak-sir-colg-project/project/app/assets/stylesheets/home.scss */
+h3.custom-font {
+  text-align: center;
+  margin-top: 0;
+}
+
+/* line 159, /root/deepak-sir-colg-project/project/app/assets/stylesheets/home.scss */
+marquee {
+  height: 200px;
+}
+
+/*  .right, .left{
+    padding: 2em;
+    .slick-keynote, .slick-publishing{
+      height: 100%;
+
+      div{
+
+          width: auto;
+
+          // @media(max-width: 479px){
+          //   flex-direction: column;
+          // }
+
+        .images-key-note
+        {
+          align-content: center;
+                  @media(max-width: 479px){
+                    max-width: 80%;
+              }
+        }
+        .link-key-note
+        {
+            text-align: center;
+            margin-top: 5px;
+        }
+
+
+      }
+
+    }
+  }
+*/
+/* line 196, /root/deepak-sir-colg-project/project/app/assets/stylesheets/home.scss */
+section#call_for_papers ul {
+  padding-left: 2em;
+  list-style: disc;
+}
+/* line 200, /root/deepak-sir-colg-project/project/app/assets/stylesheets/home.scss */
+section#call_for_papers ul li ul {
+  list-style: circle;
+}
+
+/* line 207, /root/deepak-sir-colg-project/project/app/assets/stylesheets/home.scss */
+section.home-page {
+  height: inherit;
+  color: #1F2945;
+  /*  .publish-partner{
+      img{
+        height: 150px;
+      }
+  
+      .left
+      {
+        text-align: center;
+      }
+  
+  
+  
+      .right{
+        h1{
+          font-size: 4em !important;
+          text-align: center;
+        }
+  
+      }
+  
+    }*/
+}
+/* line 210, /root/deepak-sir-colg-project/project/app/assets/stylesheets/home.scss */
+section.home-page div.carousel-section-home-page {
+  position: relative;
+}
+/* line 211, /root/deepak-sir-colg-project/project/app/assets/stylesheets/home.scss */
+section.home-page div.carousel-section-home-page img {
+  max-width: 100%;
+}
+/* line 217, /root/deepak-sir-colg-project/project/app/assets/stylesheets/home.scss */
+section.home-page div.carousel-section-home-page div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+/* line 232, /root/deepak-sir-colg-project/project/app/assets/stylesheets/home.scss */
+section.home-page div.about-conference .box {
+  margin-top: 4px;
+}
+/* line 238, /root/deepak-sir-colg-project/project/app/assets/stylesheets/home.scss */
+section.home-page .box {
+  margin: auto;
+  width: 70%;
+  padding: 1em;
+  height: 400px;
+  border: 1px solid #1F2945;
+  border-radius: 5px;
+}
+/* line 248, /root/deepak-sir-colg-project/project/app/assets/stylesheets/home.scss */
+section.home-page .imp-dates-notice {
+  text-align: center;
+}
+/* line 250, /root/deepak-sir-colg-project/project/app/assets/stylesheets/home.scss */
+section.home-page .imp-dates-notice div {
+  margin-bottom: 8px;
+}
+/* line 260, /root/deepak-sir-colg-project/project/app/assets/stylesheets/home.scss */
+section.home-page .key-note .left h1, section.home-page .publish-partner .left h1, section.home-page .sponsored-by .left h1, section.home-page .proceeding-partners .left h1 {
+  text-align: center;
+  font-size: 4em;
+}
+/* line 266, /root/deepak-sir-colg-project/project/app/assets/stylesheets/home.scss */
+section.home-page .key-note .right, section.home-page .publish-partner .right, section.home-page .sponsored-by .right, section.home-page .proceeding-partners .right {
+  margin-top: 20px;
+}
+/* line 272, /root/deepak-sir-colg-project/project/app/assets/stylesheets/home.scss */
+section.home-page .key-note .right .slick-keynote .outer_div_slick, section.home-page .key-note .right .slick-publishing .outer_div_slick, section.home-page .key-note .right .slick-sponsors .outer_div_slick, section.home-page .key-note .right .slick-proceedingprtner .outer_div_slick, section.home-page .publish-partner .right .slick-keynote .outer_div_slick, section.home-page .publish-partner .right .slick-publishing .outer_div_slick, section.home-page .publish-partner .right .slick-sponsors .outer_div_slick, section.home-page .publish-partner .right .slick-proceedingprtner .outer_div_slick, section.home-page .sponsored-by .right .slick-keynote .outer_div_slick, section.home-page .sponsored-by .right .slick-publishing .outer_div_slick, section.home-page .sponsored-by .right .slick-sponsors .outer_div_slick, section.home-page .sponsored-by .right .slick-proceedingprtner .outer_div_slick, section.home-page .proceeding-partners .right .slick-keynote .outer_div_slick, section.home-page .proceeding-partners .right .slick-publishing .outer_div_slick, section.home-page .proceeding-partners .right .slick-sponsors .outer_div_slick, section.home-page .proceeding-partners .right .slick-proceedingprtner .outer_div_slick {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/* line 279, /root/deepak-sir-colg-project/project/app/assets/stylesheets/home.scss */
+section.home-page .key-note .right .slick-keynote .outer_div_slick .images-key-note, section.home-page .key-note .right .slick-publishing .outer_div_slick .images-key-note, section.home-page .key-note .right .slick-sponsors .outer_div_slick .images-key-note, section.home-page .key-note .right .slick-proceedingprtner .outer_div_slick .images-key-note, section.home-page .publish-partner .right .slick-keynote .outer_div_slick .images-key-note, section.home-page .publish-partner .right .slick-publishing .outer_div_slick .images-key-note, section.home-page .publish-partner .right .slick-sponsors .outer_div_slick .images-key-note, section.home-page .publish-partner .right .slick-proceedingprtner .outer_div_slick .images-key-note, section.home-page .sponsored-by .right .slick-keynote .outer_div_slick .images-key-note, section.home-page .sponsored-by .right .slick-publishing .outer_div_slick .images-key-note, section.home-page .sponsored-by .right .slick-sponsors .outer_div_slick .images-key-note, section.home-page .sponsored-by .right .slick-proceedingprtner .outer_div_slick .images-key-note, section.home-page .proceeding-partners .right .slick-keynote .outer_div_slick .images-key-note, section.home-page .proceeding-partners .right .slick-publishing .outer_div_slick .images-key-note, section.home-page .proceeding-partners .right .slick-sponsors .outer_div_slick .images-key-note, section.home-page .proceeding-partners .right .slick-proceedingprtner .outer_div_slick .images-key-note {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+/* line 286, /root/deepak-sir-colg-project/project/app/assets/stylesheets/home.scss */
+section.home-page .key-note .right .slick-keynote .outer_div_slick .images-key-note img, section.home-page .key-note .right .slick-publishing .outer_div_slick .images-key-note img, section.home-page .key-note .right .slick-sponsors .outer_div_slick .images-key-note img, section.home-page .key-note .right .slick-proceedingprtner .outer_div_slick .images-key-note img, section.home-page .publish-partner .right .slick-keynote .outer_div_slick .images-key-note img, section.home-page .publish-partner .right .slick-publishing .outer_div_slick .images-key-note img, section.home-page .publish-partner .right .slick-sponsors .outer_div_slick .images-key-note img, section.home-page .publish-partner .right .slick-proceedingprtner .outer_div_slick .images-key-note img, section.home-page .sponsored-by .right .slick-keynote .outer_div_slick .images-key-note img, section.home-page .sponsored-by .right .slick-publishing .outer_div_slick .images-key-note img, section.home-page .sponsored-by .right .slick-sponsors .outer_div_slick .images-key-note img, section.home-page .sponsored-by .right .slick-proceedingprtner .outer_div_slick .images-key-note img, section.home-page .proceeding-partners .right .slick-keynote .outer_div_slick .images-key-note img, section.home-page .proceeding-partners .right .slick-publishing .outer_div_slick .images-key-note img, section.home-page .proceeding-partners .right .slick-sponsors .outer_div_slick .images-key-note img, section.home-page .proceeding-partners .right .slick-proceedingprtner .outer_div_slick .images-key-note img {
+  height: 200px;
+}
+@media (max-width: 479px) {
+  /* line 286, /root/deepak-sir-colg-project/project/app/assets/stylesheets/home.scss */
+  section.home-page .key-note .right .slick-keynote .outer_div_slick .images-key-note img, section.home-page .key-note .right .slick-publishing .outer_div_slick .images-key-note img, section.home-page .key-note .right .slick-sponsors .outer_div_slick .images-key-note img, section.home-page .key-note .right .slick-proceedingprtner .outer_div_slick .images-key-note img, section.home-page .publish-partner .right .slick-keynote .outer_div_slick .images-key-note img, section.home-page .publish-partner .right .slick-publishing .outer_div_slick .images-key-note img, section.home-page .publish-partner .right .slick-sponsors .outer_div_slick .images-key-note img, section.home-page .publish-partner .right .slick-proceedingprtner .outer_div_slick .images-key-note img, section.home-page .sponsored-by .right .slick-keynote .outer_div_slick .images-key-note img, section.home-page .sponsored-by .right .slick-publishing .outer_div_slick .images-key-note img, section.home-page .sponsored-by .right .slick-sponsors .outer_div_slick .images-key-note img, section.home-page .sponsored-by .right .slick-proceedingprtner .outer_div_slick .images-key-note img, section.home-page .proceeding-partners .right .slick-keynote .outer_div_slick .images-key-note img, section.home-page .proceeding-partners .right .slick-publishing .outer_div_slick .images-key-note img, section.home-page .proceeding-partners .right .slick-sponsors .outer_div_slick .images-key-note img, section.home-page .proceeding-partners .right .slick-proceedingprtner .outer_div_slick .images-key-note img {
+    max-width: 80%;
+  }
+}
+/* line 296, /root/deepak-sir-colg-project/project/app/assets/stylesheets/home.scss */
+section.home-page .key-note .right .slick-keynote .outer_div_slick .link-key-note, section.home-page .key-note .right .slick-publishing .outer_div_slick .link-key-note, section.home-page .key-note .right .slick-sponsors .outer_div_slick .link-key-note, section.home-page .key-note .right .slick-proceedingprtner .outer_div_slick .link-key-note, section.home-page .publish-partner .right .slick-keynote .outer_div_slick .link-key-note, section.home-page .publish-partner .right .slick-publishing .outer_div_slick .link-key-note, section.home-page .publish-partner .right .slick-sponsors .outer_div_slick .link-key-note, section.home-page .publish-partner .right .slick-proceedingprtner .outer_div_slick .link-key-note, section.home-page .sponsored-by .right .slick-keynote .outer_div_slick .link-key-note, section.home-page .sponsored-by .right .slick-publishing .outer_div_slick .link-key-note, section.home-page .sponsored-by .right .slick-sponsors .outer_div_slick .link-key-note, section.home-page .sponsored-by .right .slick-proceedingprtner .outer_div_slick .link-key-note, section.home-page .proceeding-partners .right .slick-keynote .outer_div_slick .link-key-note, section.home-page .proceeding-partners .right .slick-publishing .outer_div_slick .link-key-note, section.home-page .proceeding-partners .right .slick-sponsors .outer_div_slick .link-key-note, section.home-page .proceeding-partners .right .slick-proceedingprtner .outer_div_slick .link-key-note {
+  margin-top: 10px;
+  text-align: center;
+}
+/* line 315, /root/deepak-sir-colg-project/project/app/assets/stylesheets/home.scss */
+section.home-page .key-note .right .slick-sponsors .images-key-note img, section.home-page .publish-partner .right .slick-sponsors .images-key-note img, section.home-page .sponsored-by .right .slick-sponsors .images-key-note img, section.home-page .proceeding-partners .right .slick-sponsors .images-key-note img {
+  max-width: 100%;
+}
+
+/* line 355, /root/deepak-sir-colg-project/project/app/assets/stylesheets/home.scss */
+#sponsors-and-papers h2 {
+  text-align: center;
+}
+/* line 358, /root/deepak-sir-colg-project/project/app/assets/stylesheets/home.scss */
+#sponsors-and-papers span {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+/* line 363, /root/deepak-sir-colg-project/project/app/assets/stylesheets/home.scss */
+#sponsors-and-papers img {
+  display: block;
+  width: 62%;
+  margin: 0 auto;
+}
+
+/* line 376, /root/deepak-sir-colg-project/project/app/assets/stylesheets/home.scss */
+#symposium .symp-1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+}
+/* line 384, /root/deepak-sir-colg-project/project/app/assets/stylesheets/home.scss */
+#symposium table {
+  margin-left: 10px !important;
+  margin-right: 10px !important;
+}
+/* line 389, /root/deepak-sir-colg-project/project/app/assets/stylesheets/home.scss */
+#symposium table, #symposium th, #symposium td {
+  border: 2px solid black;
+  border-collapse: collapse;
+  padding: 15px;
+  text-align: center;
+  font-weight: bold;
+}
+/* line 1, /root/deepak-sir-colg-project/project/app/assets/stylesheets/pins.css.scss */
+#pins {
+  margin: 0 auto;
+}
+
+/* line 4, /root/deepak-sir-colg-project/project/app/assets/stylesheets/pins.css.scss */
+.box-gal {
+  margin: 5px;
+  width: 240px;
+}
+
+/* line 8, /root/deepak-sir-colg-project/project/app/assets/stylesheets/pins.css.scss */
+.box-gal img {
+  width: 100%;
+}
+
+/* line 13, /root/deepak-sir-colg-project/project/app/assets/stylesheets/pins.css.scss */
+#pins2 {
+  margin: 0 auto;
+}
+
+/* line 16, /root/deepak-sir-colg-project/project/app/assets/stylesheets/pins.css.scss */
+.box-gal-2 {
+  margin: 5px;
+  width: 240px;
+}
+
+/* line 20, /root/deepak-sir-colg-project/project/app/assets/stylesheets/pins.css.scss */
+.box-gal-2 img {
+  width: 100%;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+ */
+
+
+
+ html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+html {
+  line-height: 1;
+}
+
+ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+q, blockquote {
+  quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+a img {
+  border: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #e9ebee;
+  font-family: helvetica, arial, sans-serif;
+  font-size: 16px;
+  /*padding-top: 195px;*/
+  -moz-transition: padding-top 0.5s ease;
+  -o-transition: padding-top 0.5s ease;
+  -webkit-transition: padding-top 0.5s ease;
+  transition: padding-top 0.5s ease;
+}
+
+
+h2 {
+  font-size: 34px;
+  text-transform: uppercase;
+  font-weight: 100;
+  line-height: 2;
+  color: #2c3e50;
+}
+
+p {
+  margin-bottom: 2rem;
+  line-height: 2;
+  color: black;
+}
+
+
+
+h1,h2,h3,h4,h5,h6,b {
+  font-family: 'Montserrat', sans-serif;
+  }
+
+
+  div.nav-wrapper a{
+    font-family: 'Ropa Sans', sans-serif;
+
+  }
+header *{
+  font-family: 'Righteous', cursive;
+
+}
+
+
+footer.page-footer {
+  color: black !important;
+  background-color: #a1a4a7;
+}
