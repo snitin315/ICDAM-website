@@ -79,18 +79,25 @@
     }
 
     .item:nth-child(2) {
+      background: url('/carousel/0.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+    }
+
+    .item:nth-child(3) {
       background: url('/carousel/2.png');
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
     }
-    .item:nth-child(3) {
+    .item:nth-child(4) {
       background: url('/carousel/3.png');
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
     }
-    .item:nth-child(4) {
+    .item:nth-child(5) {
       background: url('/carousel/4.png');
   background-size: cover;
   background-position: center center;
