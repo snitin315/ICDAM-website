@@ -75,6 +75,11 @@ class HomeController < ApplicationController
     @important_dates = ImportantDate.all.sort_by &:date
 
   end
+  
+  def about_jan_wyzykowski_university
+    @important_dates = ImportantDate.all.sort_by &:date
+
+  end
 
   def call_for_papers
     @call_for_papers = CallForPaper.all

@@ -1,0 +1,60 @@
+
+<section class="sub-page" id="about_institute">
+  <div class="row">
+    <div class="col-md-8">
+      <div class="left">
+        <h1>About B.M. Institute of Engineering and Technology:</h1>
+        <hr>
+        <p class="text-justify">
+            Jan Wyżykowski University was created due to the cooperation of Polkowice
+            Commune and Polkowice County. The founder of the University is the ZAMPOL
+            company, which Polkowice Commune and Polkowice County own all the shares
+            of. On 30th August 2001, the Founder received the permit to establish non-state
+            high vocational school from the Minister of National Education and Sport.
+            <br>
+            On 8 January 2002 following the decision of the Minister of National Education
+            and Sport, The Lower Silesian University of Entrepreneurship and Technology in
+            Polkowice was registered as the Non-state high vocational schools at number 91,
+            in the register kept by the Minister of National Education and Sport (currently
+            Minister of Education and Science) Polkowice is the seat of the University,
+            district town, located in the Lower Silesia Voivodship. in Polkowice, there is a
+            sub-zone Legnica Special Economic Zone – quite a few international companies
+            are located in the zone (Volkswagen, Sanden, Sitech, CCC etc.) DWSPIT develops
+
+            the cooperation with the business sector and within the University Council
+            DWSPiT tightly adjusts its educational offer to the labour market needs.
+            <br>
+            Of 1st of January 2016, following the consent issued by the Minister of Science
+            and Higher Education the Lower Silesian University of Entrepreneurship and
+            Technology in Polkowice merged with the Copper Basin High Vocational College
+            in Lubin.
+            <br>
+            As a result of the merger at the second decision issued by the Minister of Science
+            and Higher Education, our University received also the name: Jan Wyżykowski
+            University.
+        </p>
+      </div>
+
+    </div>
+    <div class="col-md-4">
+      <div class="box left">
+          <h1 class="custom-font">Important Dates</h1>
+          <hr>
+
+          <marquee behavior="" direction="up"  truespeed="true" scrolldelay = "150" onmouseover="this.stop();" onmouseout="this.start();" >
+              <% @important_dates.each do |impdate| %>
+                  <b><%= impdate.title %></b>
+                  <br>
+                  <%= impdate.date.to_date.to_formatted_s(:long_ordinal) %>
+                  <br><hr />
+
+              <% end %>
+
+
+            </marquee>
+            <span> <a href="/important_dates">Read More...</a> </span>
+
+      </div>
+    </div>
+  </div>
+</section>
