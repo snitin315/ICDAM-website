@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  download_file: MyString
+  file_name: MyString
+
+two:
+  download_file: MyString
+  file_name: MyString

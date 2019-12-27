@@ -1,0 +1,44 @@
+
+<section class="contact_us">
+  <div class="container">
+    <div class="row">
+      <div class="col m12 s12 l8">
+        <h5>Get In Touch</h5>
+        <%=form_tag("/home/contact_us/post", method: :POST, remote: true) do%>
+          <div class="input-field col s6" id="name_field_div">
+            <i class="material-icons prefix">account_circle</i>
+            <%= text_field_tag :name,nil, id: "icon_prefix"%>
+
+            <%=label_tag :name,"Name"%>
+
+          </div>
+          <div class="input-field col s6" id="email_field_div">
+            <i class="material-icons prefix">email</i>
+            <%= text_field_tag :email,nil,class: "validate", id: "icon_prefix"%>
+            <%=label_tag :email,"Email"%>
+
+          </div>
+          <div class="input-field col s12" id="subject_field_div">
+            <%= text_field_tag :subject,nil, id: "icon_prefix"%>
+            <%=label_tag :subject,"Subject"%>
+          </div>
+
+          <div class="input-field col s12" id="content_field_div">
+            <%= text_area_tag :content,nil, id: "textarea1",class: "materialize-textarea"%>
+            <%=label_tag :content,nil%>
+
+          </div>
+          <%=button_tag(type: "submit", class: "btn waves-effect waves-light", id: "contact_us_submit") do%>
+          Send Message <i class="material-icons right">send</i>
+          <%end%>
+
+
+        <%end%>
+
+
+      </div>
+
+    
+    </div>
+  </div>
+</section>

@@ -1,0 +1,61 @@
+
+<section class="call_for_papers">
+   <div class="container">
+     <div class="row">
+       <div class="col m12 s12 l8">
+
+                 <div class="card-panel ">
+                   <span>
+The scope of this conference is to provide a platform for researchers, engineers, academicians as well as industrial professionals from all over the world to present their research results and development activities in various topics of Engineering and Technology.  It allows participants an opportunity to discuss the recent developments in the field of solidification computer science and management and review challenges faced by the community in the 21st century. The conference consists of invited oral presentations and contributed posters. Best papers will be judged and awarded during the conference.
+                     <hr>
+                     <b>ICICC-2018 will be an amalgamation of three different Tracks organized parallel to each other, as listed below:</b>
+                     <hr />
+                          <% @call_for_papers.each do|paper| %>
+                                <b><i class="fa fa-eercast" aria-hidden="true"></i>
+<%= paper.title%></b><br>
+                                    <% paper.getallsubheading.each do |subheading|%>
+                                    <i class="fa fa-google-wallet" aria-hidden="true"></i>
+  <%= subheading.content %><br>
+                                    <% end %><br>
+                          <% end %>
+
+                   </span>
+                 </div>
+
+
+       </div>
+       <div class="col m12 s12 l4">
+         <div class="card-panel ">
+           <span class="">
+             <b>Important Dates</b>
+             <hr />
+             <!-- <marquee direction="up" onmouseover="this.stop();" onmouseout="this.start();"> -->
+
+          <% @important_dates.each do |impdate| %>
+              <b><%= impdate.title %></b>
+              <br>
+              <%= impdate.date.to_date.to_formatted_s(:long_ordinal) %>
+              <br><hr />
+
+          <% end %>
+          <!-- </marquee> -->
+        </span>
+      </div>
+      </div>
+  </div>
+
+
+  <div class="row">
+    <div class="col m12 s12 l12">
+      <div class="card-panel ">
+        <span class="">
+          <b>The papers submitted to the conference will be peer reviewed and published as proceedings in Springer</b>
+          <hr />
+All papers will undergo a blind peer review process and all accepted papers will be published in the SHORT NAME conference e-proceedings with an e-ISBN number. The conference organizer encourages submissions of academic and research papers that consider the multidisciplinary/interdisciplinary themes covering the Management, Science and Social Studies, through one of the following sub-themes, although submissions of other topics for consideration are also welcome.
+         </span>
+   </div>
+   </div>
+  </div>
+
+</div>
+</section>

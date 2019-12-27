@@ -1,0 +1,63 @@
+
+document.getElementById("special_submission_submit").innerHTML="Send";
+<%if @response==true %>
+<%session[:response]=false%>
+
+noty({
+  text: '',
+  type: 'success',
+  layout: "top",
+  template: '<div><i class="fa fa-thumbs-o-up" aria-hidden="true"></i>Thanks for responding!</div><div>I will get back to you as soon as I can</div>',
+  animation: {
+        open: 'animated bounceInDown', // Animate.css class names
+        close: 'animated bounceOutUp' // Animate.css class names
+    }
+}
+);
+
+
+<%end%>
+<%if @response=="empty" %>
+<%session[:response]=false%>
+
+
+
+var name_field=$('input[name=name]');
+var email_field=$('input[name=email]')
+var number_field =$('input[name=number]')
+var introduction_field =$('textarea[name=introduction]')
+var objective_field=$('textarea[name=objective]');
+var paper_count_field =$('input[name=paper_count]')
+
+if(name_field.val()==""){
+  var name_field_div = $('#name_field_div');
+  name_field_div.append('<p style="color: red; width: auto; font-size: 100%" class="prefix">Atleast one Guest Editor is required!</p>');
+}
+
+if (email_field.val()==""){
+  var email_field_div = $('#email_field_div');
+  email_field_div.append('<p style="color: red">email is required!</p>');
+}
+if (number_field.val()==""){
+  var number_field_div = $('#number_field_div');
+  number_field_div.append('<p style="color: red">Phone number is required!</p>');
+}
+
+if (introduction_field.val()==""){
+  var introduction_field_div = $('#introduction_field_div');
+  introduction_field_div.append('<p style="color: red">introduction is required!</p>');
+}
+if (objective_field.val()==""){
+  var objective_field_div = $('#objective_field_div');
+  objective_field_div.append('<p style="color: red">objective is required!</p>');
+}
+
+if (paper_count_field.val()==""){
+  var paper_count_field_div = $('#paper_count_field_div');
+  paper_count_field_div.append('<p style="color: red">Please specify number of pages</p>');
+}
+
+
+
+
+<%end%>

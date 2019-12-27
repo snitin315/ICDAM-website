@@ -1,0 +1,45 @@
+<section class="steeringcommittee">
+   <div class="container">
+     <div class="row">
+       <div class="col m12 s12 l8">
+         <div class="card-panel ">
+
+           <span class="">
+              <h5>Steering Committee</h5><hr>
+             <% @steercompost.each do |post| %>
+                 <b class="position"><%= post.position %><%=":"%></b><br>
+                   <% post.allmembers.each do |members| %>
+                      <b class="name"><%= members.name + "   "%></b>&nbsp &nbsp<%="("%><%= members.information %><%=")"%><br>
+                   <%end%>
+                   <hr>
+
+
+             <%end%>
+
+         </span>
+         </div>
+
+       </div>
+       <div class="col m12 s12 l4">
+         <div class="card-panel ">
+           <span class="">
+             <b>Important Dates</b>
+             <hr />
+             <!-- <marquee direction="up" onmouseover="this.stop();" onmouseout="this.start();"> -->
+
+          <% @important_dates.each do |impdate| %>
+              <b><%= impdate.title %></b>
+              <br>
+              <%= impdate.date.to_date.to_formatted_s(:long_ordinal) %>
+              <br><hr />
+
+          <% end %>
+        <!-- </marquee> -->
+        </span>
+      </div>
+      </div>
+  </div>
+
+
+</div>
+</section>

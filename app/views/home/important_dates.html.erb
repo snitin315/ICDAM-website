@@ -1,0 +1,27 @@
+<section class="important_dates">
+  <div class="container">
+    <div class="row">
+
+
+  <div class="col m12 s12 l12">
+    <div class="card-panel ">
+      <span class="">
+        <b>Important Dates</b>
+        <hr />
+
+
+     <% @important_dates.each do |impdate| %>
+     <i class="fa fa-hand-o-right" aria-hidden="true"></i>
+     <span><%= impdate.title %></span>
+     <br>
+         <i class="fa fa-calendar" aria-hidden="true"></i> <%= impdate.date.to_date.to_formatted_s(:long_ordinal) %>
+         <br><hr />
+
+     <% end %>
+
+   </span>
+ </div>
+ </div>
+ </div>
+ </div>
+</section>

@@ -1,0 +1,226 @@
+<style type="text/css">
+body div.container div.row div.l4 div.card-panel{
+  height: 300px
+}
+
+body div.sponsors h4{
+  color: black;
+}
+
+body div.container div.row div.l4 marquee{
+  height: 550px;
+}
+body div.card-panel{
+  background-color: #74b5eb;
+}
+body .container {
+  margin: 0 auto;
+  max-width: 1390px;
+  width: 90%;
+}
+</style>
+<body>
+<div class="row">
+  <div class="carousel carousel-slider">
+    <br>
+      <a class="carousel-item"><img src="/carousel/img1.jpeg"></a>
+      <a class="carousel-item"><img src="/carousel/img2.jpeg"></a>
+      <a class="carousel-item"><img src="/carousel/img3.jpeg"></a>
+
+    </div>
+</div>
+
+
+
+    <div class="container">
+
+      <div class="row" >
+
+        <div class="col m6 s6 l3" >
+          <div class="card-panel  hoverable "style="height:650px">
+            <span class="">
+              <h5>News Update</h5><hr>
+              <!-- <marquee style="height:550px" direction="up" onmouseover="this.stop();" onmouseout="this.start();"> -->
+              <% @newsupdate.each do |newsupdate| %>
+              <b><%= newsupdate.news %></b><br>
+              <br>
+
+              <% end %>
+            <!-- </marquee> -->
+            </span>
+          </div>
+
+        </div>
+
+
+        <div class="col m12 s12 l5">
+          <div class="card-panel  hoverable" style="overflow:hidden; height:650px">
+            <span class="">
+              <h4 >About Conference</h4>
+              <hr>
+            <p style="text-align: justify;"><%= @aboutconference %></p>
+            </span>
+          </div>
+        </div>
+
+        <div class="col m6 s6 l4">
+          <div class="card-panel  hoverable" style=" height:650px">
+            <span class="">
+              <h5>Important Dates</h5><hr>
+<!-- <marquee direction="up" onmouseover="this.stop();" onmouseout="this.start();" > -->
+              <% @important_dates.each do |impdate| %>
+              <b><%= impdate.title %></b>
+              <br>
+              <%= impdate.date.to_date.to_formatted_s(:long_ordinal) %>
+              <br><hr />
+
+              <% end %>
+              <!-- </marquee> -->
+            </span>
+          </div>
+        </div>
+
+        <!-- <div class="col m12 s12 l3" style="height: 300px;"> -->
+
+
+        <!-- </div> -->
+
+
+
+
+
+
+      </div>
+      <div class="row">
+        <div class="col m6 s2 l6" style="height: 350px;">
+          <div class="card-panel  hoverable" style="height: 328px;">
+              <h5>Publishing Partner</h5><hr>
+                <marquee direction="up" onmouseover="this.stop();" onmouseout="this.start();" style="height:200px" >
+              <% @publishpartners.each do |publishpartner| %>
+                     <br>
+                      <img src="<%="/PublishPartner/" + publishpartner.image%>" style="width:150px;"><br>
+                      <span><a href="<%= publishpartner.url %>"><%= publishpartner.content %></a></span>
+              <% end %>
+            </marquee>
+          </div>
+        </div>
+        <div class="col m6 s12 l6"  style="height: 350px;">
+          <div class="card-panel  hoverable" style="height: 328px">
+              <h5>KeyNote Speaker</h5><hr>
+              <marquee style="height:200px" direction="up" onmouseover="this.stop();" onmouseout="this.start();">
+              <div class="row">
+                <% @keynotespeaker.each do |keynotespeaker| %>
+                    <div class="col s3 m3 l6">
+                      <img src="<%="/keynotespeaker/" + keynotespeaker.image%>"  style="width:10vw;"><br>
+                      <span><a href="<%= keynotespeaker.url %>"><%= keynotespeaker.caption %></a></span>
+                    </div>
+                <% end %>
+              </marquee>
+              </div>
+          </div>
+        </div>
+
+
+      </div>
+      <div class="row sponsors" style="  background-color: white; margin: 0 10px 0 10px;">
+        <div class="col m6 l6 s12">
+          <div >
+            <h4>SPONSORS</h4>
+            <hr><br>
+            <!-- <img src="/sponsors/image1.png" alt="">
+            <img src="/sponsors/image1.png" alt="">
+            <img src="/sponsors/image1.png" alt=""> -->
+            <% @sponsors.each do |sponsor| %>
+            <!-- <div class="col s12 m12 l12"> -->
+            <%= render 'sponsor' , sponsor: sponsor %>
+            <!-- </div> -->
+            <% end %>
+          </div>
+
+      </div>
+      <div class="col m12 s12 l6">
+        <!-- <div class="card-panel hoverable" style="height: 480px;"> -->
+          <span class="">
+            <h4>Paper Submission</h4><hr>
+            <% @papersubmission.each do |papersubmission| %>
+            <div class="card" style="background:none">
+              <div class="card-image">
+          <a target="_blank" href="https://easychair.org/conferences/?conf=icicc2018"><img src="<%="/PaperSubmission/" + papersubmission.url%>" class="responsive-img activator"  ></a>
+              </div>
+            </div>
+            <% end %>
+          </span>
+        <!-- </div> -->
+
+      </div>
+        <!-- <div class="col m12 s12 l6">
+          <div>
+            <span class="">
+              <h4>Recent Visitors</h4><hr>
+              <div class="card">
+                <div class="card-image">
+                  <img src="/map1.png" class="responsive-img activator">
+                </div>
+              </div>
+
+            </span>
+          </div>
+        </div> -->
+      </div>
+
+      <div class="row">
+
+
+
+        <div class="col m12 s12 l6">
+          <!-- <div class="card-panel  hoverable"  style="height: 480px">
+            <span class="">
+              <h5>Tourism Selection</h5><hr>
+              <div class="card"5
+                <div class="card-image">
+                  <img src="/akshardham.jpg" class="responsive-img activator">
+                </div>
+
+              </div>
+
+            </span>
+          </div> -->
+
+        </div>
+      </div>
+
+
+
+      <div class="row">
+
+
+
+
+
+
+
+      </div>
+
+
+    </div>
+    <!-- container ends here -->
+<div class="row">
+  <main style="background-color: white;padding-bottom40px;">
+  <h3 style="text-align:center">Photo Gallery</h3><hr>
+    <div class="carousel">
+      <% @photogallery.each do |pic| %>
+      <a class="carousel-item"><img style="width:350px" src="<%= "/gallery/" + pic.url %>"></a>
+      <% end %>
+    </div>
+  </main>
+</div>
+
+
+
+
+
+
+
+  </body>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js'></script>

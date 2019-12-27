@@ -1,0 +1,60 @@
+<section class="publication">
+   <div class="container">
+     <div class="row">
+       <div class="col m12 s12 l12">
+
+
+              <div class="card-panel ">
+All Accepted Paper are published by  <a href="http://www.springer.com/series/15179"> Springer LNNS Series </a> and selected extended papers of the conference will be invited to submit for publication in the special issues of the following journals:
+           </div>
+
+
+       </div>
+
+  </div>
+
+
+     <div class="row">
+       <div class="col m12 s12 l8">
+
+
+              <div class="card-panel ">
+
+                  <h5>Publication</h5><hr>
+
+                   <% @publication.each do |publish| %>
+                   <i class="fa fa-eercast" aria-hidden="true"></i>
+<b><%= publish.title %></b>
+                   <br>
+                      <a href="<%= publish.weblink %>"><%= publish.weblink %></a>
+                   <br>
+                   <%= publish.description %>
+                   <br><br />
+                   <br />
+               <% end %>
+
+
+           </div>
+
+
+       </div>
+       <div class="col m12 s12 l4">
+         <div class="card-panel ">
+             <b>Important Dates</b>
+             <hr />
+             <!-- <marquee direction="up" onmouseover="this.stop();" onmouseout="this.start();"> -->
+          <% @important_dates.each do |impdate| %>
+              <b><%= impdate.title %></b>
+              <br>
+              <%= impdate.date.to_date.to_formatted_s(:long_ordinal) %>
+              <br><hr />
+
+          <% end %>
+        <!-- </marquee> -->
+      </div>
+      </div>
+  </div>
+
+
+</div>
+</section>
