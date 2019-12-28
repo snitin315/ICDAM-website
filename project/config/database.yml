@@ -14,7 +14,7 @@ development:
   <<: *default
   database: icdamcconf_development_database
   username: pguser
-  password: iciccconf##
+  password: icdamconf##
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -23,10 +23,10 @@ test:
   <<: *default
   database: icdamconf_test_database
   username: pguser
-  password: iciccconf##
+  password: icdamconf##
 
 production:
   <<: *default
   database: icdamconf_production_database
   username: pguser
-  password: iciccconf##
+  password: icdamconf##
