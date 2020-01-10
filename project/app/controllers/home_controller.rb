@@ -107,6 +107,12 @@ class HomeController < ApplicationController
 
   end
 
+  def euro_tech_board
+    @eurotechboard = EuroTechBoard.all.sort_by 
+    @important_dates = ImportantDate.all.sort_by &:date
+
+  end
+
   def advisorycommittee
     @advcom = AdvCom.all.sort_by &:rank
     @important_dates = ImportantDate.all.sort_by &:date

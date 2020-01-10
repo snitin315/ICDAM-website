@@ -17,6 +17,7 @@ Rails.application.routes.draw do
   get '/steeringcommittee' => "home#steeringcommittee"
   get '/industryexpert' => "home#industryexpert"
   get '/technicalprogramcommittee' => "home#technicalprogramcommittee"
+  get '/european_technical_board' => "home#euro_tech_board"
   get '/advisorycommittee' => "home#advisorycommittee"
   get '/sponsorship' => "home#sponsorship"
   get '/publication' => "home#publication"
