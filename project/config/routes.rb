@@ -23,6 +23,7 @@ Rails.application.routes.draw do
   get '/publication' => "home#publication"
   get '/symposium' => "home#symposium"
   get '/gallery' => "home#gallery"
+  get '/previous_conferences' => "home#previous_conferences"
   get '/doctoral_symposium' => "home#doctoral_symposium"
   get '/poster_symposium' => "home#poster_symposium"
   get '/about_jan_wyzykowski_university' => "home#about_jan_wyzykowski_university"

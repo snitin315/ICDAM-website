@@ -173,6 +173,10 @@ class HomeController < ApplicationController
     @response= session[:response]
   end
 
+  def previous_conferences
+    @important_dates = ImportantDate.all.sort_by &:date
+  end
+
   def special_submission_post
     # byebug
     @name=params["name"]

@@ -1,0 +1,58 @@
+    <div class=" col-md-12 right ">
+      <div class="slick-publishing"> 
+         <div class="outer_div_slick">
+          <div class="images-key-note" style=" margin:10px "><img src="/ic19-1.png" style="max-width : 100%" height="250"></div>
+         </div>
+        <div class="outer_div_slick">
+          <div class="images-key-note" style=" margin:10px "><img src="/ic19-2.png" style="max-width : 100%" height="250"></div>
+        </div>
+        <div class="outer_div_slick">
+          <div class="images-key-note" style=" margin:10px "><img src="/ic19-3.png" style="max-width : 100%" height="250"></div>
+        </div>
+        <div class="outer_div_slick">
+          <div class="images-key-note" style=" margin:10px "><img src="/ic19-4.png" style="max-width : 100%" height="250"></div>
+        </div>
+        <div class="outer_div_slick">
+          <div class="images-key-note" style=" margin:10px "><img src="/ic19-5.png" style="max-width : 100%" height="250"></div>
+        </div>  
+        <div class="outer_div_slick">
+          <div class="images-key-note" style=" margin:10px "><img src="/ic19-6.png" style="max-width : 100%" height="250"></div>
+        </div>       
+      </div>
+    
+      <script type="text/javascript">
+      $(document).ready(function(){
+        $('.slick-publishing').slick({
+          autoplay: true,
+          slidesToShow: 3,
+          dots: true,
+          autoplaySpeed: 2500,
+          responsive: [
+                {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: true
+                }
+                },
+                {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1
+                }
+                },
+                {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+                }
+            ]
+        });
+      });
+      </script>
+    </div>
