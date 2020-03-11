@@ -71,28 +71,28 @@
     .carousel-inner .item {
       height: 100%;
     }
-    .item:nth-child(1) {
-      background: url('/carousel/bmeit.jpg');
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-    }
+   .item:nth-child(0) {
+   background: url('/carousel/icdam.jpeg');
+   background-size: cover;
+   background-position: center center;
+   background-repeat: no-repeat;
+     }
 
-    .item:nth-child(2) {
-      background: url('/carousel/2.png');
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-    }
-    .item:nth-child(3) {
-      background: url('/carousel/3.png');
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-    }
-    .item:nth-child(4) {
-      background: url('/carousel/4.png');
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-    }
+  //   .item:nth-child(2) {
+  //     background: url('/carousel/2.png');
+  // background-size: cover;
+  // background-position: center center;
+  // background-repeat: no-repeat;
+  //   }
+  //   .item:nth-child(3) {
+  //     background: url('/carousel/3.png');
+  // background-size: cover;
+  // background-position: center center;
+  // background-repeat: no-repeat;
+  //   }
+  //   .item:nth-child(4) {
+  //     background: url('/carousel/4.png');
+  // background-size: cover;
+  // background-position: center center;
+  // background-repeat: no-repeat;
+  //   }
